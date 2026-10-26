@@ -9,6 +9,7 @@ catalog = json.loads((ROOT / 'catalog.json').read_text())
 paths = {ROOT / n['path'] for n in catalog['notes'] if n['lang'] == 'zh'}
 paths |= {ROOT / '.translations/en' / n['path'] for n in catalog['notes'] if n['lang'] == 'en'}
 paths |= set((ROOT / 'assets').rglob('*'))
+paths |= {ROOT / p for p in catalog.get('assets',[])}
 paths |= {ROOT / 'README.md', ROOT / 'SYNC.md', ROOT / 'ATTRIBUTION.md'}
 paths |= set((ROOT / 'downloads').glob('*.html'))
 archive = ROOT / 'downloads/interview-atlas.zip'

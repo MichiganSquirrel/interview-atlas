@@ -6,6 +6,7 @@ date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
+diagram_layout: "branch"
 diagram: ["网络分区 / Partition", "业务不变量 / Invariant", "拒绝或等待 / Reject", "陈旧响应 / Stale"]
 source: "https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem"
 ---

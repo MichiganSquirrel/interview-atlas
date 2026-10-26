@@ -6,9 +6,10 @@ date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
+diagram_layout: "branch"
 diagram: ["分片键 / Key", "路由 / Router", "分片 A / Shard A", "分片 B / Shard B"]
 source: "https://www.hellointerview.com/learn/system-design/core-concepts/sharding"
-source_hash: "4432160565662419b033586d11244c2ff6ec9e4a7e1f6d8b32cb88ecf7996186"
+source_hash: "ce0602e2e7e431230aae65e730e7cb30b97cb01b7331e69f4c2591a798f7f877"
 ---
 
 # Sharding

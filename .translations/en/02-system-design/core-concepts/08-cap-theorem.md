@@ -6,9 +6,10 @@ date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
+diagram_layout: "branch"
 diagram: ["网络分区 / Partition", "业务不变量 / Invariant", "拒绝或等待 / Reject", "陈旧响应 / Stale"]
 source: "https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem"
-source_hash: "159da8c49725a950abf684a0acb5fb505ec11ba49861de78b3d6a9560ceebd5d"
+source_hash: "a311788c4e1e87dd2a1e026abfd508e5b2adc61a63ee95df7a742ee4d4b03122"
 ---
 
 # CAP & Consistency Trade-offs

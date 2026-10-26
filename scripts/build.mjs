@@ -37,6 +37,7 @@ for (const m of modules) {
 
 const processor = await createMarkdownProcessor({ syntaxHighlight: false });
 const notes = [];
+const linkedAssets = new Set();
 const errors = [];
 for (const p of sourceFiles()) {
   const rel = path.relative(ROOT, p).split(path.sep).join('/');
@@ -48,11 +49,15 @@ for (const p of sourceFiles()) {
     const labels = fm.diagram;
     const width = labels.length * 280;
     const boxW = 240;
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="192" viewBox="0 0 ${width} 192" role="img" aria-labelledby="title"><title id="title">${esc(fm.title)} / ${esc(fm.title_en)}</title><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#b5231a" stroke-width="2"/></marker></defs><rect width="${width}" height="192" fill="#f2efe8"/>${labels.map((label,i) => {
+    let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="192" viewBox="0 0 ${width} 192" role="img" aria-labelledby="title"><title id="title">${esc(fm.title)} / ${esc(fm.title_en)}</title><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#b5231a" stroke-width="2"/></marker></defs><rect width="${width}" height="192" fill="#f2efe8"/>${labels.map((label,i) => {
       const x=24+i*280;
       const parts=label.split(' / ');
       return `<rect x="${x}" y="48" width="${boxW}" height="96" rx="8" fill="white" stroke="#202020" stroke-width="2"/><text x="${x+boxW/2}" y="88" text-anchor="middle" fill="#171717" font-size="19" font-family="system-ui,sans-serif">${esc(parts[0])}</text><text x="${x+boxW/2}" y="117" text-anchor="middle" fill="#57534e" font-size="16" font-family="system-ui,sans-serif">${esc(parts[1] || '')}</text>${i<labels.length-1 ? `<path d="M${x+boxW+5} 96 H${x+275}" stroke="#b5231a" stroke-width="2" marker-end="url(#arrow)"/>` : ''}`;
     }).join('')}</svg>\n`;
+    if (fm.diagram_layout === 'branch') {
+      const positions=[[24,104],[304,104],[654,24],[654,184]];
+      svg=`<svg xmlns="http://www.w3.org/2000/svg" width="960" height="312" viewBox="0 0 960 312" role="img" aria-labelledby="title"><title id="title">${esc(fm.title)} / ${esc(fm.title_en)}</title><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#b5231a" stroke-width="2"/></marker></defs><rect width="960" height="312" fill="#f2efe8"/><path d="M269 152 H299 M549 152 H600 V72 H649 M600 152 V232 H649" fill="none" stroke="#b5231a" stroke-width="2" marker-end="url(#arrow)"/>${labels.map((label,i)=>{const [x,y]=positions[i];const parts=label.split(' / ');return `<rect x="${x}" y="${y}" width="240" height="96" rx="8" fill="white" stroke="#202020" stroke-width="2"/><text x="${x+120}" y="${y+40}" text-anchor="middle" fill="#171717" font-size="19" font-family="system-ui,sans-serif">${esc(parts[0])}</text><text x="${x+120}" y="${y+69}" text-anchor="middle" fill="#57534e" font-size="16" font-family="system-ui,sans-serif">${esc(parts[1]||'')}</text>`}).join('')}</svg>\n`;
+    }
     write(path.join(ROOT, 'assets', path.basename(rel, '.md')+'.svg'), svg);
   }
   for (const lang of ['zh','en']) {
@@ -75,6 +80,7 @@ for (const p of sourceFiles()) {
       if (resolved.startsWith('.translations/en/')) resolved=resolved.slice('.translations/en/'.length);
       if (!fs.existsSync(path.join(ROOT,resolved))) errors.push(`Broken link ${rel}: ${target}`);
       if (resolved.endsWith('.md')) return `](@@NOTE:${resolved.replace(/\.md$/,'')}@@)`;
+      linkedAssets.add(resolved);
       return `](@@ASSET:${resolved}@@)`;
     });
     let html=(await processor.render(content)).code;
@@ -98,11 +104,13 @@ for (const lang of ['zh','en']) {
  write(path.join(ROOT,`downloads/interview-atlas-${lang}.html`),`<!doctype html><html lang="${lang==='zh'?'zh-CN':'en'}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>${css}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>${title}</h1><p>${lang==='zh'?'六个模块 · 中文笔记与英文术语 · 可离线阅读':'Six modules · bilingual notes · available offline'}</p><a href="interview-atlas-${lang==='zh'?'en':'zh'}.html">${lang==='zh'?'English':'中文'}</a> · <a href="system-design-map.html">${lang==='zh'?'交互总览':'Interactive overview (Chinese)'}</a></header><main><nav aria-label="${lang==='zh'?'目录':'Contents'}">${toc}</nav><section>${articles}</section></main></html>`);
 }
 fs.copyFileSync(path.join(ROOT,'assets/system-design-map.html'),path.join(ROOT,'downloads/system-design-map.html'));
-write(path.join(ROOT,'catalog.json'),JSON.stringify({modules,notes:notes.map(n=>({...n,html:targetLink(n.html,n.lang,false)}))},null,2)+'\n');
+write(path.join(ROOT,'catalog.json'),JSON.stringify({modules,assets:[...linkedAssets].sort(),notes:notes.map(n=>({...n,html:targetLink(n.html,n.lang,false)}))},null,2)+'\n');
 if (SITE) {
  const pub=path.join(SITE,'public/interview-notes');
+ fs.rmSync(pub,{recursive:true,force:true});
  fs.mkdirSync(pub,{recursive:true});
  fs.cpSync(path.join(ROOT,'assets'),path.join(pub,'assets'),{recursive:true});
+ for(const asset of linkedAssets) {const dest=path.join(pub,asset);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(ROOT,asset),dest);}
  fs.cpSync(path.join(ROOT,'downloads'),path.join(pub,'downloads'),{recursive:true});
  fs.copyFileSync(path.join(ROOT,'catalog.json'),path.join(SITE,'src/data/interview-catalog.json'));
  const snapshot=path.join(pub,'source');

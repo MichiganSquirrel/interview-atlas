@@ -43,6 +43,18 @@
       "description_en": "Explain personal contributions, key decisions, outcomes, and lessons with real evidence."
     }
   ],
+  "assets": [
+    "assets/01-networking.svg",
+    "assets/02-api-design.svg",
+    "assets/03-data-modeling.svg",
+    "assets/04-database-indexing.svg",
+    "assets/05-caching.svg",
+    "assets/06-sharding.svg",
+    "assets/07-consistent-hashing.svg",
+    "assets/08-cap-theorem.svg",
+    "assets/09-capacity-estimation.svg",
+    "assets/system-design-map.html"
+  ],
   "notes": [
     {
       "id": "01-algorithms/README",
