@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01-algorithms",
+    "title": "算法与解题模式",
+    "title_en": "Algorithms & Problem Solving",
+    "description": "把题目归纳为可识别的模式，训练正确性、复杂度分析和限时表达。",
+    "description_en": "Recognize reusable patterns and practice correctness, complexity analysis, and timed explanation."
+  },
+  {
+    "id": "02-system-design",
+    "title": "系统设计与架构权衡",
+    "title_en": "System Design & Architecture Trade-offs",
+    "description": "从需求与数据流出发，解释组件选择、规模边界和故障行为。",
+    "description_en": "Start from requirements and data flow, then justify components, scale limits, and failure behavior."
+  },
+  {
+    "id": "03-ai-engineering",
+    "title": "AI 辅助工程实战",
+    "title_en": "AI-assisted Software Engineering",
+    "description": "用 AI 完成可验证的工程交付，练习上下文、调试、评审与验收。",
+    "description_en": "Deliver verifiable software with AI through context preparation, debugging, review, and acceptance checks."
+  },
+  {
+    "id": "04-rl-systems",
+    "title": "强化学习与训练系统",
+    "title_en": "Reinforcement Learning & Training Systems",
+    "description": "连接算法目标、数据流与训练基础设施，定位吞吐、稳定性和评估问题。",
+    "description_en": "Connect learning objectives, data flow, and training infrastructure to reason about throughput, stability, and evaluation."
+  },
+  {
+    "id": "05-company-research",
+    "title": "公司与岗位研究",
+    "title_en": "Company & Role Research",
+    "description": "把公开证据整理为岗位匹配、技术判断和高质量反问。",
+    "description_en": "Turn public evidence into role alignment, technical judgment, and useful interview questions."
+  },
+  {
+    "id": "06-project-deep-dives",
+    "title": "项目复盘与技术深挖",
+    "title_en": "Project Deep Dives",
+    "description": "用真实证据解释个人贡献、关键决策、结果与失败后的改进。",
+    "description_en": "Explain personal contributions, key decisions, outcomes, and lessons with real evidence."
+  }
+]

@@ -1,0 +1,468 @@
+{
+  "modules": [
+    {
+      "id": "01-algorithms",
+      "title": "算法与解题模式",
+      "title_en": "Algorithms & Problem Solving",
+      "description": "把题目归纳为可识别的模式，训练正确性、复杂度分析和限时表达。",
+      "description_en": "Recognize reusable patterns and practice correctness, complexity analysis, and timed explanation."
+    },
+    {
+      "id": "02-system-design",
+      "title": "系统设计与架构权衡",
+      "title_en": "System Design & Architecture Trade-offs",
+      "description": "从需求与数据流出发，解释组件选择、规模边界和故障行为。",
+      "description_en": "Start from requirements and data flow, then justify components, scale limits, and failure behavior."
+    },
+    {
+      "id": "03-ai-engineering",
+      "title": "AI 辅助工程实战",
+      "title_en": "AI-assisted Software Engineering",
+      "description": "用 AI 完成可验证的工程交付，练习上下文、调试、评审与验收。",
+      "description_en": "Deliver verifiable software with AI through context preparation, debugging, review, and acceptance checks."
+    },
+    {
+      "id": "04-rl-systems",
+      "title": "强化学习与训练系统",
+      "title_en": "Reinforcement Learning & Training Systems",
+      "description": "连接算法目标、数据流与训练基础设施，定位吞吐、稳定性和评估问题。",
+      "description_en": "Connect learning objectives, data flow, and training infrastructure to reason about throughput, stability, and evaluation."
+    },
+    {
+      "id": "05-company-research",
+      "title": "公司与岗位研究",
+      "title_en": "Company & Role Research",
+      "description": "把公开证据整理为岗位匹配、技术判断和高质量反问。",
+      "description_en": "Turn public evidence into role alignment, technical judgment, and useful interview questions."
+    },
+    {
+      "id": "06-project-deep-dives",
+      "title": "项目复盘与技术深挖",
+      "title_en": "Project Deep Dives",
+      "description": "用真实证据解释个人贡献、关键决策、结果与失败后的改进。",
+      "description_en": "Explain personal contributions, key decisions, outcomes, and lessons with real evidence."
+    }
+  ],
+  "notes": [
+    {
+      "id": "01-algorithms/README",
+      "path": "01-algorithms/README.md",
+      "module": "01-algorithms",
+      "lang": "zh",
+      "title": "算法与解题模式",
+      "description": "算法与解题模式",
+      "html": "<h1 id=\"算法与解题模式\">算法与解题模式</h1>\n<p>把题目归纳为可识别的模式，训练正确性、复杂度分析和限时表达。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/01-algorithms/practice-log/\">解题训练与错题复盘</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "01-algorithms/README",
+      "path": "01-algorithms/README.md",
+      "module": "01-algorithms",
+      "lang": "en",
+      "title": "Algorithms & Problem Solving",
+      "description": "Algorithms & Problem Solving",
+      "html": "<h1 id=\"algorithms--problem-solving\">Algorithms &#x26; Problem Solving</h1>\n<p>Recognize reusable patterns and practice correctness, complexity analysis, and timed explanation.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/01-algorithms/practice-log/\">Problem-solving Practice Log</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "01-algorithms/practice-log",
+      "path": "01-algorithms/practice-log.md",
+      "module": "01-algorithms",
+      "lang": "zh",
+      "title": "解题训练与错题复盘",
+      "description": "解题训练与错题复盘",
+      "html": "<h1 id=\"解题训练与错题复盘\">解题训练与错题复盘</h1>\n<h2 id=\"模式地图\">模式地图</h2>\n<p>数组与哈希（Array / Hashing）、双指针（Two Pointers）、滑动窗口（Sliding Window）、二分查找（Binary Search）、树与图（Tree / Graph）、堆（Heap）、回溯（Backtracking）、动态规划（Dynamic Programming）。</p>\n<h2 id=\"每题记录\">每题记录</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>日期</th><th>题目链接</th><th>模式</th><th>首次思路</th><th>卡点</th><th>复杂度</th><th>下次复习</th></tr></thead></table>\n<h2 id=\"脱稿表达\">脱稿表达</h2>\n<ol>\n<li>明确输入约束与边界情况。</li>\n<li>给出基线解法，再解释改进依据。</li>\n<li>说明不变量（Invariant）与正确性。</li>\n<li>编码后手动覆盖空输入、重复值、极端规模。</li>\n<li>记录错误成因，下一次从空白重新完成。</li>\n</ol>\n<p><a href=\"/cn/interview/01-algorithms/README/\">模块导航</a></p>",
+      "source": null
+    },
+    {
+      "id": "01-algorithms/practice-log",
+      "path": "01-algorithms/practice-log.md",
+      "module": "01-algorithms",
+      "lang": "en",
+      "title": "Problem-solving Practice Log",
+      "description": "Problem-solving Practice Log",
+      "html": "<h1 id=\"problem-solving-practice-log\">Problem-solving Practice Log</h1>\n<h2 id=\"pattern-map\">Pattern map</h2>\n<p>Arrays and hashing, two pointers, sliding windows, binary search, trees and graphs, heaps, backtracking, and dynamic programming.</p>\n<h2 id=\"per-problem-log\">Per-problem log</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Date</th><th>Problem URL</th><th>Pattern</th><th>Initial idea</th><th>Sticking point</th><th>Complexity</th><th>Next review</th></tr></thead></table>\n<h2 id=\"explain-without-notes\">Explain without notes</h2>\n<ol>\n<li>Clarify constraints and edge cases.</li>\n<li>Establish a baseline and justify improvements.</li>\n<li>Explain the invariant and correctness.</li>\n<li>Check empty inputs, duplicates, and large cases.</li>\n<li>Record the cause of mistakes; solve from scratch next time.</li>\n</ol>\n<p><a href=\"/interview/01-algorithms/README/\">Module index</a></p>",
+      "source": null
+    },
+    {
+      "id": "02-system-design/README",
+      "path": "02-system-design/README.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "系统设计与架构权衡",
+      "description": "系统设计与架构权衡",
+      "html": "<h1 id=\"系统设计与架构权衡\">系统设计与架构权衡</h1>\n<p>从需求与数据流出发，解释组件选择、规模边界和故障行为。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/01-networking/\">网络基础</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/02-api-design/\">API 设计</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/03-data-modeling/\">数据建模</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/04-database-indexing/\">数据库索引</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/05-caching/\">缓存策略与失效</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/06-sharding/\">数据分片</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/07-consistent-hashing/\">一致性哈希</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/08-cap-theorem/\">CAP 与一致性取舍</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/09-capacity-estimation/\">容量估算与数量级</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 全章导航</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "02-system-design/README",
+      "path": "02-system-design/README.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "System Design & Architecture Trade-offs",
+      "description": "System Design & Architecture Trade-offs",
+      "html": "<h1 id=\"system-design--architecture-trade-offs\">System Design &#x26; Architecture Trade-offs</h1>\n<p>Start from requirements and data flow, then justify components, scale limits, and failure behavior.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/02-system-design/core-concepts/01-networking/\">Networking Essentials</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/02-api-design/\">API Design</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/03-data-modeling/\">Data Modeling</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/04-database-indexing/\">Database Indexing</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/05-caching/\">Caching &#x26; Invalidation</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/06-sharding/\">Sharding</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/07-consistent-hashing/\">Consistent Hashing</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/08-cap-theorem/\">CAP &#x26; Consistency Trade-offs</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/09-capacity-estimation/\">Capacity Estimation &#x26; Orders of Magnitude</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts: Complete Topic Index</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "02-system-design/core-concepts/01-networking",
+      "path": "02-system-design/core-concepts/01-networking.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "网络基础",
+      "description": "网络基础",
+      "html": "<h1 id=\"网络基础\">网络基础</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/01-networking.svg\" alt=\"网络基础示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>域名系统（DNS）负责查址；TCP 提供有序、可靠的字节流；TLS 保护连接；HTTP 定义请求与响应。HTTP/3 基于 QUIC/UDP，不应把所有 HTTP 都说成 TCP。</p>\n<p>负载均衡（Load Balancing）把流量分散到实例。四层（L4）依据连接信息，七层（L7）可依据 HTTP 路径或头部。长连接需要考虑连接数、保活与重连。</p>\n<h2 id=\"面试推演训练任务进度\">面试推演：训练任务进度</h2>\n<p>提交训练任务走 HTTP 请求；服务端单向推送进度可用服务器发送事件（SSE）；双向交互再考虑 WebSocket。先定义延迟和连接规模，再选协议。</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>追问</th><th>回答抓手</th></tr></thead><tbody><tr><td>连接成功代表业务成功吗？</td><td>TCP 成功不代表事务已提交，应用层要有确认和幂等。</td></tr><tr><td>为什么要超时？</td><td>限制等待时间，配合有限重试、退避（Backoff）和抖动（Jitter）。</td></tr><tr><td>网络调用真的很慢吗？</td><td>看跨区域距离、序列化、连接复用和尾延迟（Tail Latency）。</td></tr></tbody></table>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 画出浏览器到服务的路径，并说明每一层失败时用户看到什么。</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 解释 L7 路由与 L4 转发的差别。</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/networking-essentials\">Hello Interview · Networking Essentials</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/networking-essentials"
+    },
+    {
+      "id": "02-system-design/core-concepts/01-networking",
+      "path": "02-system-design/core-concepts/01-networking.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Networking Essentials",
+      "description": "Networking Essentials",
+      "html": "<h1 id=\"networking-essentials\">Networking Essentials</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/01-networking.svg\" alt=\"网络基础示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>DNS resolves names; TCP offers an ordered, reliable byte stream; TLS protects the connection; HTTP defines requests and responses. HTTP/3 uses QUIC over UDP, so HTTP does not always imply TCP.</p>\n<p>Load balancing distributes traffic across instances. L4 uses connection metadata, while L7 can route by HTTP paths and headers. Persistent connections require connection limits, keepalives, and reconnect behavior.</p>\n<h2 id=\"practice-training-job-progress\">Practice: training-job progress</h2>\n<p>Submit jobs over HTTP. Consider Server-Sent Events (SSE) for one-way progress updates and WebSocket for bidirectional interaction. Establish latency and connection targets before selecting a protocol.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Follow-up</th><th>Reasoning</th></tr></thead><tbody><tr><td>Does a successful connection prove success?</td><td>TCP delivery does not prove a committed transaction; use application acknowledgments and idempotency.</td></tr><tr><td>Why set timeouts?</td><td>Bound waiting and combine limited retries with backoff and jitter.</td></tr><tr><td>Are network calls always slow?</td><td>Check distance, serialization, connection reuse, and tail latency.</td></tr></tbody></table>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Trace a browser request and explain the user-visible effect of each failure.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Explain L4 forwarding versus L7 routing.</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/networking-essentials\">Hello Interview · Networking Essentials</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/networking-essentials"
+    },
+    {
+      "id": "02-system-design/core-concepts/02-api-design",
+      "path": "02-system-design/core-concepts/02-api-design.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "API 设计",
+      "description": "API 设计",
+      "html": "<h1 id=\"api-设计\">API 设计</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/02-api-design.svg\" alt=\"API 设计示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>先确认资源（Resource）和访问方式，再选协议。REST 适合常见资源操作；GraphQL 适合客户端按需选择字段；gRPC 适合有明确契约的服务间调用。</p>\n<p>幂等性（Idempotency）指重复执行后的业务状态一致，不要求每次返回相同状态码。PUT 和 DELETE 具备幂等语义；POST 可以通过幂等键获得业务幂等；PATCH 取决于操作内容。</p>\n<h2 id=\"面试推演提交训练任务\">面试推演：提交训练任务</h2>\n<pre><code class=\"language-http\">POST /training-jobs\nIdempotency-Key: client-generated-key\n\n{\"dataset_id\":\"ds-42\",\"config_version\":\"v3\"}\n</code></pre>\n<p>返回 <code>202 Accepted</code>、任务标识与状态查询位置；<code>GET /training-jobs/{id}</code> 查询进度。幂等键必须绑定调用者和请求摘要，避免同键不同请求。鉴权（Authorization）依据服务端身份，不能信任请求体里的用户编号。</p>\n<p>列表用游标分页（Cursor Pagination）；排序字段加唯一标识，避免时间相同导致翻页不稳定。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 请求已提交但客户端超时，重试如何避免创建两个任务？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 说明 400、401、403、404、409、429 的适用情况。</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 分页期间新增数据时，偏移分页（Offset Pagination）可能怎样漏读或重读？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/api-design\">Hello Interview · API Design</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/api-design"
+    },
+    {
+      "id": "02-system-design/core-concepts/02-api-design",
+      "path": "02-system-design/core-concepts/02-api-design.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "API Design",
+      "description": "API Design",
+      "html": "<h1 id=\"api-design\">API Design</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/02-api-design.svg\" alt=\"API 设计示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Identify resources and access patterns before selecting a protocol. REST fits ordinary resource operations, GraphQL lets clients select fields, and gRPC suits service calls with explicit contracts.</p>\n<p>Idempotency means repeated execution leaves the same business state; response codes need not match. PUT and DELETE have idempotent semantics. POST can implement business idempotency with a key; PATCH depends on the operation.</p>\n<h2 id=\"practice-submit-a-training-job\">Practice: submit a training job</h2>\n<pre><code class=\"language-http\">POST /training-jobs\nIdempotency-Key: client-generated-key\n\n{\"dataset_id\":\"ds-42\",\"config_version\":\"v3\"}\n</code></pre>\n<p>Return <code>202 Accepted</code>, a job identifier, and a status location. Use <code>GET /training-jobs/{id}</code> for progress. Bind each idempotency key to the caller and request digest to detect incompatible reuse. Authorize using server-verified identity, rather than a client-provided user ID.</p>\n<p>Use cursor pagination for lists. Include a unique identifier in the ordering to break timestamp ties.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> A request commits but the client times out. How does retry avoid creating a second job?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Explain when to return 400, 401, 403, 404, 409, and 429.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How can concurrent inserts cause skips or duplicates with offset pagination?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/api-design\">Hello Interview · API Design</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/api-design"
+    },
+    {
+      "id": "02-system-design/core-concepts/03-data-modeling",
+      "path": "02-system-design/core-concepts/03-data-modeling.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "数据建模",
+      "description": "数据建模",
+      "html": "<h1 id=\"数据建模\">数据建模</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/03-data-modeling.svg\" alt=\"数据建模示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>从查询与不变量（Invariant）反推实体、主键（Primary Key）、关系和约束。关系型数据库（Relational Database）是常见起点；选文档、键值或图模型时，需要说明具体访问模式。</p>\n<p>规范化（Normalization）减少重复与更新异常；反规范化（Denormalization）用重复数据换取读取效率，同时引入更新与修复成本。事务的 ACID 不能替代对隔离级别（Isolation Level）的说明。</p>\n<h2 id=\"面试推演实验任务与检查点\">面试推演：实验、任务与检查点</h2>\n<pre><code class=\"language-sql\">experiments(id PRIMARY KEY, owner_id, config_version)\njobs(id PRIMARY KEY, experiment_id, state, attempt)\ncheckpoints(id PRIMARY KEY, job_id, object_key, step)\n</code></pre>\n<p>模型权重放对象存储（Object Storage），表里保存位置、版本与校验信息。任务尝试编号区分重试；状态转换采用条件更新，防止旧工作进程覆盖新尝试。检查点是否可用，以完整写入和元数据提交为界。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 如何查询某个实验最新的成功检查点？该建什么索引？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 删除任务后，如何清理对象存储中的孤立文件？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 把所有运行历史嵌进单个文档，会遇到哪些增长和并发问题？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/data-modeling\">Hello Interview · Data Modeling</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/data-modeling"
+    },
+    {
+      "id": "02-system-design/core-concepts/03-data-modeling",
+      "path": "02-system-design/core-concepts/03-data-modeling.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Data Modeling",
+      "description": "Data Modeling",
+      "html": "<h1 id=\"data-modeling\">Data Modeling</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/03-data-modeling.svg\" alt=\"数据建模示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Work backward from queries and invariants to entities, primary keys, relationships, and constraints. A relational database is a common starting point. Justify document, key-value, or graph models with specific access patterns.</p>\n<p>Normalization reduces duplication and update anomalies. Denormalization improves reads through duplication but adds update and repair costs. ACID transactions do not remove the need to choose an isolation level.</p>\n<h2 id=\"practice-experiments-jobs-and-checkpoints\">Practice: experiments, jobs, and checkpoints</h2>\n<pre><code class=\"language-sql\">experiments(id PRIMARY KEY, owner_id, config_version)\njobs(id PRIMARY KEY, experiment_id, state, attempt)\ncheckpoints(id PRIMARY KEY, job_id, object_key, step)\n</code></pre>\n<p>Keep model weights in object storage; store locations, versions, and checksums in tables. Attempt numbers distinguish retries. Use conditional state transitions so an old worker cannot overwrite a newer attempt. A checkpoint becomes usable only after its payload is complete and its metadata is committed.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How would you query an experiment’s latest successful checkpoint, and which index supports it?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How would you remove orphaned objects after deleting a job?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> What growth and concurrency problems arise when all history is embedded in one document?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/data-modeling\">Hello Interview · Data Modeling</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/data-modeling"
+    },
+    {
+      "id": "02-system-design/core-concepts/04-database-indexing",
+      "path": "02-system-design/core-concepts/04-database-indexing.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "数据库索引",
+      "description": "数据库索引",
+      "html": "<h1 id=\"数据库索引\">数据库索引</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/04-database-indexing.svg\" alt=\"数据库索引示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>索引（Index）减少定位记录时读取的数据页。B-tree 适合等值、范围和排序；哈希索引（Hash Index）侧重等值；倒排索引（Inverted Index）适合词项检索；空间索引（Spatial Index）支持位置查询。LSM 结构以写入、合并与读取成本作权衡。</p>\n<p>索引会消耗空间并增加写入维护开销。复合索引（Composite Index）的列序要匹配过滤与排序；覆盖索引（Covering Index）是否避免访问表数据还取决于数据库的可见性等条件。</p>\n<h2 id=\"面试推演读取某实验最近的任务\">面试推演：读取某实验最近的任务</h2>\n<pre><code class=\"language-sql\">CREATE INDEX jobs_experiment_recent\nON jobs (experiment_id, created_at DESC, id DESC);\n\nSELECT id, state, created_at FROM jobs\nWHERE experiment_id = 42\nORDER BY created_at DESC, id DESC LIMIT 20;\n</code></pre>\n<p>这个索引优先定位实验，再沿时间顺序读取。改成仅按 <code>state</code> 查询，效果可能不同。用执行计划（EXPLAIN）验证扫描行数、排序和实际耗时；低选择性（Selectivity）查询未必适合索引。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 为什么不能给每一列都加索引？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> <code>(a,b)</code> 为什么不等同于 <code>(b,a)</code>？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 写入吞吐、读取延迟、空间放大之间怎么取舍？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/db-indexing\">Hello Interview · Database Indexing</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/db-indexing"
+    },
+    {
+      "id": "02-system-design/core-concepts/04-database-indexing",
+      "path": "02-system-design/core-concepts/04-database-indexing.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Database Indexing",
+      "description": "Database Indexing",
+      "html": "<h1 id=\"database-indexing\">Database Indexing</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/04-database-indexing.svg\" alt=\"数据库索引示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Indexes reduce the pages read to locate records. B-trees support equality, ranges, and ordering; hash indexes focus on equality; inverted indexes support term search; spatial indexes support location queries. LSM structures trade write, merge, and read costs.</p>\n<p>Indexes consume storage and add write maintenance. Composite column order should match filters and ordering. Whether a covering index avoids table access also depends on database-specific visibility conditions.</p>\n<h2 id=\"practice-recent-jobs-for-an-experiment\">Practice: recent jobs for an experiment</h2>\n<pre><code class=\"language-sql\">CREATE INDEX jobs_experiment_recent\nON jobs (experiment_id, created_at DESC, id DESC);\n\nSELECT id, state, created_at FROM jobs\nWHERE experiment_id = 42\nORDER BY created_at DESC, id DESC LIMIT 20;\n</code></pre>\n<p>The index locates one experiment and scans in time order. A query filtering only by <code>state</code> may behave differently. Verify scanned rows, sorts, and actual runtime with EXPLAIN. Low-selectivity queries may favor a sequential scan.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Why avoid indexing every column?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Why is <code>(a,b)</code> different from <code>(b,a)</code>?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Explain trade-offs among write throughput, read latency, and space amplification.</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/db-indexing\">Hello Interview · Database Indexing</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/db-indexing"
+    },
+    {
+      "id": "02-system-design/core-concepts/05-caching",
+      "path": "02-system-design/core-concepts/05-caching.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "缓存策略与失效",
+      "description": "缓存策略与失效",
+      "html": "<h1 id=\"缓存策略与失效\">缓存策略与失效</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/05-caching.svg\" alt=\"缓存策略与失效示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>缓存（Cache）用空间和一致性复杂度换取读延迟与后端负载改善。可放在客户端、CDN、应用进程或共享缓存层。旁路缓存（Cache-aside）先读缓存，未命中再读数据库并回填。</p>\n<p>生存时间（TTL）限制驻留时间，但不自动保证业务允许的最大陈旧度。淘汰（Eviction）与过期（Expiration）不同。写穿（Write-through）、写回（Write-back）和失效策略具有不同持久性风险。</p>\n<h2 id=\"面试推演任务状态读取\">面试推演：任务状态读取</h2>\n<p>训练任务终态很少变化，适合缓存；活跃状态应依据进度新鲜度要求设置刷新策略。键加入尝试编号或版本，避免旧工作进程回填过期值。</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>故障</th><th>处理方向</th></tr></thead><tbody><tr><td>热点同时过期（Stampede）</td><td>单次回源（Single-flight）、过期时间抖动。</td></tr><tr><td>不存在的键持续穿透</td><td>短时负缓存（Negative Caching），必要时加布隆过滤器。</td></tr><tr><td>缓存整体不可用</td><td>限流、降级与回源并发上限，保护数据库。</td></tr></tbody></table>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 数据库更新成功，但缓存删除失败怎么办？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 读到旧值后回填，能否覆盖刚写入的新值？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 命中率很高时，为什么 p99 仍可能很差？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/caching\">Hello Interview · Caching &#x26; Invalidation</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/caching"
+    },
+    {
+      "id": "02-system-design/core-concepts/05-caching",
+      "path": "02-system-design/core-concepts/05-caching.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Caching & Invalidation",
+      "description": "Caching & Invalidation",
+      "html": "<h1 id=\"caching--invalidation\">Caching &#x26; Invalidation</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/05-caching.svg\" alt=\"缓存策略与失效示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Caching exchanges storage and consistency complexity for better read latency and lower backend load. Caches can live in clients, CDNs, application processes, or shared services. Cache-aside reads the cache first, loads misses from the database, and fills the cache.</p>\n<p>TTL limits residence time but does not independently guarantee an acceptable freshness bound. Eviction differs from expiration. Write-through, write-back, and invalidation strategies have different durability risks.</p>\n<h2 id=\"practice-reading-training-job-status\">Practice: reading training-job status</h2>\n<p>Terminal job states change rarely and are good cache candidates. Refresh active states according to freshness requirements. Include attempt or version identifiers in keys to avoid stale workers repopulating old values.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Failure</th><th>Response</th></tr></thead><tbody><tr><td>Hot entries expire together</td><td>Single-flight fetching and expiration jitter.</td></tr><tr><td>Repeated nonexistent keys</td><td>Short-lived negative caching; consider a Bloom filter when appropriate.</td></tr><tr><td>Cache outage</td><td>Rate limits, degradation, and bounded origin concurrency to protect the database.</td></tr></tbody></table>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> What if a database update succeeds but invalidation fails?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Can a stale reader overwrite a newly cached value?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Why can p99 remain poor despite a high hit rate?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/caching\">Hello Interview · Caching &#x26; Invalidation</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/caching"
+    },
+    {
+      "id": "02-system-design/core-concepts/06-sharding",
+      "path": "02-system-design/core-concepts/06-sharding.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "数据分片",
+      "description": "数据分片",
+      "html": "<h1 id=\"数据分片\">数据分片</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/06-sharding.svg\" alt=\"数据分片示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>分片（Sharding）把数据分散到多台机器；单实例分区（Partitioning）通常仍在同一个数据库实例内。复制（Replication）保存副本，不能直接替代写入分片。</p>\n<p>先用测量判断瓶颈能否由索引、查询优化、纵向扩容或读副本解决。分片键（Shard Key）必须兼顾流量分布、数据局部性与热点；哈希、范围、目录路由各有维护成本。</p>\n<h2 id=\"面试推演训练日志\">面试推演：训练日志</h2>\n<p>以 <code>experiment_id</code> 分片可聚合实验查询，但超大实验会成为热分片（Hot Shard）。加入时间桶或子分片可以分散写入，同时增加读取扇出（Fan-out）。全局搜索可能需要单独的检索索引。</p>\n<p>扩容要说明：存量迁移、增量复制或双写、路由切换、校验与回滚。跨分片事务（Cross-shard Transaction）和全局排序的成本也必须计入。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 单个用户占一半写流量时，哈希用户编号能解决吗？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 跨分片取最近 20 条记录怎么合并？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 路由版本不一致时，如何避免漏读和重复写？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/sharding\">Hello Interview · Sharding</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/sharding"
+    },
+    {
+      "id": "02-system-design/core-concepts/06-sharding",
+      "path": "02-system-design/core-concepts/06-sharding.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Sharding",
+      "description": "Sharding",
+      "html": "<h1 id=\"sharding\">Sharding</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/06-sharding.svg\" alt=\"数据分片示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Sharding distributes data across machines. Partitioning often divides tables inside one database instance. Replication keeps copies and does not by itself distribute primary writes.</p>\n<p>Measure whether indexing, query optimization, vertical scaling, or read replicas can solve the bottleneck first. A shard key must balance traffic distribution, locality, and hotspots. Hash, range, and directory routing have different maintenance costs.</p>\n<h2 id=\"practice-training-logs\">Practice: training logs</h2>\n<p>Sharding by <code>experiment_id</code> keeps experiment queries local, but a huge experiment can create a hot shard. Time buckets or subshards spread writes while increasing read fan-out. Global search may need a separate search index.</p>\n<p>Explain expansion through historical migration, incremental replication or dual writes, routing cutover, validation, and rollback. Include cross-shard transactions and global ordering in the cost.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> If one user generates half of all writes, does hashing the user ID help?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How do you merge the latest 20 records from several shards?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How do routing-version mismatches cause missed reads or duplicate writes?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/sharding\">Hello Interview · Sharding</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/sharding"
+    },
+    {
+      "id": "02-system-design/core-concepts/07-consistent-hashing",
+      "path": "02-system-design/core-concepts/07-consistent-hashing.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "一致性哈希",
+      "description": "一致性哈希",
+      "html": "<h1 id=\"一致性哈希\">一致性哈希</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/07-consistent-hashing.svg\" alt=\"一致性哈希示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>直接使用 <code>hash(key) % N</code>，节点数量变化会重映射大量键。一致性哈希（Consistent Hashing）把键与节点映射到同一哈希环（Hash Ring），常见实现选择顺时针的后继节点。</p>\n<p>虚拟节点（Virtual Node）让单机占据多个环位置，改善分布并表达容量权重。理想均匀分布下，从 N 个节点增加一个节点大约迁移 <code>1/(N+1)</code> 的键；这不是任意工作负载下的严格保证。</p>\n<h2 id=\"面试推演模型元数据缓存\">面试推演：模型元数据缓存</h2>\n<p>节点加入后，只迁移它新接管的区间。缓存可以按新路由重建；持久化数据库还要处理数据搬迁、请求路由版本、迁移期间读写与副本恢复。</p>\n<p>一致性哈希不保证副本数据一致，也不会自动解决单个超热键。热点需要拆分、复制读取或业务级限流。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 在纸上画三个节点的环，再加入第四个节点，标出迁移区间。</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 虚拟节点增加后，路由元数据和运维成本怎样变化？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 节点宕机与主动扩容的处理有哪些不同？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing\">Hello Interview · Consistent Hashing</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing"
+    },
+    {
+      "id": "02-system-design/core-concepts/07-consistent-hashing",
+      "path": "02-system-design/core-concepts/07-consistent-hashing.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Consistent Hashing",
+      "description": "Consistent Hashing",
+      "html": "<h1 id=\"consistent-hashing\">Consistent Hashing</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/07-consistent-hashing.svg\" alt=\"一致性哈希示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>With <code>hash(key) % N</code>, changing the node count remaps many keys. Consistent hashing maps keys and nodes onto a hash ring; a common implementation assigns each key to its clockwise successor.</p>\n<p>Virtual nodes give each machine multiple ring positions, improving distribution and representing capacity weights. Under ideal uniform distribution, adding one node to N nodes moves roughly <code>1/(N+1)</code> of keys; this is not an unconditional workload guarantee.</p>\n<h2 id=\"practice-model-metadata-cache\">Practice: model-metadata cache</h2>\n<p>A new node takes responsibility for its new ring intervals. A cache can rebuild entries under the new routing. Durable databases also need data migration, routing versions, reads and writes during migration, and replica recovery.</p>\n<p>Consistent hashing does not guarantee replica consistency or solve a single hot key. Address hotspots through splitting, replicated reads, or application rate limits.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Draw a three-node ring, add a fourth node, and mark moved intervals.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How do virtual nodes affect routing metadata and operations?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> How does failure recovery differ from planned expansion?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing\">Hello Interview · Consistent Hashing</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing"
+    },
+    {
+      "id": "02-system-design/core-concepts/08-cap-theorem",
+      "path": "02-system-design/core-concepts/08-cap-theorem.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "CAP 与一致性取舍",
+      "description": "CAP 与一致性取舍",
+      "html": "<h1 id=\"cap-与一致性取舍\">CAP 与一致性取舍</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/08-cap-theorem.svg\" alt=\"CAP 与一致性取舍示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>CAP 讨论网络分区（Network Partition）发生时，一致性（Consistency）与可用性（Availability）的取舍。这里的一致性指线性一致性（Linearizability），不是 ACID 的一致性；可用性指非故障节点收到的请求最终得到响应，并非业务可用率指标。</p>\n<p>不能把 CAP 理解为任何时候任意选两个。分区时，一侧可能拒绝或等待请求以维护一致性；继续服务则可能失去单一的全局实时视图。PACELC 还提醒我们，正常网络下也存在延迟与一致性的权衡。</p>\n<h2 id=\"面试推演gpu-配额与进度展示\">面试推演：GPU 配额与进度展示</h2>\n<p>GPU 配额扣减需要明确的并发不变量，分区时可以选择拒绝分配，避免重复承诺。训练进度展示通常可以容忍短暂陈旧，允许稍后收敛。按操作选择语义，不能给整个产品只贴一个 CP/AP 标签。</p>\n<p>最终一致性（Eventual Consistency）承诺在满足条件时收敛，但不自动承诺最大陈旧时间或冲突处理方式。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 用两个区域断连的例子，说明读和写分别如何处理。</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 为什么“用了 SQL”不能证明跨地域线性一致？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 如何区分读己之写（Read-your-writes）与线性一致性？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem\">Hello Interview · CAP &#x26; Consistency Trade-offs</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem"
+    },
+    {
+      "id": "02-system-design/core-concepts/08-cap-theorem",
+      "path": "02-system-design/core-concepts/08-cap-theorem.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "CAP & Consistency Trade-offs",
+      "description": "CAP & Consistency Trade-offs",
+      "html": "<h1 id=\"cap--consistency-trade-offs\">CAP &#x26; Consistency Trade-offs</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/08-cap-theorem.svg\" alt=\"CAP 与一致性取舍示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>CAP concerns the trade-off between consistency and availability during a network partition. Its consistency means linearizability, not ACID consistency. Its availability requires requests received by non-failing nodes to eventually receive responses; it is not an uptime percentage.</p>\n<p>CAP does not mean freely choosing any two properties at all times. During a partition, some operations may be rejected or delayed to preserve consistency. Continuing to serve can sacrifice a single real-time global view. PACELC also highlights latency versus consistency when the network is healthy.</p>\n<h2 id=\"practice-gpu-quotas-and-progress-views\">Practice: GPU quotas and progress views</h2>\n<p>Quota allocation needs explicit concurrency invariants. Reject allocations during a partition if necessary to avoid duplicate commitments. Progress displays can often tolerate stale data and converge later. Choose semantics per operation rather than labeling an entire product CP or AP.</p>\n<p>Eventual consistency promises convergence under its assumptions; it does not automatically bound staleness or specify conflict resolution.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Explain reads and writes when two regions lose connectivity.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Why does using SQL not prove cross-region linearizability?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Distinguish read-your-writes from linearizability.</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem\">Hello Interview · CAP &#x26; Consistency Trade-offs</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem"
+    },
+    {
+      "id": "02-system-design/core-concepts/09-capacity-estimation",
+      "path": "02-system-design/core-concepts/09-capacity-estimation.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "容量估算与数量级",
+      "description": "容量估算与数量级",
+      "html": "<h1 id=\"容量估算与数量级\">容量估算与数量级</h1>\n<blockquote>\n<p>范围：基于公开可访问的原文和主题目录整理；以下面试推演与自测为原创练习，不复刻 Premium 视频、测验或受限正文。</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/09-capacity-estimation.svg\" alt=\"容量估算与数量级示意图\"></p>\n<h2 id=\"核心判断\">核心判断</h2>\n<p>容量估算（Capacity Estimation）用来支持决策，不能把单机性能背成通用上限。吞吐取决于硬件、负载、对象大小、索引、批处理和持久性要求；“某数据库固定支持多少 QPS”缺少必要前提。</p>\n<p>先区分平均值、峰值和尾延迟。写出假设、单位与余量（Headroom），再判断是否需要缓存、分片或异步处理。数字必须能由实测校正。</p>\n<h2 id=\"面试推演日志写入\">面试推演：日志写入</h2>\n<p>假设每天 1,000 万条、每条 2 KB（十进制），平均写入约 <code>10,000,000 / 86,400 ≈ 116 条/秒</code>；峰值取 10 倍约 1,160 条/秒；原始数据约 20 GB/天。保留 30 天约 600 GB，三副本约 1.8 TB，尚未包含索引和压缩。</p>\n<p>利特尔定律（Little’s Law）：稳定系统中，平均在途请求数约为到达率乘平均停留时间。2,000 请求/秒、平均 0.1 秒，对应约 200 个在途请求；不能代入 p99 作为平均值。</p>\n<h2 id=\"自测\">自测</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 为什么字节（Byte）和比特（bit）不能混算？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 单区故障后，剩余容量能否承担峰值？</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> 哪个假设变化最可能改变架构结论？</li>\n</ul>\n<h2 id=\"相关笔记\">相关笔记</h2>\n<p><a href=\"/cn/interview/02-system-design/README/\">模块导航</a> · <a href=\"/cn/interview/02-system-design/core-concepts/README/\">Core Concepts 总览</a></p>\n<p>来源：<a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/numbers-to-know\">Hello Interview · Capacity Estimation &#x26; Orders of Magnitude</a>（核对日期：2026-10-25）。</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/numbers-to-know"
+    },
+    {
+      "id": "02-system-design/core-concepts/09-capacity-estimation",
+      "path": "02-system-design/core-concepts/09-capacity-estimation.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Capacity Estimation & Orders of Magnitude",
+      "description": "Capacity Estimation & Orders of Magnitude",
+      "html": "<h1 id=\"capacity-estimation--orders-of-magnitude\">Capacity Estimation &#x26; Orders of Magnitude</h1>\n<blockquote>\n<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>\n</blockquote>\n<p><img src=\"/interview-notes/assets/09-capacity-estimation.svg\" alt=\"容量估算与数量级示意图\"></p>\n<h2 id=\"core-decisions\">Core decisions</h2>\n<p>Capacity estimates support decisions; single-machine benchmark results are not universal limits. Throughput depends on hardware, workload, object size, indexes, batching, and durability requirements. A fixed database QPS claim lacks necessary context.</p>\n<p>Distinguish averages, peaks, and tail latency. State assumptions, units, and headroom before choosing caching, sharding, or asynchronous processing. Revise estimates with measurements.</p>\n<h2 id=\"practice-log-ingestion\">Practice: log ingestion</h2>\n<p>Assume 10 million records per day, each 2 KB in decimal units. Average ingestion is <code>10,000,000 / 86,400 ≈ 116 records/s</code>. A 10× peak is about 1,160 records/s. Raw storage is about 20 GB/day, or 600 GB for 30 days. Three replicas require about 1.8 TB before indexes and compression.</p>\n<p>Little’s Law: in a stable system, average in-flight work equals arrival rate times average time in the system. At 2,000 requests/s and 0.1 s average duration, expect about 200 in-flight requests. Do not substitute p99 for the average.</p>\n<h2 id=\"self-check\">Self-check</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Why must bytes and bits be kept distinct?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Can remaining capacity handle the peak after losing a zone?</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled> Which assumption is most likely to change the architecture decision?</li>\n</ul>\n<h2 id=\"related-notes\">Related notes</h2>\n<p><a href=\"/interview/02-system-design/README/\">Module index</a> · <a href=\"/interview/02-system-design/core-concepts/README/\">Core Concepts overview</a></p>\n<p>Source: <a href=\"https://www.hellointerview.com/learn/system-design/core-concepts/numbers-to-know\">Hello Interview · Capacity Estimation &#x26; Orders of Magnitude</a> (checked 2026-10-25).</p>",
+      "source": "https://www.hellointerview.com/learn/system-design/core-concepts/numbers-to-know"
+    },
+    {
+      "id": "02-system-design/core-concepts/README",
+      "path": "02-system-design/core-concepts/README.md",
+      "module": "02-system-design",
+      "lang": "zh",
+      "title": "Core Concepts 全章导航",
+      "description": "Core Concepts 全章导航",
+      "html": "<h1 id=\"core-concepts-全章导航\">Core Concepts 全章导航</h1>\n<p>已核对课程的 Foundations 与 Thinking in Scale，覆盖全部 9 个 Core Concepts 主题；不含课程其余 Patterns、Key Technologies 或付费测验。</p>\n<ol>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/01-networking/\">网络基础（Networking Essentials）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/02-api-design/\">API 设计（API Design）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/03-data-modeling/\">数据建模（Data Modeling）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/04-database-indexing/\">数据库索引（Database Indexing）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/05-caching/\">缓存策略与失效（Caching &#x26; Invalidation）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/06-sharding/\">数据分片（Sharding）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/07-consistent-hashing/\">一致性哈希（Consistent Hashing）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/08-cap-theorem/\">CAP 与一致性取舍（CAP &#x26; Consistency Trade-offs）</a></li>\n<li><a href=\"/cn/interview/02-system-design/core-concepts/09-capacity-estimation/\">容量估算与数量级（Capacity Estimation &#x26; Orders of Magnitude）</a></li>\n</ol>\n<h2 id=\"复习顺序\">复习顺序</h2>\n<p>网络与 API → 数据模型与索引 → 缓存 → 分片与一致性哈希 → CAP → 容量估算。</p>\n<p>每章先讲清楚“解决什么问题、引入什么代价、何时不该用”，再完成原创自测。</p>\n<h2 id=\"可视化\">可视化</h2>\n<p><a href=\"/interview-notes/assets/system-design-map.html\">打开可交互的系统设计总览</a>。从 GitHub 使用 Raw 下载 HTML 后，可直接离线打开。各章 SVG 可直接在 GitHub 和 Obsidian 预览。</p>\n<h2 id=\"来源与覆盖边界\">来源与覆盖边界</h2>\n<p><a href=\"https://www.hellointerview.com/learn/courses/system-design\">课程目录</a> · <a href=\"https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts\">Core Concepts 公开总览</a>。部分文章仅公开前半段和后续标题；笔记中的补充讲解是通用知识与原创推演，不声称读取了受限内容。</p>\n<p><a href=\"/cn/interview/02-system-design/README/\">返回系统设计模块</a></p>",
+      "source": null
+    },
+    {
+      "id": "02-system-design/core-concepts/README",
+      "path": "02-system-design/core-concepts/README.md",
+      "module": "02-system-design",
+      "lang": "en",
+      "title": "Core Concepts: Complete Topic Index",
+      "description": "Core Concepts: Complete Topic Index",
+      "html": "<h1 id=\"core-concepts-complete-topic-index\">Core Concepts: Complete Topic Index</h1>\n<p>Checked against Foundations and Thinking in Scale: all nine Core Concepts topics are covered. Other patterns, technologies, and paid quizzes are outside this set.</p>\n<ol>\n<li><a href=\"/interview/02-system-design/core-concepts/01-networking/\">Networking Essentials</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/02-api-design/\">API Design</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/03-data-modeling/\">Data Modeling</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/04-database-indexing/\">Database Indexing</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/05-caching/\">Caching &#x26; Invalidation</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/06-sharding/\">Sharding</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/07-consistent-hashing/\">Consistent Hashing</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/08-cap-theorem/\">CAP &#x26; Consistency Trade-offs</a></li>\n<li><a href=\"/interview/02-system-design/core-concepts/09-capacity-estimation/\">Capacity Estimation &#x26; Orders of Magnitude</a></li>\n</ol>\n<h2 id=\"study-order\">Study order</h2>\n<p>Networking and APIs → modeling and indexes → caching → sharding and consistent hashing → CAP → estimation.</p>\n<p>For each topic explain its problem, trade-offs, and when to avoid it, then complete the original self-checks.</p>\n<h2 id=\"visualization\">Visualization</h2>\n<p><a href=\"/interview-notes/assets/system-design-map.html\">Interactive system-design overview, Chinese</a>. Download the raw HTML from GitHub and open it offline. Topic SVGs preview directly in GitHub and Obsidian.</p>\n<h2 id=\"sources-and-access-boundary\">Sources and access boundary</h2>\n<p><a href=\"https://www.hellointerview.com/learn/courses/system-design\">Course curriculum</a> · <a href=\"https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts\">Public Core Concepts overview</a>. Some articles expose only introductory text and later headings. Supplemental explanations use general knowledge and original reasoning; they do not claim access to restricted content.</p>\n<p><a href=\"/interview/02-system-design/README/\">Back to system design</a></p>",
+      "source": null
+    },
+    {
+      "id": "03-ai-engineering/README",
+      "path": "03-ai-engineering/README.md",
+      "module": "03-ai-engineering",
+      "lang": "zh",
+      "title": "AI 辅助工程实战",
+      "description": "AI 辅助工程实战",
+      "html": "<h1 id=\"ai-辅助工程实战\">AI 辅助工程实战</h1>\n<p>用 AI 完成可验证的工程交付，练习上下文、调试、评审与验收。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/03-ai-engineering/practical-checklist/\">实战交付与验收清单</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "03-ai-engineering/README",
+      "path": "03-ai-engineering/README.md",
+      "module": "03-ai-engineering",
+      "lang": "en",
+      "title": "AI-assisted Software Engineering",
+      "description": "AI-assisted Software Engineering",
+      "html": "<h1 id=\"ai-assisted-software-engineering\">AI-assisted Software Engineering</h1>\n<p>Deliver verifiable software with AI through context preparation, debugging, review, and acceptance checks.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/03-ai-engineering/practical-checklist/\">Practical Delivery &#x26; Acceptance Checklist</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "03-ai-engineering/practical-checklist",
+      "path": "03-ai-engineering/practical-checklist.md",
+      "module": "03-ai-engineering",
+      "lang": "zh",
+      "title": "实战交付与验收清单",
+      "description": "实战交付与验收清单",
+      "html": "<h1 id=\"实战交付与验收清单\">实战交付与验收清单</h1>\n<h2 id=\"一次练习的完整闭环\">一次练习的完整闭环</h2>\n<p>需求澄清 → 最小实现 → 工具验证 → 人工评审 → 复盘。先定义验收条件（Acceptance Criteria），再让 AI 拆解任务。</p>\n<ul>\n<li>上下文（Context）：输入、输出、已有接口、运行环境、不可改变的约束。</li>\n<li>工具（Tools）：文件搜索、运行测试、检查日志与查看差异。</li>\n<li>调试（Debugging）：复现 → 缩小范围 → 提出假设 → 验证 → 修复。</li>\n<li>评审（Review）：正确性、失败路径、依赖、凭据处理与可维护性。</li>\n<li>证据（Evidence）：实际运行结果、尚未覆盖的边界和下一步。</li>\n</ul>\n<h2 id=\"练习记录\">练习记录</h2>\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>任务</th><th>时间限制</th><th>验收条件</th><th>AI 的错误</th><th>我的修正</th><th>验证结果</th></tr></thead></table>\n<p><a href=\"/cn/interview/02-system-design/core-concepts/02-api-design/\">API 设计</a> · <a href=\"/cn/interview/06-project-deep-dives/deep-dive-template/\">项目深挖</a> · <a href=\"/cn/interview/03-ai-engineering/README/\">模块导航</a></p>",
+      "source": null
+    },
+    {
+      "id": "03-ai-engineering/practical-checklist",
+      "path": "03-ai-engineering/practical-checklist.md",
+      "module": "03-ai-engineering",
+      "lang": "en",
+      "title": "Practical Delivery & Acceptance Checklist",
+      "description": "Practical Delivery & Acceptance Checklist",
+      "html": "<h1 id=\"practical-delivery--acceptance-checklist\">Practical Delivery &#x26; Acceptance Checklist</h1>\n<h2 id=\"a-complete-practice-loop\">A complete practice loop</h2>\n<p>Clarify requirements → build a minimal solution → verify with tools → review manually → reflect. Define acceptance criteria before asking AI to break down the task.</p>\n<ul>\n<li>Context: inputs, outputs, existing interfaces, environment, and fixed constraints.</li>\n<li>Tools: file search, tests, logs, and diffs.</li>\n<li>Debugging: reproduce, narrow the scope, hypothesize, verify, and fix.</li>\n<li>Review: correctness, failure paths, dependencies, credential handling, and maintainability.</li>\n<li>Evidence: observed results, uncovered boundaries, and next steps.</li>\n</ul>\n<h2 id=\"practice-log\">Practice log</h2>\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Task</th><th>Time limit</th><th>Acceptance criteria</th><th>AI mistake</th><th>My correction</th><th>Verification</th></tr></thead></table>\n<p><a href=\"/interview/02-system-design/core-concepts/02-api-design/\">API design</a> · <a href=\"/interview/06-project-deep-dives/deep-dive-template/\">Project deep dive</a> · <a href=\"/interview/03-ai-engineering/README/\">Module index</a></p>",
+      "source": null
+    },
+    {
+      "id": "04-rl-systems/README",
+      "path": "04-rl-systems/README.md",
+      "module": "04-rl-systems",
+      "lang": "zh",
+      "title": "强化学习与训练系统",
+      "description": "强化学习与训练系统",
+      "html": "<h1 id=\"强化学习与训练系统\">强化学习与训练系统</h1>\n<p>连接算法目标、数据流与训练基础设施，定位吞吐、稳定性和评估问题。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/04-rl-systems/knowledge-map/\">强化学习系统知识地图</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "04-rl-systems/README",
+      "path": "04-rl-systems/README.md",
+      "module": "04-rl-systems",
+      "lang": "en",
+      "title": "Reinforcement Learning & Training Systems",
+      "description": "Reinforcement Learning & Training Systems",
+      "html": "<h1 id=\"reinforcement-learning--training-systems\">Reinforcement Learning &#x26; Training Systems</h1>\n<p>Connect learning objectives, data flow, and training infrastructure to reason about throughput, stability, and evaluation.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/04-rl-systems/knowledge-map/\">RL Systems Knowledge Map</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "04-rl-systems/knowledge-map",
+      "path": "04-rl-systems/knowledge-map.md",
+      "module": "04-rl-systems",
+      "lang": "zh",
+      "title": "强化学习系统知识地图",
+      "description": "强化学习系统知识地图",
+      "html": "<h1 id=\"强化学习系统知识地图\">强化学习系统知识地图</h1>\n<p>本页是待填充的复习框架，不代表已有项目经历或已掌握程度。</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>维度</th><th>需要回答的问题</th></tr></thead><tbody><tr><td>目标与算法（Objective / Algorithm）</td><td>优化什么目标？优势估计、裁剪、KL 约束如何影响训练？</td></tr><tr><td>数据流（Data Flow）</td><td>提示词 → 采样（Rollout）→ 奖励（Reward）→ 训练批次如何流转？</td></tr><tr><td>系统执行（Execution）</td><td>训练与推理资源如何分配？同步和异步各有什么代价？</td></tr><tr><td>性能（Performance）</td><td>吞吐、GPU 利用率、长尾、显存、通信分别怎么测？</td></tr><tr><td>稳定性（Stability）</td><td>旧策略数据、版本错配、数值异常、奖励投机怎样发现？</td></tr><tr><td>恢复（Recovery）</td><td>检查点、重试、去重与可复现性需要保存什么？</td></tr><tr><td>评估（Evaluation）</td><td>怎样区分奖励提升、泛化改善和评估污染？</td></tr></tbody></table>\n<h2 id=\"每个知识点的答题模板\">每个知识点的答题模板</h2>\n<p>定义 → 数学目标或数据流 → 系统约束 → 失败模式 → 可测量证据。</p>\n<p><a href=\"/cn/interview/02-system-design/core-concepts/09-capacity-estimation/\">容量估算</a> · <a href=\"/cn/interview/02-system-design/core-concepts/03-data-modeling/\">数据建模</a> · <a href=\"/cn/interview/06-project-deep-dives/deep-dive-template/\">项目深挖</a> · <a href=\"/cn/interview/04-rl-systems/README/\">模块导航</a></p>",
+      "source": null
+    },
+    {
+      "id": "04-rl-systems/knowledge-map",
+      "path": "04-rl-systems/knowledge-map.md",
+      "module": "04-rl-systems",
+      "lang": "en",
+      "title": "RL Systems Knowledge Map",
+      "description": "RL Systems Knowledge Map",
+      "html": "<h1 id=\"rl-systems-knowledge-map\">RL Systems Knowledge Map</h1>\n<p>This is a framework to fill in, not a claim about completed projects or proficiency.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Dimension</th><th>Questions to answer</th></tr></thead><tbody><tr><td>Objective and algorithm</td><td>What is optimized? How do advantage estimation, clipping, and KL constraints affect learning?</td></tr><tr><td>Data flow</td><td>How do prompts, rollouts, rewards, and training batches move through the system?</td></tr><tr><td>Execution</td><td>How are training and inference resources allocated? What changes between synchronous and asynchronous execution?</td></tr><tr><td>Performance</td><td>How do you measure throughput, GPU utilization, tails, memory, and communication?</td></tr><tr><td>Stability</td><td>How do you detect stale policy data, version mismatch, numerical failures, and reward hacking?</td></tr><tr><td>Recovery</td><td>What state is needed for checkpoints, retries, deduplication, and reproducibility?</td></tr><tr><td>Evaluation</td><td>How do you distinguish reward gains, generalization, and evaluation contamination?</td></tr></tbody></table>\n<h2 id=\"answer-template\">Answer template</h2>\n<p>Definition → mathematical objective or data flow → system constraints → failure modes → measurable evidence.</p>\n<p><a href=\"/interview/02-system-design/core-concepts/09-capacity-estimation/\">Capacity estimates</a> · <a href=\"/interview/02-system-design/core-concepts/03-data-modeling/\">Data modeling</a> · <a href=\"/interview/06-project-deep-dives/deep-dive-template/\">Project deep dives</a> · <a href=\"/interview/04-rl-systems/README/\">Module index</a></p>",
+      "source": null
+    },
+    {
+      "id": "05-company-research/README",
+      "path": "05-company-research/README.md",
+      "module": "05-company-research",
+      "lang": "zh",
+      "title": "公司与岗位研究",
+      "description": "公司与岗位研究",
+      "html": "<h1 id=\"公司与岗位研究\">公司与岗位研究</h1>\n<p>把公开证据整理为岗位匹配、技术判断和高质量反问。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/05-company-research/company-template/\">公司与岗位调研模板</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "05-company-research/README",
+      "path": "05-company-research/README.md",
+      "module": "05-company-research",
+      "lang": "en",
+      "title": "Company & Role Research",
+      "description": "Company & Role Research",
+      "html": "<h1 id=\"company--role-research\">Company &#x26; Role Research</h1>\n<p>Turn public evidence into role alignment, technical judgment, and useful interview questions.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/05-company-research/company-template/\">Company &#x26; Role Research Template</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "05-company-research/company-template",
+      "path": "05-company-research/company-template.md",
+      "module": "05-company-research",
+      "lang": "zh",
+      "title": "公司与岗位调研模板",
+      "description": "公司与岗位调研模板",
+      "html": "<h1 id=\"公司与岗位调研模板\">公司与岗位调研模板</h1>\n<h2 id=\"基本信息\">基本信息</h2>\n<p>公司、岗位、级别、团队、面试日期：待补充。</p>\n<h2 id=\"证据表\">证据表</h2>\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>判断</th><th>公开来源链接</th><th>发布日期</th><th>核对日期</th><th>事实或推断</th><th>对岗位的意义</th></tr></thead></table>\n<p>优先使用招聘说明（Job Description）、工程博客（Engineering Blog）、论文、公开代码和官方产品材料。变化较快的信息在面试前重新核对。</p>\n<h2 id=\"形成面试观点\">形成面试观点</h2>\n<ul>\n<li>团队解决什么问题？成功指标（Success Metric）是什么？</li>\n<li>我的哪个项目能对应其技术挑战？证据是否足够？</li>\n<li>准备三个有依据的反问，避免猜测未公开的内部架构。</li>\n</ul>\n<p><a href=\"/cn/interview/06-project-deep-dives/deep-dive-template/\">项目深挖模板</a> · <a href=\"/cn/interview/05-company-research/README/\">模块导航</a></p>",
+      "source": null
+    },
+    {
+      "id": "05-company-research/company-template",
+      "path": "05-company-research/company-template.md",
+      "module": "05-company-research",
+      "lang": "en",
+      "title": "Company & Role Research Template",
+      "description": "Company & Role Research Template",
+      "html": "<h1 id=\"company--role-research-template\">Company &#x26; Role Research Template</h1>\n<h2 id=\"basics\">Basics</h2>\n<p>Company, role, level, team, and interview date: to be filled in.</p>\n<h2 id=\"evidence-table\">Evidence table</h2>\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Claim</th><th>Public source</th><th>Publication date</th><th>Checked date</th><th>Fact or inference</th><th>Role relevance</th></tr></thead></table>\n<p>Prefer job descriptions, engineering blogs, papers, public code, and official product material. Recheck fast-changing information before the interview.</p>\n<h2 id=\"develop-a-point-of-view\">Develop a point of view</h2>\n<ul>\n<li>What problem does the team solve, and what is its success metric?</li>\n<li>Which of my projects addresses a related challenge, with supporting evidence?</li>\n<li>Prepare three evidence-based questions without guessing private architecture.</li>\n</ul>\n<p><a href=\"/interview/06-project-deep-dives/deep-dive-template/\">Project deep-dive template</a> · <a href=\"/interview/05-company-research/README/\">Module index</a></p>",
+      "source": null
+    },
+    {
+      "id": "06-project-deep-dives/README",
+      "path": "06-project-deep-dives/README.md",
+      "module": "06-project-deep-dives",
+      "lang": "zh",
+      "title": "项目复盘与技术深挖",
+      "description": "项目复盘与技术深挖",
+      "html": "<h1 id=\"项目复盘与技术深挖\">项目复盘与技术深挖</h1>\n<p>用真实证据解释个人贡献、关键决策、结果与失败后的改进。</p>\n<h2 id=\"复习方法\">复习方法</h2>\n<p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>\n<p>熟练度：待复习 → 能解释 → 能独立完成 → 能应对追问。</p>\n<h2 id=\"本模块资料\">本模块资料</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/cn/interview/06-project-deep-dives/deep-dive-template/\">项目深挖模板</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "06-project-deep-dives/README",
+      "path": "06-project-deep-dives/README.md",
+      "module": "06-project-deep-dives",
+      "lang": "en",
+      "title": "Project Deep Dives",
+      "description": "Project Deep Dives",
+      "html": "<h1 id=\"project-deep-dives\">Project Deep Dives</h1>\n<p>Explain personal contributions, key decisions, outcomes, and lessons with real evidence.</p>\n<h2 id=\"study-routine\">Study routine</h2>\n<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>\n<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>\n<h2 id=\"notes\">Notes</h2>\n<!-- AUTO:START -->\n<ul>\n<li><a href=\"/interview/06-project-deep-dives/deep-dive-template/\">Project Deep-dive Template</a></li>\n</ul>\n<!-- AUTO:END -->",
+      "source": null
+    },
+    {
+      "id": "06-project-deep-dives/deep-dive-template",
+      "path": "06-project-deep-dives/deep-dive-template.md",
+      "module": "06-project-deep-dives",
+      "lang": "zh",
+      "title": "项目深挖模板",
+      "description": "项目深挖模板",
+      "html": "<h1 id=\"项目深挖模板\">项目深挖模板</h1>\n<p>不填造经历、数据或贡献；以下均待实际材料补充。</p>\n<h2 id=\"90-秒介绍\">90 秒介绍</h2>\n<p>问题与背景 → 我的责任 → 关键技术决策 → 可验证结果 → 最重要的反思。</p>\n<h2 id=\"技术证据\">技术证据</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>维度</th><th>需要补充的材料</th></tr></thead><tbody><tr><td>范围（Scope）</td><td>我做了什么、团队做了什么、哪些没有做。</td></tr><tr><td>架构（Architecture）</td><td>数据流、接口、存储、依赖和部署边界。</td></tr><tr><td>决策（Trade-off）</td><td>候选方案、约束、选择依据和放弃原因。</td></tr><tr><td>结果（Outcome）</td><td>基线、测量方法、样本规模、误差与实际指标。</td></tr><tr><td>故障（Failure）</td><td>复现条件、根因、修复、如何避免复发。</td></tr><tr><td>深挖（Follow-up）</td><td>规模十倍、节点故障、数据陈旧时怎样调整。</td></tr></tbody></table>\n<h2 id=\"追问演练\">追问演练</h2>\n<p>为什么是你提出的方案？最难的技术点是什么？如果重做，哪一项选择会改变？如何证明结果来自你的改动？</p>\n<p><a href=\"/cn/interview/02-system-design/README/\">系统设计</a> · <a href=\"/cn/interview/04-rl-systems/knowledge-map/\">强化学习系统</a> · <a href=\"/cn/interview/05-company-research/company-template/\">公司研究</a> · <a href=\"/cn/interview/06-project-deep-dives/README/\">模块导航</a></p>",
+      "source": null
+    },
+    {
+      "id": "06-project-deep-dives/deep-dive-template",
+      "path": "06-project-deep-dives/deep-dive-template.md",
+      "module": "06-project-deep-dives",
+      "lang": "en",
+      "title": "Project Deep-dive Template",
+      "description": "Project Deep-dive Template",
+      "html": "<h1 id=\"project-deep-dive-template\">Project Deep-dive Template</h1>\n<p>Do not invent experience, metrics, or contributions. Fill this template with actual materials.</p>\n<h2 id=\"90-second-introduction\">90-second introduction</h2>\n<p>Problem and context → my responsibility → key technical decision → verifiable outcome → most important lesson.</p>\n<h2 id=\"technical-evidence\">Technical evidence</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Dimension</th><th>Material to provide</th></tr></thead><tbody><tr><td>Scope</td><td>What I did, what the team did, and what remained out of scope.</td></tr><tr><td>Architecture</td><td>Data flow, interfaces, storage, dependencies, and deployment boundaries.</td></tr><tr><td>Trade-off</td><td>Alternatives, constraints, decision evidence, and rejected options.</td></tr><tr><td>Outcome</td><td>Baseline, measurement method, sample size, uncertainty, and actual metrics.</td></tr><tr><td>Failure</td><td>Reproduction conditions, root cause, fix, and recurrence prevention.</td></tr><tr><td>Follow-up</td><td>Changes needed at 10× scale, during node failures, or with stale data.</td></tr></tbody></table>\n<h2 id=\"rehearse-follow-ups\">Rehearse follow-ups</h2>\n<p>Why this approach? What was technically hardest? What would change if you rebuilt it? How do you attribute the result to your work?</p>\n<p><a href=\"/interview/02-system-design/README/\">System design</a> · <a href=\"/interview/04-rl-systems/knowledge-map/\">RL systems</a> · <a href=\"/interview/05-company-research/company-template/\">Company research</a> · <a href=\"/interview/06-project-deep-dives/README/\">Module index</a></p>",
+      "source": null
+    }
+  ]
+}

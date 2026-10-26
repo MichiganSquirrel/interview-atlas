@@ -1,0 +1,32 @@
+name: Publish downloadable notes
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: notes-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run build -- --allow-stale
+      - run: python3 scripts/pack.py
+      - name: Publish current reading pack
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="notes-${GITHUB_SHA:0:12}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" downloads/* --clobber
+          else
+            gh release create "$tag" downloads/* --target "$GITHUB_SHA" --latest --title "Interview Atlas · ${GITHUB_SHA:0:7}" --notes "Chinese and English offline reading editions, interactive diagram, and an Obsidian-ready ZIP. Built from this commit."
+          fi

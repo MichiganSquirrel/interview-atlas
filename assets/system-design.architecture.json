@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "系统设计：一次请求的关键决策",
+    "locale": "zh-CN",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "client",
+      "type": "external",
+      "label": "客户端",
+      "sublabel": "DNS · TCP · TLS",
+      "pos": [
+        50,
+        250
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "接口契约",
+      "sublabel": "REST · 鉴权 · 幂等",
+      "pos": [
+        320,
+        250
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "model",
+      "type": "database",
+      "label": "数据模型",
+      "sublabel": "实体 · 约束 · 事务",
+      "pos": [
+        590,
+        250
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "index",
+      "type": "database",
+      "label": "查询与索引",
+      "sublabel": "B-tree · 执行计划",
+      "pos": [
+        860,
+        250
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "cache",
+      "type": "database",
+      "label": "缓存",
+      "sublabel": "命中率 · 失效 · 降级",
+      "pos": [
+        320,
+        490
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "shard",
+      "type": "database",
+      "label": "分片与路由",
+      "sublabel": "分片键 · 一致性哈希",
+      "pos": [
+        590,
+        490
+      ],
+      "size": [
+        170,
+        76
+      ]
+    },
+    {
+      "id": "consistency",
+      "type": "backend",
+      "label": "一致性与容量",
+      "sublabel": "CAP · 延迟 · 余量",
+      "pos": [
+        860,
+        490
+      ],
+      "size": [
+        170,
+        76
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "client",
+      "to": "api",
+      "label": "网络通信",
+      "variant": "emphasis"
+    },
+    {
+      "from": "api",
+      "to": "model",
+      "label": "读写语义",
+      "variant": "emphasis"
+    },
+    {
+      "from": "model",
+      "to": "index",
+      "label": "访问模式",
+      "variant": "emphasis"
+    },
+    {
+      "from": "api",
+      "to": "cache",
+      "label": "读扩展",
+      "labelDy": 24
+    },
+    {
+      "from": "model",
+      "to": "shard",
+      "label": "写扩展",
+      "labelDy": 24
+    },
+    {
+      "from": "index",
+      "to": "consistency",
+      "label": "验证约束",
+      "labelDy": 24
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "先保证正确",
+      "items": [
+        "确认接口与数据不变量",
+        "约束重复请求和并发更新"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "再定位瓶颈",
+      "items": [
+        "索引与缓存改善读取",
+        "分片需要实际容量证据"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "最后解释代价",
+      "items": [
+        "副本、分区与一致性取舍",
+        "用测量验证吞吐和延迟"
+      ]
+    }
+  ]
+}

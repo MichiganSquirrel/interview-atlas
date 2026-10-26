@@ -1,0 +1,470 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interview Atlas</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start;position:sticky;top:15px;max-height:94vh;overflow:auto}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}details{margin:12px 0}summary{cursor:pointer;font-weight:700}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>Interview Atlas</h1><p>Six modules · bilingual notes · available offline</p><a href="interview-atlas-zh.html">中文</a> · <a href="system-design-map.html">Interactive overview (Chinese)</a></header><main><nav aria-label="Contents"><details open><summary>Algorithms &amp; Problem Solving</summary><a href="#en-01-algorithms/README">Algorithms &amp; Problem Solving</a><a href="#en-01-algorithms/practice-log">Problem-solving Practice Log</a></details><details open><summary>System Design &amp; Architecture Trade-offs</summary><a href="#en-02-system-design/README">System Design &amp; Architecture Trade-offs</a><a href="#en-02-system-design/core-concepts/01-networking">Networking Essentials</a><a href="#en-02-system-design/core-concepts/02-api-design">API Design</a><a href="#en-02-system-design/core-concepts/03-data-modeling">Data Modeling</a><a href="#en-02-system-design/core-concepts/04-database-indexing">Database Indexing</a><a href="#en-02-system-design/core-concepts/05-caching">Caching &amp; Invalidation</a><a href="#en-02-system-design/core-concepts/06-sharding">Sharding</a><a href="#en-02-system-design/core-concepts/07-consistent-hashing">Consistent Hashing</a><a href="#en-02-system-design/core-concepts/08-cap-theorem">CAP &amp; Consistency Trade-offs</a><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity Estimation &amp; Orders of Magnitude</a><a href="#en-02-system-design/core-concepts/README">Core Concepts: Complete Topic Index</a></details><details open><summary>AI-assisted Software Engineering</summary><a href="#en-03-ai-engineering/README">AI-assisted Software Engineering</a><a href="#en-03-ai-engineering/practical-checklist">Practical Delivery &amp; Acceptance Checklist</a></details><details open><summary>Reinforcement Learning &amp; Training Systems</summary><a href="#en-04-rl-systems/README">Reinforcement Learning &amp; Training Systems</a><a href="#en-04-rl-systems/knowledge-map">RL Systems Knowledge Map</a></details><details open><summary>Company &amp; Role Research</summary><a href="#en-05-company-research/README">Company &amp; Role Research</a><a href="#en-05-company-research/company-template">Company &amp; Role Research Template</a></details><details open><summary>Project Deep Dives</summary><a href="#en-06-project-deep-dives/README">Project Deep Dives</a><a href="#en-06-project-deep-dives/deep-dive-template">Project Deep-dive Template</a></details></nav><section><article id="en-01-algorithms/README"><h1 id="algorithms--problem-solving">Algorithms &#x26; Problem Solving</h1>
+<p>Recognize reusable patterns and practice correctness, complexity analysis, and timed explanation.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-01-algorithms/practice-log">Problem-solving Practice Log</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-01-algorithms/practice-log"><h1 id="problem-solving-practice-log">Problem-solving Practice Log</h1>
+<h2 id="pattern-map">Pattern map</h2>
+<p>Arrays and hashing, two pointers, sliding windows, binary search, trees and graphs, heaps, backtracking, and dynamic programming.</p>
+<h2 id="per-problem-log">Per-problem log</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Date</th><th>Problem URL</th><th>Pattern</th><th>Initial idea</th><th>Sticking point</th><th>Complexity</th><th>Next review</th></tr></thead></table>
+<h2 id="explain-without-notes">Explain without notes</h2>
+<ol>
+<li>Clarify constraints and edge cases.</li>
+<li>Establish a baseline and justify improvements.</li>
+<li>Explain the invariant and correctness.</li>
+<li>Check empty inputs, duplicates, and large cases.</li>
+<li>Record the cause of mistakes; solve from scratch next time.</li>
+</ol>
+<p><a href="#en-01-algorithms/README">Module index</a></p></article><article id="en-02-system-design/README"><h1 id="system-design--architecture-trade-offs">System Design &#x26; Architecture Trade-offs</h1>
+<p>Start from requirements and data flow, then justify components, scale limits, and failure behavior.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-02-system-design/core-concepts/01-networking">Networking Essentials</a></li>
+<li><a href="#en-02-system-design/core-concepts/02-api-design">API Design</a></li>
+<li><a href="#en-02-system-design/core-concepts/03-data-modeling">Data Modeling</a></li>
+<li><a href="#en-02-system-design/core-concepts/04-database-indexing">Database Indexing</a></li>
+<li><a href="#en-02-system-design/core-concepts/05-caching">Caching &#x26; Invalidation</a></li>
+<li><a href="#en-02-system-design/core-concepts/06-sharding">Sharding</a></li>
+<li><a href="#en-02-system-design/core-concepts/07-consistent-hashing">Consistent Hashing</a></li>
+<li><a href="#en-02-system-design/core-concepts/08-cap-theorem">CAP &#x26; Consistency Trade-offs</a></li>
+<li><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity Estimation &#x26; Orders of Magnitude</a></li>
+<li><a href="#en-02-system-design/core-concepts/README">Core Concepts: Complete Topic Index</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-02-system-design/core-concepts/01-networking"><h1 id="networking-essentials">Networking Essentials</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPue9kee7nOWfuuehgCAvIE5ldHdvcmtpbmcgRXNzZW50aWFsczwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7lrqLmiLfnq688L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+Q2xpZW50PC90ZXh0PjxwYXRoIGQ9Ik0yNjkgOTYgSDI5OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iMzA0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjQyNCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+RE5TICsgVExTPC90ZXh0Pjx0ZXh0IHg9IjQyNCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPjwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPui0n+i9veWdh+ihoTwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5MQjwvdGV4dD48cGF0aCBkPSJNODI5IDk2IEg4NTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9Ijg2NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI5ODQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuacjeWKoTwvdGV4dD48dGV4dCB4PSI5ODQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5TZXJ2aWNlPC90ZXh0Pjwvc3ZnPgo=" alt="网络基础示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>DNS resolves names; TCP offers an ordered, reliable byte stream; TLS protects the connection; HTTP defines requests and responses. HTTP/3 uses QUIC over UDP, so HTTP does not always imply TCP.</p>
+<p>Load balancing distributes traffic across instances. L4 uses connection metadata, while L7 can route by HTTP paths and headers. Persistent connections require connection limits, keepalives, and reconnect behavior.</p>
+<h2 id="practice-training-job-progress">Practice: training-job progress</h2>
+<p>Submit jobs over HTTP. Consider Server-Sent Events (SSE) for one-way progress updates and WebSocket for bidirectional interaction. Establish latency and connection targets before selecting a protocol.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Follow-up</th><th>Reasoning</th></tr></thead><tbody><tr><td>Does a successful connection prove success?</td><td>TCP delivery does not prove a committed transaction; use application acknowledgments and idempotency.</td></tr><tr><td>Why set timeouts?</td><td>Bound waiting and combine limited retries with backoff and jitter.</td></tr><tr><td>Are network calls always slow?</td><td>Check distance, serialization, connection reuse, and tail latency.</td></tr></tbody></table>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Trace a browser request and explain the user-visible effect of each failure.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Explain L4 forwarding versus L7 routing.</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/networking-essentials">Hello Interview · Networking Essentials</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/02-api-design"><h1 id="api-design">API Design</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPkFQSSDorr7orqEgLyBBUEkgRGVzaWduPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPui1hOa6kDwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5SZXNvdXJjZTwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWlkee6pjwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Db250cmFjdDwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPumJtOadgzwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5BdXRoPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5bmC562JPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPklkZW1wb3RlbmN5PC90ZXh0Pjwvc3ZnPgo=" alt="API 设计示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Identify resources and access patterns before selecting a protocol. REST fits ordinary resource operations, GraphQL lets clients select fields, and gRPC suits service calls with explicit contracts.</p>
+<p>Idempotency means repeated execution leaves the same business state; response codes need not match. PUT and DELETE have idempotent semantics. POST can implement business idempotency with a key; PATCH depends on the operation.</p>
+<h2 id="practice-submit-a-training-job">Practice: submit a training job</h2>
+<pre><code class="language-http">POST /training-jobs
+Idempotency-Key: client-generated-key
+
+{"dataset_id":"ds-42","config_version":"v3"}
+</code></pre>
+<p>Return <code>202 Accepted</code>, a job identifier, and a status location. Use <code>GET /training-jobs/{id}</code> for progress. Bind each idempotency key to the caller and request digest to detect incompatible reuse. Authorize using server-verified identity, rather than a client-provided user ID.</p>
+<p>Use cursor pagination for lists. Include a unique identifier in the ordering to break timestamp ties.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> A request commits but the client times out. How does retry avoid creating a second job?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Explain when to return 400, 401, 403, 404, 409, and 429.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How can concurrent inserts cause skips or duplicates with offset pagination?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/api-design">Hello Interview · API Design</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/03-data-modeling"><h1 id="data-modeling">Data Modeling</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuaVsOaNruW7uuaooSAvIERhdGEgTW9kZWxpbmc8L3RpdGxlPjxkZWZzPjxtYXJrZXIgaWQ9ImFycm93IiBtYXJrZXJXaWR0aD0iMTAiIG1hcmtlckhlaWdodD0iMTAiIHJlZlg9IjgiIHJlZlk9IjQiIG9yaWVudD0iYXV0byI+PHBhdGggZD0iTTAgMCBMOCA0IEwwIDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9tYXJrZXI+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgZmlsbD0iI2YyZWZlOCIvPjxyZWN0IHg9IjI0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE0NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5p+l6K+iPC90ZXh0Pjx0ZXh0IHg9IjE0NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPlF1ZXJpZXM8L3RleHQ+PHBhdGggZD0iTTI2OSA5NiBIMjk5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSIzMDQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNDI0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7lrp7kvZM8L3RleHQ+PHRleHQgeD0iNDI0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+RW50aXRpZXM8L3RleHQ+PHBhdGggZD0iTTU0OSA5NiBINTc5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSI1ODQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzA0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7nuqbmnZ88L3RleHQ+PHRleHQgeD0iNzA0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+Q29uc3RyYWludHM8L3RleHQ+PHBhdGggZD0iTTgyOSA5NiBIODU5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSI4NjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iOTg0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7lrZjlgqg8L3RleHQ+PHRleHQgeD0iOTg0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+U3RvcmFnZTwvdGV4dD48L3N2Zz4K" alt="数据建模示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Work backward from queries and invariants to entities, primary keys, relationships, and constraints. A relational database is a common starting point. Justify document, key-value, or graph models with specific access patterns.</p>
+<p>Normalization reduces duplication and update anomalies. Denormalization improves reads through duplication but adds update and repair costs. ACID transactions do not remove the need to choose an isolation level.</p>
+<h2 id="practice-experiments-jobs-and-checkpoints">Practice: experiments, jobs, and checkpoints</h2>
+<pre><code class="language-sql">experiments(id PRIMARY KEY, owner_id, config_version)
+jobs(id PRIMARY KEY, experiment_id, state, attempt)
+checkpoints(id PRIMARY KEY, job_id, object_key, step)
+</code></pre>
+<p>Keep model weights in object storage; store locations, versions, and checksums in tables. Attempt numbers distinguish retries. Use conditional state transitions so an old worker cannot overwrite a newer attempt. A checkpoint becomes usable only after its payload is complete and its metadata is committed.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> How would you query an experiment’s latest successful checkpoint, and which index supports it?</li>
+<li class="task-list-item"><input type="checkbox" disabled> How would you remove orphaned objects after deleting a job?</li>
+<li class="task-list-item"><input type="checkbox" disabled> What growth and concurrency problems arise when all history is embedded in one document?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/data-modeling">Hello Interview · Data Modeling</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/04-database-indexing"><h1 id="database-indexing">Database Indexing</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuaVsOaNruW6k+e0ouW8lSAvIERhdGFiYXNlIEluZGV4aW5nPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuiuv+mXruaooeW8jzwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5RdWVyeTwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPue0ouW8lTwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5JbmRleDwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuaJp+ihjOiuoeWIkjwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5QbGFuPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5rWL6YePPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPk1lYXN1cmU8L3RleHQ+PC9zdmc+Cg==" alt="数据库索引示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Indexes reduce the pages read to locate records. B-trees support equality, ranges, and ordering; hash indexes focus on equality; inverted indexes support term search; spatial indexes support location queries. LSM structures trade write, merge, and read costs.</p>
+<p>Indexes consume storage and add write maintenance. Composite column order should match filters and ordering. Whether a covering index avoids table access also depends on database-specific visibility conditions.</p>
+<h2 id="practice-recent-jobs-for-an-experiment">Practice: recent jobs for an experiment</h2>
+<pre><code class="language-sql">CREATE INDEX jobs_experiment_recent
+ON jobs (experiment_id, created_at DESC, id DESC);
+
+SELECT id, state, created_at FROM jobs
+WHERE experiment_id = 42
+ORDER BY created_at DESC, id DESC LIMIT 20;
+</code></pre>
+<p>The index locates one experiment and scans in time order. A query filtering only by <code>state</code> may behave differently. Verify scanned rows, sorts, and actual runtime with EXPLAIN. Low-selectivity queries may favor a sequential scan.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Why avoid indexing every column?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Why is <code>(a,b)</code> different from <code>(b,a)</code>?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Explain trade-offs among write throughput, read latency, and space amplification.</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/db-indexing">Hello Interview · Database Indexing</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/05-caching"><h1 id="caching--invalidation">Caching &#x26; Invalidation</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPue8k+WtmOetlueVpeS4juWkseaViCAvIENhY2hpbmcgJmFtcDsgSW52YWxpZGF0aW9uPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuivt+axgjwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5SZXF1ZXN0PC90ZXh0PjxwYXRoIGQ9Ik0yNjkgOTYgSDI5OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iMzA0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjQyNCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+57yT5a2YPC90ZXh0Pjx0ZXh0IHg9IjQyNCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPkNhY2hlPC90ZXh0PjxwYXRoIGQ9Ik01NDkgOTYgSDU3OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iNTg0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjcwNCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5pyq5ZG95LitPC90ZXh0Pjx0ZXh0IHg9IjcwNCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPk1pc3M8L3RleHQ+PHBhdGggZD0iTTgyOSA5NiBIODU5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSI4NjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iOTg0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7mlbDmja7lupM8L3RleHQ+PHRleHQgeD0iOTg0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+RGF0YWJhc2U8L3RleHQ+PC9zdmc+Cg==" alt="缓存策略与失效示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Caching exchanges storage and consistency complexity for better read latency and lower backend load. Caches can live in clients, CDNs, application processes, or shared services. Cache-aside reads the cache first, loads misses from the database, and fills the cache.</p>
+<p>TTL limits residence time but does not independently guarantee an acceptable freshness bound. Eviction differs from expiration. Write-through, write-back, and invalidation strategies have different durability risks.</p>
+<h2 id="practice-reading-training-job-status">Practice: reading training-job status</h2>
+<p>Terminal job states change rarely and are good cache candidates. Refresh active states according to freshness requirements. Include attempt or version identifiers in keys to avoid stale workers repopulating old values.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Failure</th><th>Response</th></tr></thead><tbody><tr><td>Hot entries expire together</td><td>Single-flight fetching and expiration jitter.</td></tr><tr><td>Repeated nonexistent keys</td><td>Short-lived negative caching; consider a Bloom filter when appropriate.</td></tr><tr><td>Cache outage</td><td>Rate limits, degradation, and bounded origin concurrency to protect the database.</td></tr></tbody></table>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> What if a database update succeeds but invalidation fails?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Can a stale reader overwrite a newly cached value?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Why can p99 remain poor despite a high hit rate?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/caching">Hello Interview · Caching &#x26; Invalidation</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/06-sharding"><h1 id="sharding">Sharding</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuaVsOaNruWIhueJhyAvIFNoYXJkaW5nPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWIhueJh+mUrjwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5LZXk8L3RleHQ+PHBhdGggZD0iTTI2OSA5NiBIMjk5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSIzMDQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNDI0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7ot6/nlLE8L3RleHQ+PHRleHQgeD0iNDI0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+Um91dGVyPC90ZXh0PjxwYXRoIGQ9Ik01NDkgOTYgSDU3OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iNTg0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjcwNCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5YiG54mHIEE8L3RleHQ+PHRleHQgeD0iNzA0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+U2hhcmQgQTwvdGV4dD48cGF0aCBkPSJNODI5IDk2IEg4NTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9Ijg2NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI5ODQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWIhueJhyBCPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPlNoYXJkIEI8L3RleHQ+PC9zdmc+Cg==" alt="数据分片示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Sharding distributes data across machines. Partitioning often divides tables inside one database instance. Replication keeps copies and does not by itself distribute primary writes.</p>
+<p>Measure whether indexing, query optimization, vertical scaling, or read replicas can solve the bottleneck first. A shard key must balance traffic distribution, locality, and hotspots. Hash, range, and directory routing have different maintenance costs.</p>
+<h2 id="practice-training-logs">Practice: training logs</h2>
+<p>Sharding by <code>experiment_id</code> keeps experiment queries local, but a huge experiment can create a hot shard. Time buckets or subshards spread writes while increasing read fan-out. Global search may need a separate search index.</p>
+<p>Explain expansion through historical migration, incremental replication or dual writes, routing cutover, validation, and rollback. Include cross-shard transactions and global ordering in the cost.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> If one user generates half of all writes, does hashing the user ID help?</li>
+<li class="task-list-item"><input type="checkbox" disabled> How do you merge the latest 20 records from several shards?</li>
+<li class="task-list-item"><input type="checkbox" disabled> How do routing-version mismatches cause missed reads or duplicate writes?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/sharding">Hello Interview · Sharding</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/07-consistent-hashing"><h1 id="consistent-hashing">Consistent Hashing</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuS4gOiHtOaAp+WTiOW4jCAvIENvbnNpc3RlbnQgSGFzaGluZzwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7lk4jluIzplK48L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+SGFzaCBrZXk8L3RleHQ+PHBhdGggZD0iTTI2OSA5NiBIMjk5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSIzMDQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNDI0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7lk4jluIznjq88L3RleHQ+PHRleHQgeD0iNDI0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+UmluZzwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWQjue7p+iKgueCuTwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5TdWNjZXNzb3I8L3RleHQ+PHBhdGggZD0iTTgyOSA5NiBIODU5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSI4NjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iOTg0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7ov4Hnp7vljLrpl7Q8L3RleHQ+PHRleHQgeD0iOTg0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+TW92ZSByYW5nZTwvdGV4dD48L3N2Zz4K" alt="一致性哈希示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>With <code>hash(key) % N</code>, changing the node count remaps many keys. Consistent hashing maps keys and nodes onto a hash ring; a common implementation assigns each key to its clockwise successor.</p>
+<p>Virtual nodes give each machine multiple ring positions, improving distribution and representing capacity weights. Under ideal uniform distribution, adding one node to N nodes moves roughly <code>1/(N+1)</code> of keys; this is not an unconditional workload guarantee.</p>
+<h2 id="practice-model-metadata-cache">Practice: model-metadata cache</h2>
+<p>A new node takes responsibility for its new ring intervals. A cache can rebuild entries under the new routing. Durable databases also need data migration, routing versions, reads and writes during migration, and replica recovery.</p>
+<p>Consistent hashing does not guarantee replica consistency or solve a single hot key. Address hotspots through splitting, replicated reads, or application rate limits.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Draw a three-node ring, add a fourth node, and mark moved intervals.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How do virtual nodes affect routing metadata and operations?</li>
+<li class="task-list-item"><input type="checkbox" disabled> How does failure recovery differ from planned expansion?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing">Hello Interview · Consistent Hashing</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/08-cap-theorem"><h1 id="cap--consistency-trade-offs">CAP &#x26; Consistency Trade-offs</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPkNBUCDkuI7kuIDoh7TmgKflj5boiI0gLyBDQVAgJmFtcDsgQ29uc2lzdGVuY3kgVHJhZGUtb2ZmczwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7nvZHnu5zliIbljLo8L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+UGFydGl0aW9uPC90ZXh0PjxwYXRoIGQ9Ik0yNjkgOTYgSDI5OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iMzA0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjQyNCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5Lia5Yqh5LiN5Y+Y6YePPC90ZXh0Pjx0ZXh0IHg9IjQyNCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPkludmFyaWFudDwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuaLkue7neaIluetieW+hTwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5SZWplY3Q8L3RleHQ+PHBhdGggZD0iTTgyOSA5NiBIODU5IiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz48cmVjdCB4PSI4NjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iOTg0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7pmYjml6flk43lupQ8L3RleHQ+PHRleHQgeD0iOTg0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+U3RhbGU8L3RleHQ+PC9zdmc+Cg==" alt="CAP 与一致性取舍示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>CAP concerns the trade-off between consistency and availability during a network partition. Its consistency means linearizability, not ACID consistency. Its availability requires requests received by non-failing nodes to eventually receive responses; it is not an uptime percentage.</p>
+<p>CAP does not mean freely choosing any two properties at all times. During a partition, some operations may be rejected or delayed to preserve consistency. Continuing to serve can sacrifice a single real-time global view. PACELC also highlights latency versus consistency when the network is healthy.</p>
+<h2 id="practice-gpu-quotas-and-progress-views">Practice: GPU quotas and progress views</h2>
+<p>Quota allocation needs explicit concurrency invariants. Reject allocations during a partition if necessary to avoid duplicate commitments. Progress displays can often tolerate stale data and converge later. Choose semantics per operation rather than labeling an entire product CP or AP.</p>
+<p>Eventual consistency promises convergence under its assumptions; it does not automatically bound staleness or specify conflict resolution.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Explain reads and writes when two regions lose connectivity.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Why does using SQL not prove cross-region linearizability?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Distinguish read-your-writes from linearizability.</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/cap-theorem">Hello Interview · CAP &#x26; Consistency Trade-offs</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/09-capacity-estimation"><h1 id="capacity-estimation--orders-of-magnitude">Capacity Estimation &#x26; Orders of Magnitude</h1>
+<blockquote>
+<p>Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.</p>
+</blockquote>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuWuuemHj+S8sOeul+S4juaVsOmHj+e6pyAvIENhcGFjaXR5IEVzdGltYXRpb24gJmFtcDsgT3JkZXJzIG9mIE1hZ25pdHVkZTwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7otJ/ovb08L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+TG9hZDwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWNleS9jTwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Vbml0czwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWzsOWAvDwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5QZWFrPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5L2Z6YePPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPkhlYWRyb29tPC90ZXh0Pjwvc3ZnPgo=" alt="容量估算与数量级示意图"></p>
+<h2 id="core-decisions">Core decisions</h2>
+<p>Capacity estimates support decisions; single-machine benchmark results are not universal limits. Throughput depends on hardware, workload, object size, indexes, batching, and durability requirements. A fixed database QPS claim lacks necessary context.</p>
+<p>Distinguish averages, peaks, and tail latency. State assumptions, units, and headroom before choosing caching, sharding, or asynchronous processing. Revise estimates with measurements.</p>
+<h2 id="practice-log-ingestion">Practice: log ingestion</h2>
+<p>Assume 10 million records per day, each 2 KB in decimal units. Average ingestion is <code>10,000,000 / 86,400 ≈ 116 records/s</code>. A 10× peak is about 1,160 records/s. Raw storage is about 20 GB/day, or 600 GB for 30 days. Three replicas require about 1.8 TB before indexes and compression.</p>
+<p>Little’s Law: in a stable system, average in-flight work equals arrival rate times average time in the system. At 2,000 requests/s and 0.1 s average duration, expect about 200 in-flight requests. Do not substitute p99 for the average.</p>
+<h2 id="self-check">Self-check</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Why must bytes and bits be kept distinct?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Can remaining capacity handle the peak after losing a zone?</li>
+<li class="task-list-item"><input type="checkbox" disabled> Which assumption is most likely to change the architecture decision?</li>
+</ul>
+<h2 id="related-notes">Related notes</h2>
+<p><a href="#en-02-system-design/README">Module index</a> · <a href="#en-02-system-design/core-concepts/README">Core Concepts overview</a></p>
+<p>Source: <a href="https://www.hellointerview.com/learn/system-design/core-concepts/numbers-to-know">Hello Interview · Capacity Estimation &#x26; Orders of Magnitude</a> (checked 2026-10-25).</p></article><article id="en-02-system-design/core-concepts/README"><h1 id="core-concepts-complete-topic-index">Core Concepts: Complete Topic Index</h1>
+<p>Checked against Foundations and Thinking in Scale: all nine Core Concepts topics are covered. Other patterns, technologies, and paid quizzes are outside this set.</p>
+<ol>
+<li><a href="#en-02-system-design/core-concepts/01-networking">Networking Essentials</a></li>
+<li><a href="#en-02-system-design/core-concepts/02-api-design">API Design</a></li>
+<li><a href="#en-02-system-design/core-concepts/03-data-modeling">Data Modeling</a></li>
+<li><a href="#en-02-system-design/core-concepts/04-database-indexing">Database Indexing</a></li>
+<li><a href="#en-02-system-design/core-concepts/05-caching">Caching &#x26; Invalidation</a></li>
+<li><a href="#en-02-system-design/core-concepts/06-sharding">Sharding</a></li>
+<li><a href="#en-02-system-design/core-concepts/07-consistent-hashing">Consistent Hashing</a></li>
+<li><a href="#en-02-system-design/core-concepts/08-cap-theorem">CAP &#x26; Consistency Trade-offs</a></li>
+<li><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity Estimation &#x26; Orders of Magnitude</a></li>
+</ol>
+<h2 id="study-order">Study order</h2>
+<p>Networking and APIs → modeling and indexes → caching → sharding and consistent hashing → CAP → estimation.</p>
+<p>For each topic explain its problem, trade-offs, and when to avoid it, then complete the original self-checks.</p>
+<h2 id="visualization">Visualization</h2>
+<p><a href="system-design-map.html">Interactive system-design overview, Chinese</a>. Download the raw HTML from GitHub and open it offline. Topic SVGs preview directly in GitHub and Obsidian.</p>
+<h2 id="sources-and-access-boundary">Sources and access boundary</h2>
+<p><a href="https://www.hellointerview.com/learn/courses/system-design">Course curriculum</a> · <a href="https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts">Public Core Concepts overview</a>. Some articles expose only introductory text and later headings. Supplemental explanations use general knowledge and original reasoning; they do not claim access to restricted content.</p>
+<p><a href="#en-02-system-design/README">Back to system design</a></p></article><article id="en-03-ai-engineering/README"><h1 id="ai-assisted-software-engineering">AI-assisted Software Engineering</h1>
+<p>Deliver verifiable software with AI through context preparation, debugging, review, and acceptance checks.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-03-ai-engineering/practical-checklist">Practical Delivery &#x26; Acceptance Checklist</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-03-ai-engineering/practical-checklist"><h1 id="practical-delivery--acceptance-checklist">Practical Delivery &#x26; Acceptance Checklist</h1>
+<h2 id="a-complete-practice-loop">A complete practice loop</h2>
+<p>Clarify requirements → build a minimal solution → verify with tools → review manually → reflect. Define acceptance criteria before asking AI to break down the task.</p>
+<ul>
+<li>Context: inputs, outputs, existing interfaces, environment, and fixed constraints.</li>
+<li>Tools: file search, tests, logs, and diffs.</li>
+<li>Debugging: reproduce, narrow the scope, hypothesize, verify, and fix.</li>
+<li>Review: correctness, failure paths, dependencies, credential handling, and maintainability.</li>
+<li>Evidence: observed results, uncovered boundaries, and next steps.</li>
+</ul>
+<h2 id="practice-log">Practice log</h2>
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Task</th><th>Time limit</th><th>Acceptance criteria</th><th>AI mistake</th><th>My correction</th><th>Verification</th></tr></thead></table>
+<p><a href="#en-02-system-design/core-concepts/02-api-design">API design</a> · <a href="#en-06-project-deep-dives/deep-dive-template">Project deep dive</a> · <a href="#en-03-ai-engineering/README">Module index</a></p></article><article id="en-04-rl-systems/README"><h1 id="reinforcement-learning--training-systems">Reinforcement Learning &#x26; Training Systems</h1>
+<p>Connect learning objectives, data flow, and training infrastructure to reason about throughput, stability, and evaluation.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-04-rl-systems/knowledge-map">RL Systems Knowledge Map</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-04-rl-systems/knowledge-map"><h1 id="rl-systems-knowledge-map">RL Systems Knowledge Map</h1>
+<p>This is a framework to fill in, not a claim about completed projects or proficiency.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Dimension</th><th>Questions to answer</th></tr></thead><tbody><tr><td>Objective and algorithm</td><td>What is optimized? How do advantage estimation, clipping, and KL constraints affect learning?</td></tr><tr><td>Data flow</td><td>How do prompts, rollouts, rewards, and training batches move through the system?</td></tr><tr><td>Execution</td><td>How are training and inference resources allocated? What changes between synchronous and asynchronous execution?</td></tr><tr><td>Performance</td><td>How do you measure throughput, GPU utilization, tails, memory, and communication?</td></tr><tr><td>Stability</td><td>How do you detect stale policy data, version mismatch, numerical failures, and reward hacking?</td></tr><tr><td>Recovery</td><td>What state is needed for checkpoints, retries, deduplication, and reproducibility?</td></tr><tr><td>Evaluation</td><td>How do you distinguish reward gains, generalization, and evaluation contamination?</td></tr></tbody></table>
+<h2 id="answer-template">Answer template</h2>
+<p>Definition → mathematical objective or data flow → system constraints → failure modes → measurable evidence.</p>
+<p><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity estimates</a> · <a href="#en-02-system-design/core-concepts/03-data-modeling">Data modeling</a> · <a href="#en-06-project-deep-dives/deep-dive-template">Project deep dives</a> · <a href="#en-04-rl-systems/README">Module index</a></p></article><article id="en-05-company-research/README"><h1 id="company--role-research">Company &#x26; Role Research</h1>
+<p>Turn public evidence into role alignment, technical judgment, and useful interview questions.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-05-company-research/company-template">Company &#x26; Role Research Template</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-05-company-research/company-template"><h1 id="company--role-research-template">Company &#x26; Role Research Template</h1>
+<h2 id="basics">Basics</h2>
+<p>Company, role, level, team, and interview date: to be filled in.</p>
+<h2 id="evidence-table">Evidence table</h2>
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Claim</th><th>Public source</th><th>Publication date</th><th>Checked date</th><th>Fact or inference</th><th>Role relevance</th></tr></thead></table>
+<p>Prefer job descriptions, engineering blogs, papers, public code, and official product material. Recheck fast-changing information before the interview.</p>
+<h2 id="develop-a-point-of-view">Develop a point of view</h2>
+<ul>
+<li>What problem does the team solve, and what is its success metric?</li>
+<li>Which of my projects addresses a related challenge, with supporting evidence?</li>
+<li>Prepare three evidence-based questions without guessing private architecture.</li>
+</ul>
+<p><a href="#en-06-project-deep-dives/deep-dive-template">Project deep-dive template</a> · <a href="#en-05-company-research/README">Module index</a></p></article><article id="en-06-project-deep-dives/README"><h1 id="project-deep-dives">Project Deep Dives</h1>
+<p>Explain personal contributions, key decisions, outcomes, and lessons with real evidence.</p>
+<h2 id="study-routine">Study routine</h2>
+<p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
+<p>Progress: review needed → explain → solve independently → handle follow-ups.</p>
+<h2 id="notes">Notes</h2>
+<!-- AUTO:START -->
+<ul>
+<li><a href="#en-06-project-deep-dives/deep-dive-template">Project Deep-dive Template</a></li>
+</ul>
+<!-- AUTO:END --></article><article id="en-06-project-deep-dives/deep-dive-template"><h1 id="project-deep-dive-template">Project Deep-dive Template</h1>
+<p>Do not invent experience, metrics, or contributions. Fill this template with actual materials.</p>
+<h2 id="90-second-introduction">90-second introduction</h2>
+<p>Problem and context → my responsibility → key technical decision → verifiable outcome → most important lesson.</p>
+<h2 id="technical-evidence">Technical evidence</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Dimension</th><th>Material to provide</th></tr></thead><tbody><tr><td>Scope</td><td>What I did, what the team did, and what remained out of scope.</td></tr><tr><td>Architecture</td><td>Data flow, interfaces, storage, dependencies, and deployment boundaries.</td></tr><tr><td>Trade-off</td><td>Alternatives, constraints, decision evidence, and rejected options.</td></tr><tr><td>Outcome</td><td>Baseline, measurement method, sample size, uncertainty, and actual metrics.</td></tr><tr><td>Failure</td><td>Reproduction conditions, root cause, fix, and recurrence prevention.</td></tr><tr><td>Follow-up</td><td>Changes needed at 10× scale, during node failures, or with stale data.</td></tr></tbody></table>
+<h2 id="rehearse-follow-ups">Rehearse follow-ups</h2>
+<p>Why this approach? What was technically hardest? What would change if you rebuilt it? How do you attribute the result to your work?</p>
+<p><a href="#en-02-system-design/README">System design</a> · <a href="#en-04-rl-systems/knowledge-map">RL systems</a> · <a href="#en-05-company-research/company-template">Company research</a> · <a href="#en-06-project-deep-dives/README">Module index</a></p></article></section></main></html>
