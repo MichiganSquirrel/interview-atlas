@@ -6,35 +6,35 @@ date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
-source_hash: "2673a261f0771db10a332a1e043c105d03882bdfec7120d21015ac135deffa5d"
+source_hash: "a862f1b43a7d202d121469df94cf3f90655d4a925421b9d0c36299545f40fd2b"
 ---
 
 # Core Concepts: Complete Topic Index
 
-Checked against Foundations and Thinking in Scale: all nine Core Concepts topics are covered. Other patterns, technologies, and paid quizzes are outside this set.
+Nine explanatory chapters are available as continuous reading. All prose is visible without expansion controls, quizzes, or self-checks. Each chapter connects concepts, mechanisms, suitable uses, and trade-offs through concrete examples.
 
-1. [Networking Essentials](01-networking.md)
-2. [API Design](02-api-design.md)
-3. [Data Modeling](03-data-modeling.md)
-4. [Database Indexing](04-database-indexing.md)
-5. [Caching & Invalidation](05-caching.md)
-6. [Sharding](06-sharding.md)
-7. [Consistent Hashing](07-consistent-hashing.md)
-8. [CAP & Consistency Trade-offs](08-cap-theorem.md)
-9. [Capacity Estimation & Orders of Magnitude](09-capacity-estimation.md)
+| Chapter | Coverage |
+| --- | --- |
+| [Networking](01-networking.md) | Request paths, layers, protocols, real-time communication, balancing, regions, and recovery. |
+| [API design](02-api-design.md) | Contracts, asynchronous operations, idempotency, pagination, authorization, and evolution. |
+| [Data modeling](03-data-modeling.md) | Access patterns, entities, constraints, concurrency, object storage, and lifecycle. |
+| [Indexes](04-database-indexing.md) | Pages, B-trees, LSM, composite and covering indexes, plans, and maintenance. |
+| [Caching](05-caching.md) | Placement, access patterns, freshness, invalidation races, hotspots, and origin protection. |
+| [Sharding](06-sharding.md) | Keys, placement, hotspots, cross-shard operations, and migration. |
+| [Consistent hashing](07-consistent-hashing.md) | Remapping, rings, virtual nodes, membership versions, and replication boundaries. |
+| [CAP and consistency](08-cap-theorem.md) | Partition behavior, consistency models, and end-to-end read guarantees. |
+| [Capacity estimates](09-capacity-estimation.md) | Demand, storage, bandwidth, concurrency, resources, queues, and headroom. |
 
-## Study order
+## Reading order
 
-Networking and APIs → modeling and indexes → caching → sharding and consistent hashing → CAP → estimation.
+Networking and APIs → modeling and indexes → caching → sharding and consistent hashing → CAP → estimation. Start with one request, then consider scaling and failure. Individual chapters can also be opened directly.
 
-For each topic explain its problem, trade-offs, and when to avoid it, then complete the original self-checks.
+## Diagrams and offline reading
 
-## Visualization
+Each chapter includes an SVG preview. Download the [interactive system-design overview, Chinese](../../../../assets/system-design-map.html) as standalone HTML. The complete pack contains both languages, diagrams, and an Obsidian-ready folder.
 
-[Interactive system-design overview, Chinese](../../../../assets/system-design-map.html). Download the raw HTML from GitHub and open it offline. Topic SVGs preview directly in GitHub and Obsidian.
+## Reading references
 
-## Sources and access boundary
+All nine written topics were reviewed through the existing authenticated Hello Interview session. These guides are independently organized around system questions with primary documentation and worked examples; they do not transcribe course videos or quizzes. Other patterns, technologies, and design problems are outside this set.
 
-[Course curriculum](https://www.hellointerview.com/learn/courses/system-design) · [Public Core Concepts overview](https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts). Some articles expose only introductory text and later headings. Supplemental explanations use general knowledge and original reasoning; they do not claim access to restricted content.
-
-[Back to system design](../README.md)
+[Hello Interview curriculum](https://www.hellointerview.com/learn/courses/system-design) · [Back to system design](../README.md)

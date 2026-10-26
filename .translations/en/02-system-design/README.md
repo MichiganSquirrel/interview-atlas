@@ -6,18 +6,16 @@ date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
-source_hash: "d51c5248e2f75b36ff24d75ea6978f67cf7294488a40b5cbffc7230cd753f23e"
+source_hash: "004d844253026d50a06ec5f379252a5733424df049c5335bf57ec7e87288cc86"
 ---
 
 # System Design & Architecture Trade-offs
 
 Start from requirements and data flow, then justify components, scale limits, and failure behavior.
 
-## Study routine
+## Reading approach
 
-Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.
-
-Progress: review needed → explain → solve independently → handle follow-ups.
+Connect request paths, data organization, scale, and failures. Chapters directly present concepts, mechanisms, examples, and trade-offs without self-checks or hidden prose.
 
 ## Notes
 

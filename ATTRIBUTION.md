@@ -1,8 +1,8 @@
 # 来源与说明
 
-系统设计 Core Concepts 的主题清单与学习入口来自 [Hello Interview](https://www.hellointerview.com/learn/courses/system-design)。每章附对应公开文章链接与核对日期。
+系统设计 Core Concepts 的主题清单与学习入口来自 [Hello Interview](https://www.hellointerview.com/learn/courses/system-design)。每章附对应学习入口和相关技术文档。
 
-本仓库提供简短中文学习总结、英文镜像与原创练习；未复制课程视频、付费测验、截图或受限正文。部分内容只有公开导读和标题可见，相应补充讲解属于通用知识与原创推演。
+现有登录会话已用于核对九个书面章节。笔记按独立结构讲解技术概念，结合官方技术文档、训练平台例子与明确假设下的计算，并维护英文镜像。正文全部平铺，不添加自测。没有复制课程正文、视频转录、测验或截图，也不把本站内容称为课程全文翻译。
 
 交互总览使用 [Archify](https://github.com/tt-a1i/archify) 生成，图示内容由本仓库创作。普通章节 SVG 由本仓库的构建脚本生成。
 

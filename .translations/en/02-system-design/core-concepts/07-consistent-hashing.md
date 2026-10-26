@@ -1,42 +1,69 @@
 ---
 title: "Consistent Hashing"
 title_en: "Consistent Hashing"
-description: "Consistent Hashing"
+description: "Modulo remapping, rings, virtual nodes, membership versions, replicas, and hotspots."
 date: "2026-10-25"
 tags: ["interview", "system-design"]
 status: "待复习"
 public: true
 diagram: ["哈希键 / Hash key", "哈希环 / Ring", "后继节点 / Successor", "迁移区间 / Move range"]
 source: "https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing"
-source_hash: "5abc413e13ffe857d902f18a92b39ee676dc9b77d2661444477df5dcf7446960"
+
+
+source_hash: "fd1a0b9355853de578fd2cd91b715a3a688eeb98080ac652a7a697002f9c2b0a"
 ---
 
 # Consistent Hashing
 
-> Scope: concise notes based on the publicly accessible article and topic outline. Practice scenarios and self-checks are original; Premium videos, quizzes, and restricted text are not reproduced.
+Consistent hashing reduces key reassignment when cluster membership changes. It is a placement and routing method, not a protocol for replica agreement, durability, or recovery.
 
-![一致性哈希示意图](../../../../assets/07-consistent-hashing.svg)
+![From a key to a ring and owner](../../../../assets/07-consistent-hashing.svg)
 
-## Core decisions
+## Why direct modulo complicates expansion
 
-With `hash(key) % N`, changing the node count remaps many keys. Consistent hashing maps keys and nodes onto a hash ring; a common implementation assigns each key to its clockwise successor.
+For a fixed cluster, `hash(key) % N` is simple. Changing N to N+1 remaps many keys. Caches can experience widespread misses; persistent stores need movement and compatibility with old locations.
 
-Virtual nodes give each machine multiple ring positions, improving distribution and representing capacity weights. Under ideal uniform distribution, adding one node to N nodes moves roughly `1/(N+1)` of keys; this is not an unconditional workload guarantee.
+The issue is coupling ownership directly to physical node count, not modulo itself. Fixed logical partitions mapped separately to machines provide another way to reduce that coupling.
 
-## Practice: model-metadata cache
+## Ring ownership
 
-A new node takes responsibility for its new ring intervals. A cache can rebuild entries under the new routing. Durable databases also need data migration, routing versions, reads and writes during migration, and replica recovery.
+Place keys and nodes in a circular hash space. A common rule assigns a key to the first clockwise node, wrapping around at the end.
 
-Consistent hashing does not guarantee replica consistency or solve a single hot key. Address hotspots through splitting, replicated reads, or application rate limits.
+Suppose `A=10, B=50, C=90`. Key 30 belongs to B, key 70 to C, and key 95 wraps to A. Adding `D=35` transfers `(10,35]` from B to D without changing other intervals. These small integer positions illustrate the rule.
 
-## Self-check
+```text
+Before: 10(A) ---- 30(key) -------- 50(B) -------- 90(C)
+After:  10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)
+```
 
-- [ ] Draw a three-node ring, add a fourth node, and mark moved intervals.
-- [ ] How do virtual nodes affect routing metadata and operations?
-- [ ] How does failure recovery differ from planned expansion?
+With ideal uniform distribution and equal weights, adding a node takes roughly `1/(N+1)` of keys on average. This is not an exact guarantee for each expansion, byte volume, or request load.
 
-## Related notes
+## Virtual nodes
 
-[Module index](../README.md) · [Core Concepts overview](README.md)
+One position per machine can leave a successor overloaded after a failure. Virtual nodes assign several distributed positions to each physical machine, spreading transferred intervals. More positions can represent greater capacity.
 
-Source: [Hello Interview · Consistent Hashing](https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing) (checked 2026-10-25).
+Costs include routing metadata and migration management. Virtual nodes cannot split one hot key, and balanced key counts need not imply balanced memory consumption.
+
+## Membership and routing versions
+
+Clients, proxies, or servers need a membership view and ring version. Different versions can send the same key to different owners.
+
+Migration can involve forwarding, redirects, or controlled reads from old and new locations. Writes need explicit ownership and cutover rules. Removing a node solely on a local timeout can mistake a partition for failure and create competing writers.
+
+## Placement versus recovery
+
+Placement determines where data belongs; replication determines where additional copies exist. Replicas should span physical machines and relevant failure domains. Several virtual nodes on one machine are not independent backups.
+
+Failed caches can rebuild from a source of truth. Durable data needs existing replicas or another recovery source. Expansion still needs historical copying, change catch-up, and validation.
+
+## Hotspots and alternative placement
+
+Hot keys may need local caches, replicated reads, splitting, or rate limiting, each with separate consistency and invalidation decisions. Alternatives such as rendezvous hashing also reduce remapping.
+
+Redis Cluster illustrates why product details matter: it maps 16,384 fixed hash slots onto nodes and migrates slots, rather than directly using this virtual-node ring. The [Redis Cluster specification](https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/) documents slots and redirects.
+
+## Related notes and source
+
+[Sharding](06-sharding.md) · [Caching](05-caching.md) · [CAP](08-cap-theorem.md)
+
+Learning reference: [Hello Interview · Consistent Hashing](https://www.hellointerview.com/learn/system-design/core-concepts/consistent-hashing), reviewed through the authenticated written chapter. The integer-ring example and routing-version discussion are independent explanations.
