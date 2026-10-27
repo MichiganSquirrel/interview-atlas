@@ -13,7 +13,10 @@ from typing import Any, Dict, List, Tuple
 # 把 .env 中的配置加载到环境变量；默认不会覆盖进程中已有的同名变量。
 load_dotenv()
 
-# OpenAI 客户端在调用函数中初始化；请在 .env 中配置 OPENAI_API_KEY。
+# 客户端配置：api_key 用于鉴权；这里未指定 base_url，使用 SDK 默认的 OpenAI 地址。
+# 当前仍是 OpenAI 配置；接 DeepSeek 时，需要同时修改 Key、base_url 和下方的 model。
+# os.environ[...] 在变量不存在时会抛出 KeyError；不要把真实密钥写进代码。
+openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 # System prompt 定义助手行为和文本工具协议，不负责选择模型或设置 API 参数。
 # {tool_list_repr} 稍后替换为工具说明；{{JSON_ARGS}} 的双花括号用于转义 str.format。
@@ -25,11 +28,6 @@ You have access to a series of tools you can execute. Hear are the tools you can
 
 When you want to use a tool, reply with exactly one line in the format: 'tool: TOOL_NAME({{JSON_ARGS}})' and nothing else.
 Use compact single-line JSON with double quotes. After receiving a tool_result(...) message, continue the task.
-Do not use Markdown code fences for tool requests.
-Example: tool: read_file({{"filename":"main.py"}})
-Only report an edit as successful after edit_file returns action "edited" or "created_file".
-If action is "old_str not found", no edit occurred: read the file again and use its exact text.
-After an edit, read the file to verify the requested change before claiming completion.
 If no tool is needed, respond normally.
 """
 
@@ -145,7 +143,8 @@ def get_full_system_prompt():
 
 def extract_tool_invocations(text: str) -> List[Tuple[str, Dict[str, Any]]]:
     """
-    解析单行 tool: name({...}) 工具请求。
+    Return list of (tool_name, args) requested in 'tool: name({...})' lines.
+    The parser expects single-line, compact JSON in parentheses.
     """
     # 例如 tool: read_file({"filename":"main.py"})
     # 会解析成 ("read_file", {"filename": "main.py"})，不会执行任意 Python 表达式。
@@ -161,10 +160,8 @@ def extract_tool_invocations(text: str) -> List[Tuple[str, Dict[str, Any]]]:
             if not rest.endswith(")"):
                 continue
             json_str = rest[:-1].strip()
-            # JSON 文本转换成 Python 对象。
+            # JSON 文本转换成 Python 对象；当前尚未校验它是否是字典及参数类型。
             args = json.loads(json_str)
-            if not isinstance(args, dict):
-                continue
             invocations.append((name, args))
         except Exception:
             # 格式错误的工具行会被忽略；若一条也没解析到，外层会当作普通回答。
@@ -172,8 +169,6 @@ def extract_tool_invocations(text: str) -> List[Tuple[str, Dict[str, Any]]]:
     return invocations
 
 def execute_llm_call(conversation: List[Dict[str, str]]):
-    # 保留原来的 OpenAI 调用，只有调用本函数时才需要 OPENAI_API_KEY。
-    openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     # 每次请求都发送当前 conversation；本脚本不依赖服务端自动保存对话。
     # 未显式传入的参数由 SDK 或服务端采用各自的默认行为。
     response = openai_client.chat.completions.create(
@@ -204,31 +199,34 @@ def run_coding_agent_loop():
             "content": user_input.strip()
         })
         # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。
-        # 当前没有最大步骤数；API 异常仍会向外抛出，工具异常在下方捕获。
+        # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。
         while True:
             assistant_response = execute_llm_call(conversation)
             tool_invocations = extract_tool_invocations(assistant_response)
-            # 无论是工具请求还是普通回答，都保存模型消息，保留完整的操作上下文。
-            conversation.append({"role": "assistant", "content": assistant_response})
             # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。
             if not tool_invocations:
                 print(f"{ASSISTANT_COLOR}Assistant:{RESET_COLOR}: {assistant_response}")
-                if assistant_response.lstrip().startswith("tool:"):
-                    print("[协议错误] 未解析到有效工具调用，上面的文字没有触发文件操作。")
+                conversation.append({
+                    "role": "assistant",
+                    "content": assistant_response
+                })
                 break
+            # 注意：当前工具分支未将 assistant_response 加入历史，只追加工具结果。
+            # 后续模型因此看不到自己发出的这条工具请求；这是现有逻辑的一个待改进点。
             for name, args in tool_invocations:
+                # 只从注册表选函数；未知工具名会触发 KeyError。
+                tool = TOOL_REGISTRY[name]
+                resp = ""
                 print(name, args)
-                try:
-                    tool = TOOL_REGISTRY[name]
-                    # 按参数名调用；缺少参数直接报错，避免误用默认空串覆盖文件。
-                    inspect.signature(tool).bind(**args)
-                    resp = tool(**args)
-                except (KeyError, TypeError, ValueError, OSError) as exc:
-                    resp = {"action": "error", "error": str(exc)}
-                # 打印实际返回值：上面的工具名和参数只代表尝试执行，不代表成功。
-                print("tool_result:", json.dumps(resp, ensure_ascii=False))
-                if name == "edit_file" and resp.get("action") == "old_str not found":
-                    print("[编辑失败] old_str 未匹配，文件没有修改；需要重新读取并使用准确原文。")
+                # 从 JSON 参数中取值并执行工具；缺失参数采用这里给出的默认值。
+                if name == "read_file":
+                    resp = tool(args.get("filename", "."))
+                elif name == "list_files":
+                    resp = tool(args.get("path", "."))
+                elif name == "edit_file":
+                    resp = tool(args.get("path", "."), 
+                                args.get("old_str", ""), 
+                                args.get("new_str", ""))
                 # 当前文本协议把工具结果作为 user 消息回传，并非原生 role="tool"。
                 # 下一次内层循环会把这些结果发给模型，让它继续决定下一步。
                 conversation.append({
@@ -238,6 +236,6 @@ def run_coding_agent_loop():
                 
 
 # 直接运行此文件时进入交互循环；import 时不会启动循环，
-# 但顶层的 .env 加载仍会执行。
+# 但顶层的 .env 加载和客户端初始化仍会执行。
 if __name__ == "__main__":
     run_coding_agent_loop()

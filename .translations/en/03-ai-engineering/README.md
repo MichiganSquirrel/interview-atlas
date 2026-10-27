@@ -6,7 +6,7 @@ date: "2026-10-25"
 tags: ["interview", "ai-engineering"]
 status: "待复习"
 public: true
-source_hash: "0fe995c9be53a769d5f5080346efec15c7161ffc5c7f96118a6cfb33d2b8f546"
+source_hash: "ce8ad86a40040ea19d6a36fa19c041bb0e4f5b39ed14463336f413ac3c4d5a85"
 ---
 
 # AI-assisted Software Engineering
@@ -32,4 +32,7 @@ Progress: review needed → explain → solve independently → handle follow-up
 
 The three tools read a file, list a directory, and replace file contents. Paths are resolved relative to the working directory from which the script was launched. `edit_file` replaces only the first match; an empty `old_str` creates or overwrites the entire file. The current implementation has no workspace boundary, tool-call limit, or shared handling for API and file errors. The tool branch also omits the model's tool request from the message history and appends only the execution result. When reading the example, distinguish its current behavior from possible future improvements.
 
-The current inner loop calls `execute_deepseek_call()` by default, reads authentication configuration from `DEEPSEEK_API_KEY`, and selects the request endpoint with `base_url="https://api.deepseek.com"`. The retained `execute_llm_call()` initializes its OpenAI client and reads `OPENAI_API_KEY` only when that function is called. `load_dotenv()` loads `.env`. Actual configuration and local dependencies are excluded from publication. The source code is preserved as supplied; its Chinese comments help distinguish the responsibilities of context, tool execution, and message history.
+The current module source calls `execute_llm_call()` from the inner loop. Its client reads authentication configuration from `OPENAI_API_KEY` when the module is loaded and uses the SDK's default OpenAI endpoint. `load_dotenv()` loads `.env`. Actual configuration and local dependencies are excluded from publication. The source code is preserved as supplied; its Chinese comments help distinguish the responsibilities of context, tool execution, and message history.
+
+
+[The two-loop note](scratch_note.md) contains an improved implementation: it saves every model response, binds and passes tool arguments by name, catches tool exceptions, and displays actual results. Those behaviors differ from the currently downloadable module source. Both versions are preserved; identify which version you are discussing.

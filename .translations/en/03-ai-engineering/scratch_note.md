@@ -5,7 +5,7 @@ description: "Understand the control flow of a minimal coding agent, from a user
 date: "2026-10-26"
 tags: ["interview", "ai-engineering", "agent-loop"]
 public: true
-source_hash: "58a1b88abf2d2ebcb338a889c03738cfafad342bfc1318cdd99b6e15d1ed1272"
+source_hash: "4256e98fbc6fe4973535701704b313b030c28e769c7152497d7604969bc3f4e5"
 ---
 
 # The Two Loops of a Coding Agent
@@ -28,6 +28,8 @@ Inner loop: request model → execute tool → return result to model
 ```
 
 ## Code and comments
+
+The pseudocode and Python excerpt below are the improved implementation in this note: they save model messages, call tools by parameter name, and catch tool exceptions. These behaviors differ from the current [module source](200lineClaudeCode.py); do not assume that the downloadable source already includes these improvements.
 
 Read the pseudocode first to understand the two loops and their responsibilities, then compare it with the full implementation below.
 
