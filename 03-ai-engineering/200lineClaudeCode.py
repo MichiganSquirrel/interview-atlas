@@ -13,10 +13,8 @@ from typing import Any, Dict, List, Tuple
 # 把 .env 中的配置加载到环境变量；默认不会覆盖进程中已有的同名变量。
 load_dotenv()
 
-# 客户端配置：api_key 用于鉴权；这里未指定 base_url，使用 SDK 默认的 OpenAI 地址。
-# 当前仍是 OpenAI 配置；接 DeepSeek 时，需要同时修改 Key、base_url 和下方的 model。
-# os.environ[...] 在变量不存在时会抛出 KeyError；不要把真实密钥写进代码。
-openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+# 客户端在各自的调用函数中初始化，因此使用 DeepSeek 时不需要配置 OpenAI Key。
+# 在 .env 中自行填写 DEEPSEEK_API_KEY；不要把真实密钥写进代码或提交到 Git。
 
 # System prompt 定义助手行为和文本工具协议，不负责选择模型或设置 API 参数。
 # {tool_list_repr} 稍后替换为工具说明；{{JSON_ARGS}} 的双花括号用于转义 str.format。
@@ -169,6 +167,8 @@ def extract_tool_invocations(text: str) -> List[Tuple[str, Dict[str, Any]]]:
     return invocations
 
 def execute_llm_call(conversation: List[Dict[str, str]]):
+    # 保留原来的 OpenAI 调用，只有调用本函数时才需要 OPENAI_API_KEY。
+    openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     # 每次请求都发送当前 conversation；本脚本不依赖服务端自动保存对话。
     # 未显式传入的参数由 SDK 或服务端采用各自的默认行为。
     response = openai_client.chat.completions.create(
@@ -178,6 +178,26 @@ def execute_llm_call(conversation: List[Dict[str, str]]):
     )
     # 取第一条候选回复的正文；当前没有处理正文为 None 或生成被截断的情况。
     return response.choices[0].message.content
+
+def execute_deepseek_call(conversation: List[Dict[str, str]]):
+    """使用 DeepSeek 的 OpenAI 兼容接口，返回回复正文供现有工具解析器处理。"""
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
+    if not api_key:
+        raise ValueError("请先在 .env 中填写 DEEPSEEK_API_KEY=你的DeepSeek密钥")
+
+    # OpenAI 是 SDK 类名；base_url 决定请求实际发送到 DeepSeek。
+    with OpenAI(api_key=api_key, base_url="https://api.deepseek.com") as client:
+        response = client.chat.completions.create(
+            model="deepseek-flash",  # DeepSeek 模型名，不使用 OpenAI 的 gpt-5。
+            messages=conversation,
+            max_tokens=2000,  # DeepSeek 使用 max_tokens 参数限制生成长度。
+            # 先使用非思考模式，直接取得正文并沿用当前的文本工具协议。
+            extra_body={"thinking": {"type": "disabled"}},
+        )
+    content = response.choices[0].message.content
+    if not content:
+        raise RuntimeError("DeepSeek 返回了空正文，请检查响应或调整生成上限")
+    return content
 
 def run_coding_agent_loop():
     # 启动时打印完整提示词，便于观察模型看到的工具定义。
@@ -201,7 +221,9 @@ def run_coding_agent_loop():
         # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。
         # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。
         while True:
-            assistant_response = execute_llm_call(conversation)
+            # 如需切回 OpenAI，启用下一行，并注释 DeepSeek 调用。
+            # assistant_response = execute_llm_call(conversation)
+            assistant_response = execute_deepseek_call(conversation)
             tool_invocations = extract_tool_invocations(assistant_response)
             # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。
             if not tool_invocations:
@@ -236,6 +258,6 @@ def run_coding_agent_loop():
                 
 
 # 直接运行此文件时进入交互循环；import 时不会启动循环，
-# 但顶层的 .env 加载和客户端初始化仍会执行。
+# 但顶层的 .env 加载仍会执行。
 if __name__ == "__main__":
     run_coding_agent_loop()

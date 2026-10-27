@@ -51,7 +51,9 @@ def run_coding_agent_loop():
         # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。
         # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。
         while True:
-            assistant_response = execute_llm_call(conversation)
+            # 如需切回 OpenAI，启用下一行，并注释 DeepSeek 调用。
+            # assistant_response = execute_llm_call(conversation)
+            assistant_response = execute_deepseek_call(conversation)
             tool_invocations = extract_tool_invocations(assistant_response)
             # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。
             if not tool_invocations:

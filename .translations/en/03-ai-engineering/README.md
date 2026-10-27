@@ -6,7 +6,7 @@ date: "2026-10-25"
 tags: ["interview", "ai-engineering"]
 status: "待复习"
 public: true
-source_hash: "c3a15857bd35b7b1ab0d0ff4a5db352bc71471f8a68b05f17bb841b7d8221c97"
+source_hash: "0fe995c9be53a769d5f5080346efec15c7161ffc5c7f96118a6cfb33d2b8f546"
 ---
 
 # AI-assisted Software Engineering
@@ -32,4 +32,4 @@ Progress: review needed → explain → solve independently → handle follow-up
 
 The three tools read a file, list a directory, and replace file contents. Paths are resolved relative to the working directory from which the script was launched. `edit_file` replaces only the first match; an empty `old_str` creates or overwrites the entire file. The current implementation has no workspace boundary, tool-call limit, or shared handling for API and file errors. The tool branch also omits the model's tool request from the message history and appends only the execution result. When reading the example, distinguish its current behavior from possible future improvements.
 
-The client reads authentication configuration from the `OPENAI_API_KEY` environment variable, and `load_dotenv()` loads `.env`. Actual configuration and local dependencies are excluded from publication. The source code is preserved as supplied; its Chinese comments help distinguish the responsibilities of context, tool execution, and message history.
+The current inner loop calls `execute_deepseek_call()` by default, reads authentication configuration from `DEEPSEEK_API_KEY`, and selects the request endpoint with `base_url="https://api.deepseek.com"`. The retained `execute_llm_call()` initializes its OpenAI client and reads `OPENAI_API_KEY` only when that function is called. `load_dotenv()` loads `.env`. Actual configuration and local dependencies are excluded from publication. The source code is preserved as supplied; its Chinese comments help distinguish the responsibilities of context, tool execution, and message history.

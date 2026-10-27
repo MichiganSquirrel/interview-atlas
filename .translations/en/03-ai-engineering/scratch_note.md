@@ -5,7 +5,7 @@ description: "Understand the control flow of a minimal coding agent, from a user
 date: "2026-10-26"
 tags: ["interview", "ai-engineering", "agent-loop"]
 public: true
-source_hash: "2b87019d098ba5edd269c4c88cb5e73cd321093f251829bbd561a166b3ceeee7"
+source_hash: "cb16a0a0446ab6d073bedb7da7b868eeb244a3538670ef817f7caa3cf626da4e"
 ---
 
 # The Two Loops of a Coding Agent
@@ -52,7 +52,9 @@ def run_coding_agent_loop():
         # Inner agent loop: a task can call tools repeatedly before producing an ordinary answer.
         # There is currently no step limit or handling of API/file exceptions here.
         while True:
-            assistant_response = execute_llm_call(conversation)
+            # To switch back to OpenAI, enable the next line and comment out the DeepSeek call.
+            # assistant_response = execute_llm_call(conversation)
+            assistant_response = execute_deepseek_call(conversation)
             tool_invocations = extract_tool_invocations(assistant_response)
             # If no tool request is recognized, display the answer, save it in history, and return to user input.
             if not tool_invocations:
