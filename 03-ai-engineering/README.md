@@ -22,6 +22,7 @@ public: true
 
 <!-- AUTO:START -->
 - [实战交付与验收清单](practical-checklist.md)
+- [Coding Agent 的双层循环](scratch_node.md)
 <!-- AUTO:END -->
 
 
