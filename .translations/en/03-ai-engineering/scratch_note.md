@@ -5,7 +5,7 @@ description: "Understand the control flow of a minimal coding agent, from a user
 date: "2026-10-26"
 tags: ["interview", "ai-engineering", "agent-loop"]
 public: true
-source_hash: "cb16a0a0446ab6d073bedb7da7b868eeb244a3538670ef817f7caa3cf626da4e"
+source_hash: "58a1b88abf2d2ebcb338a889c03738cfafad342bfc1318cdd99b6e15d1ed1272"
 ---
 
 # The Two Loops of a Coding Agent
@@ -29,6 +29,33 @@ Inner loop: request model → execute tool → return result to model
 
 ## Code and comments
 
+Read the pseudocode first to understand the two loops and their responsibilities, then compare it with the full implementation below.
+
+```text
+Initialize: conversation history = [system prompt, including tool definitions]
+
+Outer loop: wait for a new user task
+    Receive user input
+    If the user exits: end the outer loop
+    Append the user task to the conversation history
+
+    Inner loop: advance the current task
+        Send the full conversation history and request a model reply
+        Parse the reply for tool calls
+        Append the model reply to the conversation history
+
+        If there are no tool calls:
+            Display the model answer
+            End the inner loop and wait for the next task in the outer loop
+
+        For each tool call:
+            Look up the function by tool name in the registry
+            Execute it with the arguments; record any execution error
+            Display the result and append it to the conversation history
+
+        Continue the inner loop so the model can decide what to do next
+```
+
 ```python
 def run_coding_agent_loop():
     # Print the full prompt at startup to inspect the tool definitions seen by the model.
@@ -50,37 +77,32 @@ def run_coding_agent_loop():
             "content": user_input.strip()
         })
         # Inner agent loop: a task can call tools repeatedly before producing an ordinary answer.
-        # There is currently no step limit or handling of API/file exceptions here.
+        # There is no step limit; API exceptions propagate, while tool exceptions are caught below.
         while True:
-            # To switch back to OpenAI, enable the next line and comment out the DeepSeek call.
-            # assistant_response = execute_llm_call(conversation)
-            assistant_response = execute_deepseek_call(conversation)
+            assistant_response = execute_llm_call(conversation)
             tool_invocations = extract_tool_invocations(assistant_response)
-            # If no tool request is recognized, display the answer, save it in history, and return to user input.
+            # Save model messages for both tool requests and ordinary replies to preserve the operation history.
+            conversation.append({"role": "assistant", "content": assistant_response})
+            # If no tool request is recognized, display the answer and return to the outer input loop.
             if not tool_invocations:
                 print(f"{ASSISTANT_COLOR}Assistant:{RESET_COLOR}: {assistant_response}")
-                conversation.append({
-                    "role": "assistant",
-                    "content": assistant_response
-                })
+                if assistant_response.lstrip().startswith("tool:"):
+                    print("[协议错误] 未解析到有效工具调用，上面的文字没有触发文件操作。")
                 break
-            # The tool branch currently omits assistant_response from history and appends only tool results.
-            # The model cannot see its own tool request in later history; this is a possible improvement to the current logic.
             for name, args in tool_invocations:
-                # Select functions only from the registry; an unknown tool name raises KeyError.
-                tool = TOOL_REGISTRY[name]
-                resp = ""
                 print(name, args)
-                # Read JSON arguments and execute the tool; missing arguments use the defaults shown here.
-                if name == "read_file":
-                    resp = tool(args.get("filename", "."))
-                elif name == "list_files":
-                    resp = tool(args.get("path", "."))
-                elif name == "edit_file":
-                    resp = tool(args.get("path", "."), 
-                                args.get("old_str", ""), 
-                                args.get("new_str", ""))
-                # The current text protocol returns tool results as user messages, rather than native role="tool" messages.
+                try:
+                    tool = TOOL_REGISTRY[name]
+                    # Call by parameter name; missing arguments raise errors rather than defaulting to empty strings that overwrite files.
+                    inspect.signature(tool).bind(**args)
+                    resp = tool(**args)
+                except (KeyError, TypeError, ValueError, OSError) as exc:
+                    resp = {"action": "error", "error": str(exc)}
+                # Print the actual result: the tool name and arguments above indicate an attempt, not success.
+                print("tool_result:", json.dumps(resp, ensure_ascii=False))
+                if name == "edit_file" and resp.get("action") == "old_str not found":
+                    print("[编辑失败] old_str 未匹配，文件没有修改；需要重新读取并使用准确原文。")
+                # This text protocol returns tool results as user messages, rather than native role="tool" messages.
                 # The next inner-loop iteration sends these results to the model so it can decide the next step.
                 conversation.append({
                     "role": "user",
