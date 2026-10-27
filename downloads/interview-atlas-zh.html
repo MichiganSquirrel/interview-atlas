@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试知识图谱</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>面试知识图谱</h1><p>六个模块 · 中文笔记与英文术语 · 可离线阅读</p><a href="interview-atlas-en.html">English</a> · <a href="system-design-map.html">交互总览</a></header><main><nav aria-label="目录"><section class="toc-module"><h2>算法与解题模式</h2><a href="#zh-01-algorithms/README">算法与解题模式</a><a href="#zh-01-algorithms/practice-log">解题训练与错题复盘</a></section><section class="toc-module"><h2>系统设计与架构权衡</h2><a href="#zh-02-system-design/README">系统设计与架构权衡</a><a href="#zh-02-system-design/core-concepts/01-networking">网络基础</a><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a><a href="#zh-02-system-design/core-concepts/03-data-modeling">数据建模</a><a href="#zh-02-system-design/core-concepts/04-database-indexing">数据库索引</a><a href="#zh-02-system-design/core-concepts/05-caching">缓存策略与失效</a><a href="#zh-02-system-design/core-concepts/06-sharding">数据分片</a><a href="#zh-02-system-design/core-concepts/07-consistent-hashing">一致性哈希</a><a href="#zh-02-system-design/core-concepts/08-cap-theorem">CAP 与一致性取舍</a><a href="#zh-02-system-design/core-concepts/09-capacity-estimation">容量估算与数量级</a><a href="#zh-02-system-design/core-concepts/README">Core Concepts 全章导航</a></section><section class="toc-module"><h2>AI 辅助工程实战</h2><a href="#zh-03-ai-engineering/README">AI 辅助工程实战</a><a href="#zh-03-ai-engineering/practical-checklist">实战交付与验收清单</a><a href="#zh-03-ai-engineering/scratch_node">Coding Agent 的双层循环</a></section><section class="toc-module"><h2>强化学习与训练系统</h2><a href="#zh-04-rl-systems/README">强化学习与训练系统</a><a href="#zh-04-rl-systems/knowledge-map">强化学习系统知识地图</a></section><section class="toc-module"><h2>公司与岗位研究</h2><a href="#zh-05-company-research/README">公司与岗位研究</a><a href="#zh-05-company-research/company-template">公司与岗位调研模板</a></section><section class="toc-module"><h2>项目复盘与技术深挖</h2><a href="#zh-06-project-deep-dives/README">项目复盘与技术深挖</a><a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖模板</a></section></nav><section><article id="zh-01-algorithms/README"><h1 id="算法与解题模式">算法与解题模式</h1>
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试知识图谱</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>面试知识图谱</h1><p>六个模块 · 中文笔记与英文术语 · 可离线阅读</p><a href="interview-atlas-en.html">English</a> · <a href="system-design-map.html">交互总览</a></header><main><nav aria-label="目录"><section class="toc-module"><h2>算法与解题模式</h2><a href="#zh-01-algorithms/README">算法与解题模式</a><a href="#zh-01-algorithms/practice-log">解题训练与错题复盘</a></section><section class="toc-module"><h2>系统设计与架构权衡</h2><a href="#zh-02-system-design/README">系统设计与架构权衡</a><a href="#zh-02-system-design/core-concepts/01-networking">网络基础</a><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a><a href="#zh-02-system-design/core-concepts/03-data-modeling">数据建模</a><a href="#zh-02-system-design/core-concepts/04-database-indexing">数据库索引</a><a href="#zh-02-system-design/core-concepts/05-caching">缓存策略与失效</a><a href="#zh-02-system-design/core-concepts/06-sharding">数据分片</a><a href="#zh-02-system-design/core-concepts/07-consistent-hashing">一致性哈希</a><a href="#zh-02-system-design/core-concepts/08-cap-theorem">CAP 与一致性取舍</a><a href="#zh-02-system-design/core-concepts/09-capacity-estimation">容量估算与数量级</a><a href="#zh-02-system-design/core-concepts/README">Core Concepts 全章导航</a></section><section class="toc-module"><h2>AI 辅助工程实战</h2><a href="#zh-03-ai-engineering/README">AI 辅助工程实战</a><a href="#zh-03-ai-engineering/practical-checklist">实战交付与验收清单</a><a href="#zh-03-ai-engineering/scratch_note">Coding Agent 的双层循环</a></section><section class="toc-module"><h2>强化学习与训练系统</h2><a href="#zh-04-rl-systems/README">强化学习与训练系统</a><a href="#zh-04-rl-systems/knowledge-map">强化学习系统知识地图</a></section><section class="toc-module"><h2>公司与岗位研究</h2><a href="#zh-05-company-research/README">公司与岗位研究</a><a href="#zh-05-company-research/company-template">公司与岗位调研模板</a></section><section class="toc-module"><h2>项目复盘与技术深挖</h2><a href="#zh-06-project-deep-dives/README">项目复盘与技术深挖</a><a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖模板</a></section></nav><section><article id="zh-01-algorithms/README"><h1 id="算法与解题模式">算法与解题模式</h1>
 <p>把题目归纳为可识别的模式，训练正确性、复杂度分析和限时表达。</p>
 <h2 id="复习方法">复习方法</h2>
 <p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>
@@ -730,7 +730,7 @@ LIMIT 20;
 <!-- AUTO:START -->
 <ul>
 <li><a href="#zh-03-ai-engineering/practical-checklist">实战交付与验收清单</a></li>
-<li><a href="#zh-03-ai-engineering/scratch_node">Coding Agent 的双层循环</a></li>
+<li><a href="#zh-03-ai-engineering/scratch_note">Coding Agent 的双层循环</a></li>
 </ul>
 <!-- AUTO:END -->
 <h2 id="最小-coding-agent-实例">最小 Coding Agent 实例</h2>
@@ -759,7 +759,8 @@ LIMIT 20;
 
 
 <table><thead><tr><th>任务</th><th>时间限制</th><th>验收条件</th><th>AI 的错误</th><th>我的修正</th><th>验证结果</th></tr></thead></table>
-<p><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a> · <a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖</a> · <a href="#zh-03-ai-engineering/README">模块导航</a></p></article><article id="zh-03-ai-engineering/scratch_node"><h1 id="coding-agent-的双层循环">Coding Agent 的双层循环</h1>
+<p><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a> · <a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖</a> · <a href="#zh-03-ai-engineering/README">模块导航</a></p></article><article id="zh-03-ai-engineering/scratch_note"><h1 id="coding-agent-的双层循环">Coding Agent 的双层循环</h1>
+<p>to model：这里加上原本的代码和注释</p>
 <p>下面的流程图保留了这篇笔记的核心：外层循环（Outer Loop）接收新的用户任务，内层循环（Inner Loop）推进当前任务。理解这个划分，可以把模型生成、工具执行和对话历史三个职责连起来。</p>
 <pre><code class="language-text">coding agent的核心：
 外层循环：等待用户输入一个任务
@@ -772,20 +773,62 @@ LIMIT 20;
                               ↓
                         回到外层等待输入
 </code></pre>
-<h2 id="外层循环接收任务并保留上下文">外层循环：接收任务并保留上下文</h2>
-<p>在<a href="../03-ai-engineering/200lineClaudeCode.py">模块内的 Python 示例</a>中，<code>run_coding_agent_loop()</code> 先创建 <code>conversation</code>，再进入等待用户输入的外层 <code>while True</code>。用户输入被追加为一条 <code>user</code> 消息，随后控制流进入内层循环。模型完成一次回答后，程序回到输入位置，等待用户继续提出问题。</p>
-<p>这里的“新任务”不意味着清空历史。<code>conversation</code> 创建在外层循环之前，因此后续输入仍带着前面的消息。这使“继续改刚才的文件”这样的跟进请求具有上下文（Context）。历史保存在内存中；当前脚本退出后不会持久保存对话。</p>
-<h2 id="内层循环模型决定下一步python-执行工具">内层循环：模型决定下一步，Python 执行工具</h2>
-<p>内层循环先调用 <code>execute_llm_call(conversation)</code>。模型输出的文本交给 <code>extract_tool_invocations()</code> 解析：如果得到 <code>tool: read_file({"filename":"main.py"})</code> 这样的单行请求，程序就从工具注册表（Tool Registry）取出对应函数并执行。模型生成的是工具名和参数；本地 Python 函数负责实际读取或修改文件。</p>
-<p>执行结果被序列化为 <code>tool_result(...)</code>，追加到消息历史（Message History），下一轮再连同历史一起发送给模型。因此，同一个任务可以先读文件、再修改文件，最后给出文字说明。工具调用并不结束这个任务；它提供下一步判断需要的信息。</p>
-<p>这份示例使用自定义文本协议（Text Protocol）：工具结果以 <code>user</code> 消息回传，代码没有传入 API 原生的 <code>tools</code> 或 <code>tool_calls</code>。描述实现时需要说清这层约定，不能只看到函数名就认为模型已经直接调用了本地函数。</p>
-<h2 id="用一次文件修改串起整个流程">用一次文件修改串起整个流程</h2>
-<p>假设用户输入“查看 <code>main.py</code>，把问候语改成 Hello”。外层循环接收这一句，并进入内层循环。第一轮模型可以请求 <code>read_file</code>，程序读取文件并回传内容；第二轮模型根据内容请求 <code>edit_file</code>，程序完成首次匹配替换并回传结果；第三轮模型返回普通说明，内层循环结束。外层循环随后等待用户的下一条输入。</p>
-<p>这是一条用于理解控制流的可能轨迹，不是已经运行过的实验结果。具体模型输出可能不同；示例解析器也可能忽略格式错误的工具请求。</p>
-<h2 id="结束条件与现有实现的边界">结束条件与现有实现的边界</h2>
-<p>当前代码在没有解析到工具请求时，把回复作为普通回答展示，并跳出内层循环。因此，“没有工具请求”是代码使用的结束条件；它本身不能证明任务已经正确完成。如果模型的工具请求格式错误，也可能走到同一个分支。</p>
-<p>工具分支目前只追加执行结果，没有保存模型发出的那条工具请求；后续历史会缺少请求本身。内层循环也没有最大步数或统一的异常处理。这些都是阅读现有实现时需要明确的行为，源码保持原样。外层循环在等待输入时收到 Ctrl+C 或输入结束（EOF）会退出。</p>
-<p><a href="#zh-03-ai-engineering/README">返回 AI 辅助工程实战</a></p></article><article id="zh-04-rl-systems/README"><h1 id="强化学习与训练系统">强化学习与训练系统</h1>
+<h2 id="代码与注释">代码与注释</h2>
+<pre><code class="language-python">def run_coding_agent_loop():
+    # 启动时打印完整提示词，便于观察模型看到的工具定义。
+    print(get_full_system_prompt())
+    # conversation 是保存在内存里的对话历史，退出后不会持久化。
+    conversation = [{
+        "role": "system",
+        "content": get_full_system_prompt()
+    }]
+    # 外层循环：接收用户的新任务。
+    while True:
+        try:
+            user_input = input(f"{YOU_COLOR}You:{RESET_COLOR}:")
+        # 在等待输入时，Ctrl+C 或输入结束可退出。
+        except (KeyboardInterrupt, EOFError):
+            break
+        conversation.append({
+            "role": "user",
+            "content": user_input.strip()
+        })
+        # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。
+        # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。
+        while True:
+            assistant_response = execute_llm_call(conversation)
+            tool_invocations = extract_tool_invocations(assistant_response)
+            # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。
+            if not tool_invocations:
+                print(f"{ASSISTANT_COLOR}Assistant:{RESET_COLOR}: {assistant_response}")
+                conversation.append({
+                    "role": "assistant",
+                    "content": assistant_response
+                })
+                break
+            # 注意：当前工具分支未将 assistant_response 加入历史，只追加工具结果。
+            # 后续模型因此看不到自己发出的这条工具请求；这是现有逻辑的一个待改进点。
+            for name, args in tool_invocations:
+                # 只从注册表选函数；未知工具名会触发 KeyError。
+                tool = TOOL_REGISTRY[name]
+                resp = ""
+                print(name, args)
+                # 从 JSON 参数中取值并执行工具；缺失参数采用这里给出的默认值。
+                if name == "read_file":
+                    resp = tool(args.get("filename", "."))
+                elif name == "list_files":
+                    resp = tool(args.get("path", "."))
+                elif name == "edit_file":
+                    resp = tool(args.get("path", "."), 
+                                args.get("old_str", ""), 
+                                args.get("new_str", ""))
+                # 当前文本协议把工具结果作为 user 消息回传，并非原生 role="tool"。
+                # 下一次内层循环会把这些结果发给模型，让它继续决定下一步。
+                conversation.append({
+                    "role": "user",
+                    "content": f"tool_result({json.dumps(resp)})"
+                })
+</code></pre></article><article id="zh-04-rl-systems/README"><h1 id="强化学习与训练系统">强化学习与训练系统</h1>
 <p>连接算法目标、数据流与训练基础设施，定位吞吐、稳定性和评估问题。</p>
 <h2 id="复习方法">复习方法</h2>
 <p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>

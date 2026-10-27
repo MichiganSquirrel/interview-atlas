@@ -23,7 +23,7 @@ Progress: review needed → explain → solve independently → handle follow-up
 
 <!-- AUTO:START -->
 - [Practical Delivery & Acceptance Checklist](practical-checklist.md)
-- [The Two Loops of a Coding Agent](scratch_node.md)
+- [The Two Loops of a Coding Agent](scratch_note.md)
 <!-- AUTO:END -->
 
 ## Minimal Coding Agent example
