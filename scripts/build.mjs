@@ -37,7 +37,10 @@ for (const m of modules) {
   }
 }
 
-const processor = await createMarkdownProcessor({ syntaxHighlight: false });
+const processor = await createMarkdownProcessor({
+  syntaxHighlight: 'shiki',
+  shikiConfig: { theme: 'github-dark', wrap: false }
+});
 const notes = [];
 const linkedAssets = new Set();
 const errors = [];
@@ -98,7 +101,7 @@ const targetLink = (html, lang, offline) => html
    if (offline) return asset==='assets/system-design-map.html'?'system-design-map.html':`../${asset}`;
    return `/interview-notes/${asset}`;
  });
-const css=`:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}`;
+const css=`:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}pre code{font-size:inherit}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}`;
 for (const lang of ['zh','en']) {
  const selected=notes.filter(n=>n.lang===lang);
  const title=lang==='zh'?'面试知识图谱':'Interview Atlas';

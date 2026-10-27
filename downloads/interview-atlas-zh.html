@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试知识图谱</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>面试知识图谱</h1><p>六个模块 · 中文笔记与英文术语 · 可离线阅读</p><a href="interview-atlas-en.html">English</a> · <a href="system-design-map.html">交互总览</a></header><main><nav aria-label="目录"><section class="toc-module"><h2>算法与解题模式</h2><a href="#zh-01-algorithms/README">算法与解题模式</a><a href="#zh-01-algorithms/practice-log">解题训练与错题复盘</a></section><section class="toc-module"><h2>系统设计与架构权衡</h2><a href="#zh-02-system-design/README">系统设计与架构权衡</a><a href="#zh-02-system-design/core-concepts/01-networking">网络基础</a><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a><a href="#zh-02-system-design/core-concepts/03-data-modeling">数据建模</a><a href="#zh-02-system-design/core-concepts/04-database-indexing">数据库索引</a><a href="#zh-02-system-design/core-concepts/05-caching">缓存策略与失效</a><a href="#zh-02-system-design/core-concepts/06-sharding">数据分片</a><a href="#zh-02-system-design/core-concepts/07-consistent-hashing">一致性哈希</a><a href="#zh-02-system-design/core-concepts/08-cap-theorem">CAP 与一致性取舍</a><a href="#zh-02-system-design/core-concepts/09-capacity-estimation">容量估算与数量级</a><a href="#zh-02-system-design/core-concepts/README">Core Concepts 全章导航</a></section><section class="toc-module"><h2>AI 辅助工程实战</h2><a href="#zh-03-ai-engineering/README">AI 辅助工程实战</a><a href="#zh-03-ai-engineering/practical-checklist">实战交付与验收清单</a><a href="#zh-03-ai-engineering/scratch_note">Coding Agent 的双层循环</a></section><section class="toc-module"><h2>强化学习与训练系统</h2><a href="#zh-04-rl-systems/README">强化学习与训练系统</a><a href="#zh-04-rl-systems/knowledge-map">强化学习系统知识地图</a></section><section class="toc-module"><h2>公司与岗位研究</h2><a href="#zh-05-company-research/README">公司与岗位研究</a><a href="#zh-05-company-research/company-template">公司与岗位调研模板</a></section><section class="toc-module"><h2>项目复盘与技术深挖</h2><a href="#zh-06-project-deep-dives/README">项目复盘与技术深挖</a><a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖模板</a></section></nav><section><article id="zh-01-algorithms/README"><h1 id="算法与解题模式">算法与解题模式</h1>
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试知识图谱</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}pre code{font-size:inherit}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>面试知识图谱</h1><p>六个模块 · 中文笔记与英文术语 · 可离线阅读</p><a href="interview-atlas-en.html">English</a> · <a href="system-design-map.html">交互总览</a></header><main><nav aria-label="目录"><section class="toc-module"><h2>算法与解题模式</h2><a href="#zh-01-algorithms/README">算法与解题模式</a><a href="#zh-01-algorithms/practice-log">解题训练与错题复盘</a></section><section class="toc-module"><h2>系统设计与架构权衡</h2><a href="#zh-02-system-design/README">系统设计与架构权衡</a><a href="#zh-02-system-design/core-concepts/01-networking">网络基础</a><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a><a href="#zh-02-system-design/core-concepts/03-data-modeling">数据建模</a><a href="#zh-02-system-design/core-concepts/04-database-indexing">数据库索引</a><a href="#zh-02-system-design/core-concepts/05-caching">缓存策略与失效</a><a href="#zh-02-system-design/core-concepts/06-sharding">数据分片</a><a href="#zh-02-system-design/core-concepts/07-consistent-hashing">一致性哈希</a><a href="#zh-02-system-design/core-concepts/08-cap-theorem">CAP 与一致性取舍</a><a href="#zh-02-system-design/core-concepts/09-capacity-estimation">容量估算与数量级</a><a href="#zh-02-system-design/core-concepts/README">Core Concepts 全章导航</a></section><section class="toc-module"><h2>AI 辅助工程实战</h2><a href="#zh-03-ai-engineering/README">AI 辅助工程实战</a><a href="#zh-03-ai-engineering/practical-checklist">实战交付与验收清单</a><a href="#zh-03-ai-engineering/scratch_note">Coding Agent 的双层循环</a></section><section class="toc-module"><h2>强化学习与训练系统</h2><a href="#zh-04-rl-systems/README">强化学习与训练系统</a><a href="#zh-04-rl-systems/knowledge-map">强化学习系统知识地图</a></section><section class="toc-module"><h2>公司与岗位研究</h2><a href="#zh-05-company-research/README">公司与岗位研究</a><a href="#zh-05-company-research/company-template">公司与岗位调研模板</a></section><section class="toc-module"><h2>项目复盘与技术深挖</h2><a href="#zh-06-project-deep-dives/README">项目复盘与技术深挖</a><a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖模板</a></section></nav><section><article id="zh-01-algorithms/README"><h1 id="算法与解题模式">算法与解题模式</h1>
 <p>把题目归纳为可识别的模式，训练正确性、复杂度分析和限时表达。</p>
 <h2 id="复习方法">复习方法</h2>
 <p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>
@@ -166,11 +166,10 @@
 <p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPkFQSSDorr7orqEgLyBBUEkgRGVzaWduPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPui1hOa6kDwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5SZXNvdXJjZTwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWlkee6pjwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Db250cmFjdDwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPumJtOadgzwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5BdXRoPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5bmC562JPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPklkZW1wb3RlbmN5PC90ZXh0Pjwvc3ZnPgo=" alt="API 设计的主要决策"></p>
 <h2 id="从资源与操作开始">从资源与操作开始</h2>
 <p>先识别实验（Experiment）、任务（Training Job）和检查点（Checkpoint）。资源身份放在路径中，可选筛选放查询参数，创建或修改的内容放请求体：</p>
-<pre><code class="language-http">POST /training-jobs
-GET /training-jobs/job-42
-GET /training-jobs?experiment_id=exp-7&#x26;state=running&#x26;limit=20
-POST /training-jobs/job-42/cancellations
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="http"><code><span class="line"><span style="color:#F97583">POST</span><span style="color:#E1E4E8"> /training-jobs</span></span>
+<span class="line"><span style="color:#F97583">GET</span><span style="color:#E1E4E8"> /training-jobs/job-42</span></span>
+<span class="line"><span style="color:#F97583">GET</span><span style="color:#E1E4E8"> /training-jobs?experiment_id=exp-7&#x26;state=running&#x26;limit=20</span></span>
+<span class="line"><span style="color:#F97583">POST</span><span style="color:#E1E4E8"> /training-jobs/job-42/cancellations</span></span></code></pre>
 <p>取消可以建模为取消请求资源，也可以使用明确的 RPC 操作。URL 是否“漂亮”不如取消究竟是同步完成、接受后异步执行，还是可能被重复提交重要。</p>
 <h2 id="方法与状态码表达什么">方法与状态码表达什么</h2>
 
@@ -212,24 +211,22 @@ POST /training-jobs/job-42/cancellations
 <p>创建已经完成可返回 <code>201 Created</code>；只是接受了异步工作可返回 <code>202 Accepted</code> 和状态查询位置。<code>400</code> 表示输入问题，<code>401</code> 表示缺少有效身份，<code>403</code> 表示权限不足，<code>409</code> 表示资源状态冲突，<code>429</code> 表示请求受到限流。状态码只表达类别，业务错误还应有稳定的错误标识。</p>
 <h2 id="异步操作需要可观察的状态">异步操作需要可观察的状态</h2>
 <p>任务创建接口可以立即返回任务编号、当前状态与 <code>Location</code>。之后查询返回 <code>queued → running → succeeded/failed/cancelled</code> 中的状态。取消请求已接受，不等于 GPU 工作进程已经停止。</p>
-<pre><code class="language-json">{
-  "id": "job-42",
-  "state": "queued",
-  "attempt": 1,
-  "status_url": "/training-jobs/job-42"
-}
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"job-42"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "state"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"queued"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "attempt"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "status_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/training-jobs/job-42"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>状态和尝试编号应来自同一份受控数据。失败原因、是否可重试、结果位置也属于契约，不应让客户端从日志文字里猜测。</p>
 <h2 id="幂等键要和业务提交绑定">幂等键要和业务提交绑定</h2>
 <p>客户端在一次逻辑创建开始时生成幂等键（Idempotency Key），网络重试继续使用同一个键。服务端按调用者、接口和键记录请求摘要与处理结果；同键不同参数应返回冲突，不能悄悄复用旧结果。</p>
 <p>最容易遗漏的是原子性：如果任务创建成功后，进程在保存去重结果前崩溃，重试仍可能创建第二个任务。可以在同一事务中保存幂等记录和任务记录，并通过唯一约束处理并发请求。进行中的重复请求、去重记录的保留期和过期后的语义都需要定义。</p>
 <h2 id="分页排序与查询成本">分页、排序与查询成本</h2>
 <p>偏移分页（Offset Pagination）适合稳定的小列表或需要按页跳转的界面，但大偏移可能扫描大量数据，列表变动也可能导致重复与漏读。游标分页（Cursor Pagination）保存排序边界，适合持续增长的数据。</p>
-<pre><code class="language-sql">WHERE owner_id = :owner
-  AND (created_at, id) &#x3C; (:last_time, :last_id)
-ORDER BY created_at DESC, id DESC
-LIMIT 20;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> owner_id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> :</span><span style="color:#F97583">owner</span></span>
+<span class="line"><span style="color:#F97583">  AND</span><span style="color:#E1E4E8"> (created_at, id) </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> (:last_time, :last_id)</span></span>
+<span class="line"><span style="color:#F97583">ORDER BY</span><span style="color:#E1E4E8"> created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span></span>
+<span class="line"><span style="color:#F97583">LIMIT</span><span style="color:#79B8FF"> 20</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <p>时间相同的记录需要唯一编号打破平局。游标还应绑定筛选条件和排序方向；游标分页本身不保证跨页快照一致性。服务端应限制 <code>limit</code>、允许的筛选字段与排序组合，以免接口暴露无法有效执行的任意查询。<a href="#zh-02-system-design/core-concepts/04-database-indexing">API 参数与底层索引要一起设计</a>。</p>
 <h2 id="身份授权和错误格式">身份、授权和错误格式</h2>
 <p>认证（Authentication）回答“你是谁”，授权（Authorization）回答“能否操作这个资源”。即使 JWT 验证成功，读取 <code>job-42</code> 时仍应检查任务归属或团队权限，不能仅相信请求中的 <code>owner_id</code>。</p>
@@ -248,11 +245,10 @@ LIMIT 20;
 <p>这些约束比“使用 SQL 还是 NoSQL”更具体。先给出主要查询、排序、过滤、写入频率与数据规模，再判断哪些约束能由数据库直接维护，哪些需要应用协议。</p>
 <h2 id="实体主键和关系">实体、主键和关系</h2>
 <p>实验与任务通常是一对多，任务与检查点也是一对多；用户与团队可以通过关联表表达多对多。主键（Primary Key）选择稳定的系统标识，避免用可能修改的电子邮箱承担内部身份。自然键（Natural Key）仍可加唯一约束。</p>
-<pre><code class="language-sql">experiments(id PRIMARY KEY, owner_id, config_version, created_at)
-jobs(id PRIMARY KEY, experiment_id, state, active_attempt, version, created_at)
-job_attempts(job_id, attempt, worker_id, state, PRIMARY KEY(job_id, attempt))
-checkpoints(id PRIMARY KEY, job_id, attempt, step, object_key, state)
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#E1E4E8">experiments(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, owner_id, config_version, created_at)</span></span>
+<span class="line"><span style="color:#E1E4E8">jobs(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, experiment_id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, active_attempt, </span><span style="color:#F97583">version</span><span style="color:#E1E4E8">, created_at)</span></span>
+<span class="line"><span style="color:#E1E4E8">job_attempts(job_id, attempt, worker_id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">(job_id, attempt))</span></span>
+<span class="line"><span style="color:#E1E4E8">checkpoints(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, job_id, attempt, step, object_key, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">)</span></span></code></pre>
 <p>这里把逻辑任务和执行尝试分开，同一任务重试不会丢掉先前执行历史。实际建表时还应添加外键、非空约束和必要的唯一约束，而不是让每个调用方自行记住规则。</p>
 <h2 id="不同数据模型改变了哪些操作">不同数据模型改变了哪些操作</h2>
 
@@ -297,10 +293,9 @@ checkpoints(id PRIMARY KEY, job_id, attempt, step, object_key, state)
 <p>反规范化之后要回答三个问题：哪一份是事实源（Source of Truth）、由什么机制更新副本、失败后如何重建。异步物化视图（Materialized View）可以减轻读取成本，但会产生可见延迟和修复任务。历史快照中的“提交时配置”不一定是需要纠正的冗余，它可能是有意保留的业务事实。</p>
 <h2 id="用条件更新保护并发状态">用条件更新保护并发状态</h2>
 <p>ACID 的一致性并不意味着所有并发执行都会得到期望结果。隔离级别（Isolation Level）、锁与条件更新决定应用看到和修改什么状态。<a href="https://www.postgresql.org/docs/current/transaction-iso.html">PostgreSQL 的隔离文档</a>区分了这些行为。</p>
-<pre><code class="language-sql">UPDATE jobs
-SET state = 'running', version = version + 1
-WHERE id = :job_id AND state = 'queued' AND version = :expected_version;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">UPDATE</span><span style="color:#E1E4E8"> jobs</span></span>
+<span class="line"><span style="color:#F97583">SET</span><span style="color:#F97583"> state</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'running'</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">version</span><span style="color:#F97583"> =</span><span style="color:#F97583"> version</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> :job_id </span><span style="color:#F97583">AND</span><span style="color:#F97583"> state</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'queued'</span><span style="color:#F97583"> AND</span><span style="color:#F97583"> version</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> :expected_version;</span></span></code></pre>
 <p>受影响行数为零表示记录已变化，调用方不能假定领取成功。工作进程完成时还应验证尝试编号或栅栏令牌（Fencing Token），防止超时的旧工作进程覆盖新执行。</p>
 <h2 id="大对象与元数据的提交边界">大对象与元数据的提交边界</h2>
 <p>权重、日志归档和数据集通常放对象存储，数据库保存位置、大小、校验和、版本和发布状态。对象存储与数据库通常不共享一个本地事务，因此“文件上传成功”和“元数据提交成功”必须分开处理。</p>
@@ -318,15 +313,14 @@ WHERE id = :job_id AND state = 'queued' AND version = :expected_version;
 <p>返回整张表的大部分记录时，顺序扫描（Sequential Scan）可能比通过索引逐条回表更划算。查询优化器会综合选择性、统计信息、数据分布和成本选择执行计划。</p>
 <h2 id="b-tree-与复合索引">B-tree 与复合索引</h2>
 <p>B-tree 通过有序的多分支结构支持等值、范围和排序。它的高度通常比较小，但真实延迟还取决于数据是否在缓存、是否回表和返回多少记录。</p>
-<pre><code class="language-sql">CREATE INDEX jobs_by_experiment_recent
-ON jobs (experiment_id, created_at DESC, id DESC);
-
-SELECT id, state, created_at
-FROM jobs
-WHERE experiment_id = 42
-ORDER BY created_at DESC, id DESC
-LIMIT 20;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">CREATE</span><span style="color:#F97583"> INDEX</span><span style="color:#B392F0"> jobs_by_experiment_recent</span></span>
+<span class="line"><span style="color:#F97583">ON</span><span style="color:#E1E4E8"> jobs (experiment_id, created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">SELECT</span><span style="color:#E1E4E8"> id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, created_at</span></span>
+<span class="line"><span style="color:#F97583">FROM</span><span style="color:#E1E4E8"> jobs</span></span>
+<span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> experiment_id </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 42</span></span>
+<span class="line"><span style="color:#F97583">ORDER BY</span><span style="color:#E1E4E8"> created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span></span>
+<span class="line"><span style="color:#F97583">LIMIT</span><span style="color:#79B8FF"> 20</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <p>这个顺序先定位实验，再沿目标顺序取记录。若查询改为只过滤时间，访问方式就不同。设计列序应依据等值条件、范围条件、排序和实际数据分布，不能只背“选择性最高的放第一列”。某些数据库能使用跳跃扫描等优化，最左前缀也不应被说成任何实现都绝对不能越过的规则。</p>
 <h2 id="覆盖部分和表达式索引">覆盖、部分和表达式索引</h2>
 <p>覆盖索引（Covering Index）包含查询所需字段，可能减少回表。在 PostgreSQL 中，可以使用 <code>INCLUDE (state)</code> 存放返回列；能否真正执行高效的仅索引扫描（Index-only Scan），还取决于可见性信息等条件。</p>
@@ -521,9 +515,8 @@ LIMIT 20;
 <h2 id="哈希环怎样定位数据">哈希环怎样定位数据</h2>
 <p>把哈希空间首尾连接成环，将节点和键都映射到环上的位置。常见规则是从键的位置顺时针找到第一个节点，将其作为归属节点；超过最大位置则绕回开头。</p>
 <p>假设环上位置为 <code>A=10, B=50, C=90</code>：键 30 归 B，键 70 归 C，键 95 绕回归 A。加入 <code>D=35</code> 后，原来归 B 的区间 <code>(10,35]</code> 转给 D，其他区间不因这次插入而改变。这个例子使用简化的整数位置，只用于说明归属规则。</p>
-<pre><code class="language-text">旧位置：10(A) ---- 30(key) -------- 50(B) -------- 90(C)
-新位置：10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>旧位置：10(A) ---- 30(key) -------- 50(B) -------- 90(C)</span></span>
+<span class="line"><span>新位置：10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)</span></span></code></pre>
 <p>理想均匀分布、节点等权时，增加一个节点平均大约接管 <code>1/(N+1)</code> 的键。这是关于分布和期望的近似，不代表每次扩容都恰好迁移这个比例，也不代表字节数和流量同样均衡。</p>
 <h2 id="虚拟节点改善什么">虚拟节点改善什么</h2>
 <p>若每台机器只有一个位置，某台机器退出后可能让它的后继承担过多数据。虚拟节点（Virtual Node）让同一台物理机器拥有多个分散位置，把接管区间分散给更多机器。更强的机器可以配置更多位置，表达权重。</p>
@@ -600,10 +593,9 @@ LIMIT 20;
 <p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuWuuemHj+S8sOeul+S4juaVsOmHj+e6pyAvIENhcGFjaXR5IEVzdGltYXRpb24gJmFtcDsgT3JkZXJzIG9mIE1hZ25pdHVkZTwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7otJ/ovb08L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+TG9hZDwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWNleS9jTwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Vbml0czwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWzsOWAvDwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5QZWFrPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5L2Z6YePPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPkhlYWRyb29tPC90ZXh0Pjwvc3ZnPgo=" alt="从负载假设走向峰值与余量"></p>
 <h2 id="先把问题转换成负载">先把问题转换成负载</h2>
 <p>日活用户（DAU）不等于同时在线用户，也不直接等于每秒请求数。先估计每个用户每天的操作次数，再区分每次操作触发多少服务调用、数据库读取、写入或消息。</p>
-<pre><code class="language-text">平均请求/秒 = 每日操作数 / 86,400
-峰值请求/秒 = 平均请求/秒 × 明确假设的峰值系数
-后端读取/秒 ≈ 请求/秒 × 每请求读取次数 × 未命中率
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>平均请求/秒 = 每日操作数 / 86,400</span></span>
+<span class="line"><span>峰值请求/秒 = 平均请求/秒 × 明确假设的峰值系数</span></span>
+<span class="line"><span>后端读取/秒 ≈ 请求/秒 × 每请求读取次数 × 未命中率</span></span></code></pre>
 <p>峰值系数不是行业常数，应考虑时区、定时任务、事件爆发和租户倾斜。扇出（Fan-out）、重试和后台任务会让内部流量高于外部请求量。</p>
 <h2 id="一个完整的训练日志估算">一个完整的训练日志估算</h2>
 <p>假设每天 1,000 万条日志，每条 2 KB，使用十进制单位，峰值为平均的 10 倍。这些数字是讲解假设，不是实测结果。</p>
@@ -762,73 +754,71 @@ LIMIT 20;
 <p><a href="#zh-02-system-design/core-concepts/02-api-design">API 设计</a> · <a href="#zh-06-project-deep-dives/deep-dive-template">项目深挖</a> · <a href="#zh-03-ai-engineering/README">模块导航</a></p></article><article id="zh-03-ai-engineering/scratch_note"><h1 id="coding-agent-的双层循环">Coding Agent 的双层循环</h1>
 <p>to model：这里加上原本的代码和注释</p>
 <p>下面的流程图保留了这篇笔记的核心：外层循环（Outer Loop）接收新的用户任务，内层循环（Inner Loop）推进当前任务。理解这个划分，可以把模型生成、工具执行和对话历史三个职责连起来。</p>
-<pre><code class="language-text">coding agent的核心：
-外层循环：等待用户输入一个任务
-    ↓
-内层循环：请求模型 → 执行工具 → 把结果交回模型
-    ↑                         ↓
-    └──── 模型还要用工具 ──────┘
-                              ↓
-                         模型直接回答
-                              ↓
-                        回到外层等待输入
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>coding agent的核心：</span></span>
+<span class="line"><span>外层循环：等待用户输入一个任务</span></span>
+<span class="line"><span>    ↓</span></span>
+<span class="line"><span>内层循环：请求模型 → 执行工具 → 把结果交回模型</span></span>
+<span class="line"><span>    ↑                         ↓</span></span>
+<span class="line"><span>    └──── 模型还要用工具 ──────┘</span></span>
+<span class="line"><span>                              ↓</span></span>
+<span class="line"><span>                         模型直接回答</span></span>
+<span class="line"><span>                              ↓</span></span>
+<span class="line"><span>                        回到外层等待输入</span></span></code></pre>
 <h2 id="代码与注释">代码与注释</h2>
-<pre><code class="language-python">def run_coding_agent_loop():
-    # 启动时打印完整提示词，便于观察模型看到的工具定义。
-    print(get_full_system_prompt())
-    # conversation 是保存在内存里的对话历史，退出后不会持久化。
-    conversation = [{
-        "role": "system",
-        "content": get_full_system_prompt()
-    }]
-    # 外层循环：接收用户的新任务。
-    while True:
-        try:
-            user_input = input(f"{YOU_COLOR}You:{RESET_COLOR}:")
-        # 在等待输入时，Ctrl+C 或输入结束可退出。
-        except (KeyboardInterrupt, EOFError):
-            break
-        conversation.append({
-            "role": "user",
-            "content": user_input.strip()
-        })
-        # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。
-        # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。
-        while True:
-            assistant_response = execute_llm_call(conversation)
-            tool_invocations = extract_tool_invocations(assistant_response)
-            # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。
-            if not tool_invocations:
-                print(f"{ASSISTANT_COLOR}Assistant:{RESET_COLOR}: {assistant_response}")
-                conversation.append({
-                    "role": "assistant",
-                    "content": assistant_response
-                })
-                break
-            # 注意：当前工具分支未将 assistant_response 加入历史，只追加工具结果。
-            # 后续模型因此看不到自己发出的这条工具请求；这是现有逻辑的一个待改进点。
-            for name, args in tool_invocations:
-                # 只从注册表选函数；未知工具名会触发 KeyError。
-                tool = TOOL_REGISTRY[name]
-                resp = ""
-                print(name, args)
-                # 从 JSON 参数中取值并执行工具；缺失参数采用这里给出的默认值。
-                if name == "read_file":
-                    resp = tool(args.get("filename", "."))
-                elif name == "list_files":
-                    resp = tool(args.get("path", "."))
-                elif name == "edit_file":
-                    resp = tool(args.get("path", "."), 
-                                args.get("old_str", ""), 
-                                args.get("new_str", ""))
-                # 当前文本协议把工具结果作为 user 消息回传，并非原生 role="tool"。
-                # 下一次内层循环会把这些结果发给模型，让它继续决定下一步。
-                conversation.append({
-                    "role": "user",
-                    "content": f"tool_result({json.dumps(resp)})"
-                })
-</code></pre></article><article id="zh-04-rl-systems/README"><h1 id="强化学习与训练系统">强化学习与训练系统</h1>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> run_coding_agent_loop</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#6A737D">    # 启动时打印完整提示词，便于观察模型看到的工具定义。</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(get_full_system_prompt())</span></span>
+<span class="line"><span style="color:#6A737D">    # conversation 是保存在内存里的对话历史，退出后不会持久化。</span></span>
+<span class="line"><span style="color:#E1E4E8">    conversation </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [{</span></span>
+<span class="line"><span style="color:#9ECBFF">        "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"system"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        "content"</span><span style="color:#E1E4E8">: get_full_system_prompt()</span></span>
+<span class="line"><span style="color:#E1E4E8">    }]</span></span>
+<span class="line"><span style="color:#6A737D">    # 外层循环：接收用户的新任务。</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#79B8FF"> True</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            user_input </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> input</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{YOU_COLOR}</span><span style="color:#9ECBFF">You:</span><span style="color:#79B8FF">{RESET_COLOR}</span><span style="color:#9ECBFF">:"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D">        # 在等待输入时，Ctrl+C 或输入结束可退出。</span></span>
+<span class="line"><span style="color:#F97583">        except</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">KeyboardInterrupt</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">EOFError</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">            break</span></span>
+<span class="line"><span style="color:#E1E4E8">        conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">            "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            "content"</span><span style="color:#E1E4E8">: user_input.strip()</span></span>
+<span class="line"><span style="color:#E1E4E8">        })</span></span>
+<span class="line"><span style="color:#6A737D">        # 内层 agent loop：同一个任务可以连续调用多次工具，再给出普通回答。</span></span>
+<span class="line"><span style="color:#6A737D">        # 当前没有最大步骤数，也没有在这里捕获 API / 文件操作异常。</span></span>
+<span class="line"><span style="color:#F97583">        while</span><span style="color:#79B8FF"> True</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            assistant_response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> execute_llm_call(conversation)</span></span>
+<span class="line"><span style="color:#E1E4E8">            tool_invocations </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> extract_tool_invocations(assistant_response)</span></span>
+<span class="line"><span style="color:#6A737D">            # 没有识别到工具请求，就展示回答、保存历史，回到外层等待用户输入。</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> tool_invocations:</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{ASSISTANT_COLOR}</span><span style="color:#9ECBFF">Assistant:</span><span style="color:#79B8FF">{RESET_COLOR}</span><span style="color:#9ECBFF">: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">assistant_response</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">                conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"assistant"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "content"</span><span style="color:#E1E4E8">: assistant_response</span></span>
+<span class="line"><span style="color:#E1E4E8">                })</span></span>
+<span class="line"><span style="color:#F97583">                break</span></span>
+<span class="line"><span style="color:#6A737D">            # 注意：当前工具分支未将 assistant_response 加入历史，只追加工具结果。</span></span>
+<span class="line"><span style="color:#6A737D">            # 后续模型因此看不到自己发出的这条工具请求；这是现有逻辑的一个待改进点。</span></span>
+<span class="line"><span style="color:#F97583">            for</span><span style="color:#E1E4E8"> name, args </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> tool_invocations:</span></span>
+<span class="line"><span style="color:#6A737D">                # 只从注册表选函数；未知工具名会触发 KeyError。</span></span>
+<span class="line"><span style="color:#E1E4E8">                tool </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> TOOL_REGISTRY</span><span style="color:#E1E4E8">[name]</span></span>
+<span class="line"><span style="color:#E1E4E8">                resp </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> ""</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(name, args)</span></span>
+<span class="line"><span style="color:#6A737D">                # 从 JSON 参数中取值并执行工具；缺失参数采用这里给出的默认值。</span></span>
+<span class="line"><span style="color:#F97583">                if</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "read_file"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"filename"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#F97583">                elif</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "list_files"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"path"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#F97583">                elif</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "edit_file"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"path"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">), </span></span>
+<span class="line"><span style="color:#E1E4E8">                                args.get(</span><span style="color:#9ECBFF">"old_str"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">), </span></span>
+<span class="line"><span style="color:#E1E4E8">                                args.get(</span><span style="color:#9ECBFF">"new_str"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#6A737D">                # 当前文本协议把工具结果作为 user 消息回传，并非原生 role="tool"。</span></span>
+<span class="line"><span style="color:#6A737D">                # 下一次内层循环会把这些结果发给模型，让它继续决定下一步。</span></span>
+<span class="line"><span style="color:#E1E4E8">                conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "content"</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"tool_result(</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">json.dumps(resp)</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">)"</span></span>
+<span class="line"><span style="color:#E1E4E8">                })</span></span></code></pre></article><article id="zh-04-rl-systems/README"><h1 id="强化学习与训练系统">强化学习与训练系统</h1>
 <p>连接算法目标、数据流与训练基础设施，定位吞吐、稳定性和评估问题。</p>
 <h2 id="复习方法">复习方法</h2>
 <p>每次选一个问题，先脱稿讲解，再补笔记。记录依据、尚未验证的假设和下一次复习时间。</p>

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interview Atlas</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>Interview Atlas</h1><p>Six modules · bilingual notes · available offline</p><a href="interview-atlas-zh.html">中文</a> · <a href="system-design-map.html">Interactive overview (Chinese)</a></header><main><nav aria-label="Contents"><section class="toc-module"><h2>Algorithms &amp; Problem Solving</h2><a href="#en-01-algorithms/README">Algorithms &amp; Problem Solving</a><a href="#en-01-algorithms/practice-log">Problem-solving Practice Log</a></section><section class="toc-module"><h2>System Design &amp; Architecture Trade-offs</h2><a href="#en-02-system-design/README">System Design &amp; Architecture Trade-offs</a><a href="#en-02-system-design/core-concepts/01-networking">Networking Essentials</a><a href="#en-02-system-design/core-concepts/02-api-design">API Design</a><a href="#en-02-system-design/core-concepts/03-data-modeling">Data Modeling</a><a href="#en-02-system-design/core-concepts/04-database-indexing">Database Indexing</a><a href="#en-02-system-design/core-concepts/05-caching">Caching &amp; Invalidation</a><a href="#en-02-system-design/core-concepts/06-sharding">Sharding</a><a href="#en-02-system-design/core-concepts/07-consistent-hashing">Consistent Hashing</a><a href="#en-02-system-design/core-concepts/08-cap-theorem">CAP &amp; Consistency Trade-offs</a><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity Estimation &amp; Orders of Magnitude</a><a href="#en-02-system-design/core-concepts/README">Core Concepts: Complete Topic Index</a></section><section class="toc-module"><h2>AI-assisted Software Engineering</h2><a href="#en-03-ai-engineering/README">AI-assisted Software Engineering</a><a href="#en-03-ai-engineering/practical-checklist">Practical Delivery &amp; Acceptance Checklist</a><a href="#en-03-ai-engineering/scratch_note">The Two Loops of a Coding Agent</a></section><section class="toc-module"><h2>Reinforcement Learning &amp; Training Systems</h2><a href="#en-04-rl-systems/README">Reinforcement Learning &amp; Training Systems</a><a href="#en-04-rl-systems/knowledge-map">RL Systems Knowledge Map</a></section><section class="toc-module"><h2>Company &amp; Role Research</h2><a href="#en-05-company-research/README">Company &amp; Role Research</a><a href="#en-05-company-research/company-template">Company &amp; Role Research Template</a></section><section class="toc-module"><h2>Project Deep Dives</h2><a href="#en-06-project-deep-dives/README">Project Deep Dives</a><a href="#en-06-project-deep-dives/deep-dive-template">Project Deep-dive Template</a></section></nav><section><article id="en-01-algorithms/README"><h1 id="algorithms--problem-solving">Algorithms &#x26; Problem Solving</h1>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interview Atlas</title><style>:root{color-scheme:light;--ink:#171717;--red:#b5231a;--paper:#f2efe8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.8 system-ui,-apple-system,sans-serif}header{border-bottom:3px solid var(--ink);padding:35px max(24px,calc((100vw - 1240px)/2))}h1{line-height:1.2;font-size:clamp(30px,4vw,52px)}.eyebrow{color:var(--red);letter-spacing:.12em;font-size:12px}main{max-width:1240px;margin:auto;padding:30px 24px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px}nav a{display:block;font-size:14px;padding:4px 0}nav{align-self:start}a{color:var(--red);overflow-wrap:anywhere}article{background:white;border:2px solid var(--ink);padding:28px;margin-bottom:35px;scroll-margin-top:20px}h2{line-height:1.4}h3{border-bottom:1px solid #ddd}img{max-width:100%;height:auto}table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow:auto}td,th{border:1px solid #ddd;padding:8px 12px;text-align:left}blockquote{border-left:3px solid var(--red);margin:15px 0;padding:1px 18px;color:#666;font-size:14px}pre{background:#f3f4f6;padding:14px;overflow:auto;font-size:13px}code{font-size:.88em}pre code{font-size:inherit}.toc-module{margin:0 0 1.5rem}.toc-module h2{font-size:16px;margin:0 0 .5rem}button{padding:8px 15px;background:white;border:2px solid #171717;cursor:pointer}section{min-width:0}@media(max-width:780px){main{display:block}nav{position:static;max-height:none;margin-bottom:28px}article{padding:18px}}@media print{nav,button{display:none}main{display:block;padding:0}article{break-before:page;border:0;padding:0}header{border:0}body{background:white}}</style><header><div class="eyebrow">YIKUN DING / INTERVIEW ATLAS</div><h1>Interview Atlas</h1><p>Six modules · bilingual notes · available offline</p><a href="interview-atlas-zh.html">中文</a> · <a href="system-design-map.html">Interactive overview (Chinese)</a></header><main><nav aria-label="Contents"><section class="toc-module"><h2>Algorithms &amp; Problem Solving</h2><a href="#en-01-algorithms/README">Algorithms &amp; Problem Solving</a><a href="#en-01-algorithms/practice-log">Problem-solving Practice Log</a></section><section class="toc-module"><h2>System Design &amp; Architecture Trade-offs</h2><a href="#en-02-system-design/README">System Design &amp; Architecture Trade-offs</a><a href="#en-02-system-design/core-concepts/01-networking">Networking Essentials</a><a href="#en-02-system-design/core-concepts/02-api-design">API Design</a><a href="#en-02-system-design/core-concepts/03-data-modeling">Data Modeling</a><a href="#en-02-system-design/core-concepts/04-database-indexing">Database Indexing</a><a href="#en-02-system-design/core-concepts/05-caching">Caching &amp; Invalidation</a><a href="#en-02-system-design/core-concepts/06-sharding">Sharding</a><a href="#en-02-system-design/core-concepts/07-consistent-hashing">Consistent Hashing</a><a href="#en-02-system-design/core-concepts/08-cap-theorem">CAP &amp; Consistency Trade-offs</a><a href="#en-02-system-design/core-concepts/09-capacity-estimation">Capacity Estimation &amp; Orders of Magnitude</a><a href="#en-02-system-design/core-concepts/README">Core Concepts: Complete Topic Index</a></section><section class="toc-module"><h2>AI-assisted Software Engineering</h2><a href="#en-03-ai-engineering/README">AI-assisted Software Engineering</a><a href="#en-03-ai-engineering/practical-checklist">Practical Delivery &amp; Acceptance Checklist</a><a href="#en-03-ai-engineering/scratch_note">The Two Loops of a Coding Agent</a></section><section class="toc-module"><h2>Reinforcement Learning &amp; Training Systems</h2><a href="#en-04-rl-systems/README">Reinforcement Learning &amp; Training Systems</a><a href="#en-04-rl-systems/knowledge-map">RL Systems Knowledge Map</a></section><section class="toc-module"><h2>Company &amp; Role Research</h2><a href="#en-05-company-research/README">Company &amp; Role Research</a><a href="#en-05-company-research/company-template">Company &amp; Role Research Template</a></section><section class="toc-module"><h2>Project Deep Dives</h2><a href="#en-06-project-deep-dives/README">Project Deep Dives</a><a href="#en-06-project-deep-dives/deep-dive-template">Project Deep-dive Template</a></section></nav><section><article id="en-01-algorithms/README"><h1 id="algorithms--problem-solving">Algorithms &#x26; Problem Solving</h1>
 <p>Recognize reusable patterns and practice correctness, complexity analysis, and timed explanation.</p>
 <h2 id="study-routine">Study routine</h2>
 <p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
@@ -166,11 +166,10 @@
 <p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPkFQSSDorr7orqEgLyBBUEkgRGVzaWduPC90aXRsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI4IiByZWZZPSI0IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wIDAgTDggNCBMMCA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTIzMWEiIHN0cm9rZS13aWR0aD0iMiIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTEyMCIgaGVpZ2h0PSIxOTIiIGZpbGw9IiNmMmVmZTgiLz48cmVjdCB4PSIyNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPui1hOa6kDwvdGV4dD48dGV4dCB4PSIxNDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5SZXNvdXJjZTwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWlkee6pjwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Db250cmFjdDwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPumJtOadgzwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5BdXRoPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5bmC562JPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPklkZW1wb3RlbmN5PC90ZXh0Pjwvc3ZnPgo=" alt="The main API design decisions"></p>
 <h2 id="resources-and-operations">Resources and operations</h2>
 <p>Identify experiments, training jobs, and checkpoints. Put resource identity in paths, optional filters in query parameters, and creation or modification data in request bodies:</p>
-<pre><code class="language-http">POST /training-jobs
-GET /training-jobs/job-42
-GET /training-jobs?experiment_id=exp-7&#x26;state=running&#x26;limit=20
-POST /training-jobs/job-42/cancellations
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="http"><code><span class="line"><span style="color:#F97583">POST</span><span style="color:#E1E4E8"> /training-jobs</span></span>
+<span class="line"><span style="color:#F97583">GET</span><span style="color:#E1E4E8"> /training-jobs/job-42</span></span>
+<span class="line"><span style="color:#F97583">GET</span><span style="color:#E1E4E8"> /training-jobs?experiment_id=exp-7&#x26;state=running&#x26;limit=20</span></span>
+<span class="line"><span style="color:#F97583">POST</span><span style="color:#E1E4E8"> /training-jobs/job-42/cancellations</span></span></code></pre>
 <p>Cancellation can be represented as a request resource or an explicit RPC action. More important than naming is whether cancellation completes synchronously, is accepted for later execution, and tolerates repeated submission.</p>
 <h2 id="methods-and-status-codes">Methods and status codes</h2>
 
@@ -212,24 +211,22 @@ POST /training-jobs/job-42/cancellations
 <p>Return <code>201 Created</code> for completed creation and <code>202 Accepted</code> with a status location for accepted asynchronous work. <code>400</code> indicates invalid input, <code>401</code> missing valid authentication, <code>403</code> insufficient permission, <code>409</code> a state conflict, and <code>429</code> rate limiting. Stable business error identifiers supplement these categories.</p>
 <h2 id="make-asynchronous-operations-observable">Make asynchronous operations observable</h2>
 <p>Creation can return a job ID, current state, and <code>Location</code>. Later reads expose <code>queued → running → succeeded/failed/cancelled</code>. Accepted cancellation does not prove the GPU worker has stopped.</p>
-<pre><code class="language-json">{
-  "id": "job-42",
-  "state": "queued",
-  "attempt": 1,
-  "status_url": "/training-jobs/job-42"
-}
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"job-42"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "state"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"queued"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "attempt"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "status_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/training-jobs/job-42"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>State and attempt number should come from controlled records. Failure reasons, retryability, and result locations belong in the contract rather than being inferred from logs.</p>
 <h2 id="bind-idempotency-to-the-business-commit">Bind idempotency to the business commit</h2>
 <p>Generate an idempotency key for each logical creation and reuse it across network retries. Scope records to the caller, operation, and key, and store a request digest and outcome. Incompatible key reuse should conflict.</p>
 <p>Atomicity matters: if creation commits before its deduplication result is saved, a crash can permit duplicate creation. A transaction can store both the idempotency record and job, with a unique constraint handling concurrent requests. Define in-progress responses, retention, and behavior after expiration.</p>
 <h2 id="pagination-and-query-cost">Pagination and query cost</h2>
 <p>Offset pagination can suit stable small lists and page-number navigation. Large offsets may scan many rows, and concurrent updates can cause skips or duplicates. Cursor pagination instead records an ordering boundary:</p>
-<pre><code class="language-sql">WHERE owner_id = :owner
-  AND (created_at, id) &#x3C; (:last_time, :last_id)
-ORDER BY created_at DESC, id DESC
-LIMIT 20;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> owner_id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> :</span><span style="color:#F97583">owner</span></span>
+<span class="line"><span style="color:#F97583">  AND</span><span style="color:#E1E4E8"> (created_at, id) </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> (:last_time, :last_id)</span></span>
+<span class="line"><span style="color:#F97583">ORDER BY</span><span style="color:#E1E4E8"> created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span></span>
+<span class="line"><span style="color:#F97583">LIMIT</span><span style="color:#79B8FF"> 20</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <p>Use a unique ID to break timestamp ties. Bind cursors to filters and order. Cursor pagination alone does not guarantee a cross-page snapshot. Limit page sizes and supported query combinations; <a href="#en-02-system-design/core-concepts/04-database-indexing">design API parameters with indexes</a>.</p>
 <h2 id="identity-permissions-and-errors">Identity, permissions, and errors</h2>
 <p>Authentication establishes identity; authorization grants access to a resource or action. A valid JWT does not prove permission to read <code>job-42</code>. Check ownership or team permissions independently of a supplied <code>owner_id</code>.</p>
@@ -248,11 +245,10 @@ LIMIT 20;
 <p>These requirements are more precise than SQL versus NoSQL. Describe queries, sorting, filters, write frequency, and scale. Decide which constraints belong in the database and which require an application protocol.</p>
 <h2 id="entities-keys-and-relationships">Entities, keys, and relationships</h2>
 <p>Experiments have many jobs; jobs have many checkpoints. Membership tables can model users belonging to multiple teams. Use stable system identifiers internally rather than mutable email addresses. Natural identifiers can still have uniqueness constraints.</p>
-<pre><code class="language-sql">experiments(id PRIMARY KEY, owner_id, config_version, created_at)
-jobs(id PRIMARY KEY, experiment_id, state, active_attempt, version, created_at)
-job_attempts(job_id, attempt, worker_id, state, PRIMARY KEY(job_id, attempt))
-checkpoints(id PRIMARY KEY, job_id, attempt, step, object_key, state)
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#E1E4E8">experiments(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, owner_id, config_version, created_at)</span></span>
+<span class="line"><span style="color:#E1E4E8">jobs(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, experiment_id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, active_attempt, </span><span style="color:#F97583">version</span><span style="color:#E1E4E8">, created_at)</span></span>
+<span class="line"><span style="color:#E1E4E8">job_attempts(job_id, attempt, worker_id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">(job_id, attempt))</span></span>
+<span class="line"><span style="color:#E1E4E8">checkpoints(id </span><span style="color:#F97583">PRIMARY KEY</span><span style="color:#E1E4E8">, job_id, attempt, step, object_key, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">)</span></span></code></pre>
 <p>Separating logical jobs from execution attempts preserves retry history. Real schemas also need foreign keys, non-null constraints, and appropriate uniqueness rather than relying on every caller to enforce rules.</p>
 <h2 id="what-different-models-change">What different models change</h2>
 
@@ -297,10 +293,9 @@ checkpoints(id PRIMARY KEY, job_id, attempt, step, object_key, state)
 <p>For duplicated views identify the source of truth, update mechanism, and repair process. Asynchronous materialized views reduce read cost but introduce visibility delay and rebuilding. A historical submission-time configuration can be an intentional business fact rather than erroneous duplication.</p>
 <h2 id="protect-concurrent-state-changes">Protect concurrent state changes</h2>
 <p>ACID consistency does not guarantee that every concurrent execution matches application intent. Isolation levels, locks, and conditional writes determine observable behavior. <a href="https://www.postgresql.org/docs/current/transaction-iso.html">PostgreSQL’s isolation documentation</a> distinguishes these guarantees.</p>
-<pre><code class="language-sql">UPDATE jobs
-SET state = 'running', version = version + 1
-WHERE id = :job_id AND state = 'queued' AND version = :expected_version;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">UPDATE</span><span style="color:#E1E4E8"> jobs</span></span>
+<span class="line"><span style="color:#F97583">SET</span><span style="color:#F97583"> state</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'running'</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">version</span><span style="color:#F97583"> =</span><span style="color:#F97583"> version</span><span style="color:#F97583"> +</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> id </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> :job_id </span><span style="color:#F97583">AND</span><span style="color:#F97583"> state</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'queued'</span><span style="color:#F97583"> AND</span><span style="color:#F97583"> version</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> :expected_version;</span></span></code></pre>
 <p>Zero updated rows means the record changed, not that acquisition succeeded. Completion should verify attempt numbers or fencing tokens so an expired worker cannot overwrite a newer execution.</p>
 <h2 id="large-objects-and-publication-boundaries">Large objects and publication boundaries</h2>
 <p>Keep weights, archived logs, and datasets in object storage; record locations, sizes, checksums, versions, and publication state in metadata. Object storage and a database generally do not share a local transaction.</p>
@@ -318,15 +313,14 @@ WHERE id = :job_id AND state = 'queued' AND version = :expected_version;
 <p>When a query returns much of a table, a sequential scan can beat many index-directed table fetches. Optimizers consider selectivity, statistics, distribution, and estimated costs.</p>
 <h2 id="b-trees-and-composite-order">B-trees and composite order</h2>
 <p>B-trees maintain ordered branching structures for equality, ranges, and ordering. Small tree height alone does not determine latency: caching, table fetches, and result count still matter.</p>
-<pre><code class="language-sql">CREATE INDEX jobs_by_experiment_recent
-ON jobs (experiment_id, created_at DESC, id DESC);
-
-SELECT id, state, created_at
-FROM jobs
-WHERE experiment_id = 42
-ORDER BY created_at DESC, id DESC
-LIMIT 20;
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sql"><code><span class="line"><span style="color:#F97583">CREATE</span><span style="color:#F97583"> INDEX</span><span style="color:#B392F0"> jobs_by_experiment_recent</span></span>
+<span class="line"><span style="color:#F97583">ON</span><span style="color:#E1E4E8"> jobs (experiment_id, created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">SELECT</span><span style="color:#E1E4E8"> id, </span><span style="color:#F97583">state</span><span style="color:#E1E4E8">, created_at</span></span>
+<span class="line"><span style="color:#F97583">FROM</span><span style="color:#E1E4E8"> jobs</span></span>
+<span class="line"><span style="color:#F97583">WHERE</span><span style="color:#E1E4E8"> experiment_id </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 42</span></span>
+<span class="line"><span style="color:#F97583">ORDER BY</span><span style="color:#E1E4E8"> created_at </span><span style="color:#F97583">DESC</span><span style="color:#E1E4E8">, id </span><span style="color:#F97583">DESC</span></span>
+<span class="line"><span style="color:#F97583">LIMIT</span><span style="color:#79B8FF"> 20</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <p>This index locates an experiment and follows the requested order. Time-only filtering is a different access path. Choose order from equality, range, ordering, and real distribution, not a universal “most selective first” rule. Some engines support skip-scan optimizations, so left-prefix limitations should not be stated as absolute for every implementation.</p>
 <h2 id="covering-partial-and-expression-indexes">Covering, partial, and expression indexes</h2>
 <p>Covering indexes include returned fields and can reduce table access. PostgreSQL’s <code>INCLUDE (state)</code> adds a payload column, but efficient index-only scans also depend on visibility information.</p>
@@ -521,9 +515,8 @@ LIMIT 20;
 <h2 id="ring-ownership">Ring ownership</h2>
 <p>Place keys and nodes in a circular hash space. A common rule assigns a key to the first clockwise node, wrapping around at the end.</p>
 <p>Suppose <code>A=10, B=50, C=90</code>. Key 30 belongs to B, key 70 to C, and key 95 wraps to A. Adding <code>D=35</code> transfers <code>(10,35]</code> from B to D without changing other intervals. These small integer positions illustrate the rule.</p>
-<pre><code class="language-text">Before: 10(A) ---- 30(key) -------- 50(B) -------- 90(C)
-After:  10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>Before: 10(A) ---- 30(key) -------- 50(B) -------- 90(C)</span></span>
+<span class="line"><span>After:  10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)</span></span></code></pre>
 <p>With ideal uniform distribution and equal weights, adding a node takes roughly <code>1/(N+1)</code> of keys on average. This is not an exact guarantee for each expansion, byte volume, or request load.</p>
 <h2 id="virtual-nodes">Virtual nodes</h2>
 <p>One position per machine can leave a successor overloaded after a failure. Virtual nodes assign several distributed positions to each physical machine, spreading transferred intervals. More positions can represent greater capacity.</p>
@@ -600,10 +593,9 @@ After:  10(A) ---- 30(key) -- 35(D) -- 50(B) ----- 90(C)
 <p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTIwIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDExMjAgMTkyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPjx0aXRsZSBpZD0idGl0bGUiPuWuuemHj+S8sOeul+S4juaVsOmHj+e6pyAvIENhcGFjaXR5IEVzdGltYXRpb24gJmFtcDsgT3JkZXJzIG9mIE1hZ25pdHVkZTwvdGl0bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIG1hcmtlcldpZHRoPSIxMCIgbWFya2VySGVpZ2h0PSIxMCIgcmVmWD0iOCIgcmVmWT0iNCIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwIEw4IDQgTDAgOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iMTkyIiBmaWxsPSIjZjJlZmU4Ii8+PHJlY3QgeD0iMjQiIHk9IjQ4IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzIwMjAyMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTQ0IiB5PSI4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE3MTcxNyIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj7otJ/ovb08L3RleHQ+PHRleHQgeD0iMTQ0IiB5PSIxMTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1NzUzNGUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+TG9hZDwvdGV4dD48cGF0aCBkPSJNMjY5IDk2IEgyOTkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjMwNCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MjQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWNleS9jTwvdGV4dD48dGV4dCB4PSI0MjQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5Vbml0czwvdGV4dD48cGF0aCBkPSJNNTQ5IDk2IEg1NzkiIHN0cm9rZT0iI2I1MjMxYSIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPjxyZWN0IHg9IjU4NCIgeT0iNDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iOTYiIHJ4PSI4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMjAyMDIwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MDQiIHk9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTcxNzE3IiBmb250LXNpemU9IjE5IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPuWzsOWAvDwvdGV4dD48dGV4dCB4PSI3MDQiIHk9IjExNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzU3NTM0ZSIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIj5QZWFrPC90ZXh0PjxwYXRoIGQ9Ik04MjkgOTYgSDg1OSIgc3Ryb2tlPSIjYjUyMzFhIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+PHJlY3QgeD0iODY0IiB5PSI0OCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI5NiIgcng9IjgiIGZpbGw9IndoaXRlIiBzdHJva2U9IiMyMDIwMjAiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9Ijk4NCIgeT0iODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNzE3MTciIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiI+5L2Z6YePPC90ZXh0Pjx0ZXh0IHg9Ijk4NCIgeT0iMTE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNTc1MzRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiPkhlYWRyb29tPC90ZXh0Pjwvc3ZnPgo=" alt="From workload assumptions to peaks and headroom"></p>
 <h2 id="convert-demand-into-work">Convert demand into work</h2>
 <p>Daily active users are neither simultaneous users nor requests per second. Estimate operations per user and the service calls, database accesses, and messages each operation creates.</p>
-<pre><code class="language-text">Average requests/s = daily operations / 86,400
-Peak requests/s = average requests/s × an explicit peak factor
-Backend reads/s ≈ requests/s × reads/request × miss rate
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>Average requests/s = daily operations / 86,400</span></span>
+<span class="line"><span>Peak requests/s = average requests/s × an explicit peak factor</span></span>
+<span class="line"><span>Backend reads/s ≈ requests/s × reads/request × miss rate</span></span></code></pre>
 <p>Peak factors depend on time zones, scheduled work, events, and tenant skew. Fan-out, retries, and background work increase internal traffic beyond external demand.</p>
 <h2 id="a-complete-log-ingestion-example">A complete log-ingestion example</h2>
 <p>Assume 10 million daily records, 2 KB each in decimal units, and a 10× peak. These are illustrative assumptions, not measurements.</p>
@@ -762,73 +754,71 @@ Backend reads/s ≈ requests/s × reads/request × miss rate
 <p><a href="#en-02-system-design/core-concepts/02-api-design">API design</a> · <a href="#en-06-project-deep-dives/deep-dive-template">Project deep dive</a> · <a href="#en-03-ai-engineering/README">Module index</a></p></article><article id="en-03-ai-engineering/scratch_note"><h1 id="the-two-loops-of-a-coding-agent">The Two Loops of a Coding Agent</h1>
 <p>to model: add the original code and comments here</p>
 <p>The diagram preserves the central idea of the original note: the outer loop accepts a new user task, while the inner loop advances the current task. This distinction connects three responsibilities: model generation, tool execution, and conversation history.</p>
-<pre><code class="language-text">The core of a coding agent:
-Outer loop: wait for a user task
-    ↓
-Inner loop: request model → execute tool → return result to model
-    ↑                                           ↓
-    └────────── model needs another tool ────────┘
-                                                ↓
-                                      model answers directly
-                                                ↓
-                                      return to user input
-</code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>The core of a coding agent:</span></span>
+<span class="line"><span>Outer loop: wait for a user task</span></span>
+<span class="line"><span>    ↓</span></span>
+<span class="line"><span>Inner loop: request model → execute tool → return result to model</span></span>
+<span class="line"><span>    ↑                                           ↓</span></span>
+<span class="line"><span>    └────────── model needs another tool ────────┘</span></span>
+<span class="line"><span>                                                ↓</span></span>
+<span class="line"><span>                                      model answers directly</span></span>
+<span class="line"><span>                                                ↓</span></span>
+<span class="line"><span>                                      return to user input</span></span></code></pre>
 <h2 id="code-and-comments">Code and comments</h2>
-<pre><code class="language-python">def run_coding_agent_loop():
-    # Print the full prompt at startup to inspect the tool definitions seen by the model.
-    print(get_full_system_prompt())
-    # conversation is in-memory message history and is not persisted after exit.
-    conversation = [{
-        "role": "system",
-        "content": get_full_system_prompt()
-    }]
-    # Outer loop: accept a new user task.
-    while True:
-        try:
-            user_input = input(f"{YOU_COLOR}You:{RESET_COLOR}:")
-        # While waiting for input, Ctrl+C or end-of-input exits the loop.
-        except (KeyboardInterrupt, EOFError):
-            break
-        conversation.append({
-            "role": "user",
-            "content": user_input.strip()
-        })
-        # Inner agent loop: a task can call tools repeatedly before producing an ordinary answer.
-        # There is currently no step limit or handling of API/file exceptions here.
-        while True:
-            assistant_response = execute_llm_call(conversation)
-            tool_invocations = extract_tool_invocations(assistant_response)
-            # If no tool request is recognized, display the answer, save it in history, and return to user input.
-            if not tool_invocations:
-                print(f"{ASSISTANT_COLOR}Assistant:{RESET_COLOR}: {assistant_response}")
-                conversation.append({
-                    "role": "assistant",
-                    "content": assistant_response
-                })
-                break
-            # The tool branch currently omits assistant_response from history and appends only tool results.
-            # The model cannot see its own tool request in later history; this is a possible improvement to the current logic.
-            for name, args in tool_invocations:
-                # Select functions only from the registry; an unknown tool name raises KeyError.
-                tool = TOOL_REGISTRY[name]
-                resp = ""
-                print(name, args)
-                # Read JSON arguments and execute the tool; missing arguments use the defaults shown here.
-                if name == "read_file":
-                    resp = tool(args.get("filename", "."))
-                elif name == "list_files":
-                    resp = tool(args.get("path", "."))
-                elif name == "edit_file":
-                    resp = tool(args.get("path", "."), 
-                                args.get("old_str", ""), 
-                                args.get("new_str", ""))
-                # The current text protocol returns tool results as user messages, rather than native role="tool" messages.
-                # The next inner-loop iteration sends these results to the model so it can decide the next step.
-                conversation.append({
-                    "role": "user",
-                    "content": f"tool_result({json.dumps(resp)})"
-                })
-</code></pre></article><article id="en-04-rl-systems/README"><h1 id="reinforcement-learning--training-systems">Reinforcement Learning &#x26; Training Systems</h1>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> run_coding_agent_loop</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#6A737D">    # Print the full prompt at startup to inspect the tool definitions seen by the model.</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(get_full_system_prompt())</span></span>
+<span class="line"><span style="color:#6A737D">    # conversation is in-memory message history and is not persisted after exit.</span></span>
+<span class="line"><span style="color:#E1E4E8">    conversation </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [{</span></span>
+<span class="line"><span style="color:#9ECBFF">        "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"system"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        "content"</span><span style="color:#E1E4E8">: get_full_system_prompt()</span></span>
+<span class="line"><span style="color:#E1E4E8">    }]</span></span>
+<span class="line"><span style="color:#6A737D">    # Outer loop: accept a new user task.</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#79B8FF"> True</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            user_input </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> input</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{YOU_COLOR}</span><span style="color:#9ECBFF">You:</span><span style="color:#79B8FF">{RESET_COLOR}</span><span style="color:#9ECBFF">:"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D">        # While waiting for input, Ctrl+C or end-of-input exits the loop.</span></span>
+<span class="line"><span style="color:#F97583">        except</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">KeyboardInterrupt</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">EOFError</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">            break</span></span>
+<span class="line"><span style="color:#E1E4E8">        conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">            "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            "content"</span><span style="color:#E1E4E8">: user_input.strip()</span></span>
+<span class="line"><span style="color:#E1E4E8">        })</span></span>
+<span class="line"><span style="color:#6A737D">        # Inner agent loop: a task can call tools repeatedly before producing an ordinary answer.</span></span>
+<span class="line"><span style="color:#6A737D">        # There is currently no step limit or handling of API/file exceptions here.</span></span>
+<span class="line"><span style="color:#F97583">        while</span><span style="color:#79B8FF"> True</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            assistant_response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> execute_llm_call(conversation)</span></span>
+<span class="line"><span style="color:#E1E4E8">            tool_invocations </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> extract_tool_invocations(assistant_response)</span></span>
+<span class="line"><span style="color:#6A737D">            # If no tool request is recognized, display the answer, save it in history, and return to user input.</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> tool_invocations:</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{ASSISTANT_COLOR}</span><span style="color:#9ECBFF">Assistant:</span><span style="color:#79B8FF">{RESET_COLOR}</span><span style="color:#9ECBFF">: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">assistant_response</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">                conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"assistant"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "content"</span><span style="color:#E1E4E8">: assistant_response</span></span>
+<span class="line"><span style="color:#E1E4E8">                })</span></span>
+<span class="line"><span style="color:#F97583">                break</span></span>
+<span class="line"><span style="color:#6A737D">            # The tool branch currently omits assistant_response from history and appends only tool results.</span></span>
+<span class="line"><span style="color:#6A737D">            # The model cannot see its own tool request in later history; this is a possible improvement to the current logic.</span></span>
+<span class="line"><span style="color:#F97583">            for</span><span style="color:#E1E4E8"> name, args </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> tool_invocations:</span></span>
+<span class="line"><span style="color:#6A737D">                # Select functions only from the registry; an unknown tool name raises KeyError.</span></span>
+<span class="line"><span style="color:#E1E4E8">                tool </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> TOOL_REGISTRY</span><span style="color:#E1E4E8">[name]</span></span>
+<span class="line"><span style="color:#E1E4E8">                resp </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> ""</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(name, args)</span></span>
+<span class="line"><span style="color:#6A737D">                # Read JSON arguments and execute the tool; missing arguments use the defaults shown here.</span></span>
+<span class="line"><span style="color:#F97583">                if</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "read_file"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"filename"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#F97583">                elif</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "list_files"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"path"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#F97583">                elif</span><span style="color:#E1E4E8"> name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "edit_file"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    resp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> tool(args.get(</span><span style="color:#9ECBFF">"path"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">), </span></span>
+<span class="line"><span style="color:#E1E4E8">                                args.get(</span><span style="color:#9ECBFF">"old_str"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">), </span></span>
+<span class="line"><span style="color:#E1E4E8">                                args.get(</span><span style="color:#9ECBFF">"new_str"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#6A737D">                # The current text protocol returns tool results as user messages, rather than native role="tool" messages.</span></span>
+<span class="line"><span style="color:#6A737D">                # The next inner-loop iteration sends these results to the model so it can decide the next step.</span></span>
+<span class="line"><span style="color:#E1E4E8">                conversation.append({</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    "content"</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"tool_result(</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">json.dumps(resp)</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">)"</span></span>
+<span class="line"><span style="color:#E1E4E8">                })</span></span></code></pre></article><article id="en-04-rl-systems/README"><h1 id="reinforcement-learning--training-systems">Reinforcement Learning &#x26; Training Systems</h1>
 <p>Connect learning objectives, data flow, and training infrastructure to reason about throughput, stability, and evaluation.</p>
 <h2 id="study-routine">Study routine</h2>
 <p>Explain one question without notes before revising it. Record evidence, unverified assumptions, and a next review date.</p>
