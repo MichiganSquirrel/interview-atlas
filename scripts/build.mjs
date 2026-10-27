@@ -15,7 +15,9 @@ const read = p => fs.readFileSync(p, 'utf8');
 const hash = p => crypto.createHash('sha256').update(read(p).replace(/<!-- AUTO:START -->[\s\S]*?<!-- AUTO:END -->/, '<!-- AUTO:START -->\n<!-- AUTO:END -->')).digest('hex');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const write = (p, s) => { fs.mkdirSync(path.dirname(p), { recursive: true }); if (!fs.existsSync(p) || read(p) !== s) fs.writeFileSync(p, s); };
-const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
+// Local coding environments are not notes or downloadable attachments.
+const excludedPart = name => name.startsWith('.') || ['node_modules', 'venv', '__pycache__', '_private'].includes(name) || /\.py[cod]$/.test(name);
+const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).filter(e => !excludedPart(e.name) && !e.isSymbolicLink()).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
 const sourceFiles = () => modules.flatMap(m => walk(path.join(ROOT, m.id))).filter(p => p.endsWith('.md')).sort();
 
 // Only this explicit block is generated. Preserve all other human-written material.
@@ -78,6 +80,7 @@ for (const p of sourceFiles()) {
       let resolved=path.posix.normalize(path.posix.join(path.posix.dirname(lang==='zh'||!fs.existsSync(src)?rel:`.translations/en/${rel}`),decoded));
       if (resolved.startsWith('../') || path.isAbsolute(resolved)) {errors.push(`Escaping link ${rel}: ${target}`);return whole;}
       if (resolved.startsWith('.translations/en/')) resolved=resolved.slice('.translations/en/'.length);
+      if (resolved.split('/').some(excludedPart)) {errors.push(`Non-public local file linked in ${rel}: ${target}`);return whole;}
       if (!fs.existsSync(path.join(ROOT,resolved))) errors.push(`Broken link ${rel}: ${target}`);
       if (resolved.endsWith('.md')) return `](@@NOTE:${resolved.replace(/\.md$/,'')}@@)`;
       linkedAssets.add(resolved);

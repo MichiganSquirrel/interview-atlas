@@ -4,3 +4,9 @@ node_modules/
 .obsidian/
 _private/
 *.log
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]

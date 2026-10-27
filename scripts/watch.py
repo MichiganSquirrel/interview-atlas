@@ -11,11 +11,16 @@ def fingerprint():
     modules=json.loads((ROOT/'modules.json').read_text())
     files=[]
     for directory in [*[m['id'] for m in modules],'.translations/en','assets']:
-        files += [p for p in (ROOT/directory).rglob('*') if p.is_file()]
+        for base, dirs, names in os.walk(ROOT/directory, followlinks=False):
+            dirs[:] = [d for d in dirs if not excluded(d) and not (Path(base)/d).is_symlink()]
+            files += [Path(base)/n for n in names if not excluded(n) and not (Path(base)/n).is_symlink()]
     h=hashlib.sha256()
     for p in sorted(files):
         h.update(str(p.relative_to(ROOT)).encode()); h.update(p.read_bytes())
     return h.hexdigest()
+
+def excluded(name):
+    return name.startswith('.') or name in {'node_modules','venv','__pycache__','_private'} or name.endswith(('.pyc','.pyo','.pyd'))
 
 def save(state):
     temp=STATE.with_suffix('.tmp');temp.write_text(json.dumps(state,indent=2));temp.replace(STATE)

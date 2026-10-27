@@ -731,7 +731,11 @@ Backend reads/s ≈ requests/s × reads/request × miss rate
 <ul>
 <li><a href="#en-03-ai-engineering/practical-checklist">Practical Delivery &#x26; Acceptance Checklist</a></li>
 </ul>
-<!-- AUTO:END --></article><article id="en-03-ai-engineering/practical-checklist"><h1 id="practical-delivery--acceptance-checklist">Practical Delivery &#x26; Acceptance Checklist</h1>
+<!-- AUTO:END -->
+<h2 id="minimal-coding-agent-example">Minimal Coding Agent example</h2>
+<p><a href="../03-ai-engineering/200lineClaudeCode.py">The Python example in this module</a> demonstrates a complete agent loop: the user enters a task, the model emits a single line in the form <code>tool: tool_name(JSON_arguments)</code>, Python selects a function from the tool registry and executes it, and a <code>tool_result(...)</code> message is added to the conversation so the model can decide what to do next. The inner loop continues the same task until the model returns ordinary text; the outer loop then waits for another user input. This implementation uses a custom text protocol and does not pass native <code>tools</code> or <code>tool_calls</code> to the API.</p>
+<p>The three tools read a file, list a directory, and replace file contents. Paths are resolved relative to the working directory from which the script was launched. <code>edit_file</code> replaces only the first match; an empty <code>old_str</code> creates or overwrites the entire file. The current implementation has no workspace boundary, tool-call limit, or shared handling for API and file errors. The tool branch also omits the model’s tool request from the message history and appends only the execution result. When reading the example, distinguish its current behavior from possible future improvements.</p>
+<p>The client reads authentication configuration from the <code>OPENAI_API_KEY</code> environment variable, and <code>load_dotenv()</code> loads <code>.env</code>. Actual configuration and local dependencies are excluded from publication. The source code is preserved as supplied; its Chinese comments help distinguish the responsibilities of context, tool execution, and message history.</p></article><article id="en-03-ai-engineering/practical-checklist"><h1 id="practical-delivery--acceptance-checklist">Practical Delivery &#x26; Acceptance Checklist</h1>
 <h2 id="a-complete-practice-loop">A complete practice loop</h2>
 <p>Clarify requirements → build a minimal solution → verify with tools → review manually → reflect. Define acceptance criteria before asking AI to break down the task.</p>
 <ul>
